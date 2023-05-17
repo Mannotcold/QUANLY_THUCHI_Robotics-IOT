@@ -25,6 +25,9 @@ namespace PMQLTHU_CHI
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
+
+
+
         void loaddata()
         {
             connection = new SqlConnection(str);
