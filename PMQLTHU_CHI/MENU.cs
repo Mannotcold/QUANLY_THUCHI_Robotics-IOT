@@ -47,9 +47,9 @@ namespace PMQLTHU_CHI
             {
                 connection = new SqlConnection(str);
                 connection.Open();
-                string TenKH = txtTuKhoa.Text;
+                string TenKH = txtTuKhoa.Text + '%';
                 command = connection.CreateCommand();
-                command.CommandText = "select * from PHIEU_THU_CHI WHERE Nguoi = '" + TenKH + "'";
+                command.CommandText = "select * from PHIEU_THU_CHI WHERE Nguoi LIKE '" + TenKH + "'";
                 adapter.SelectCommand = command;
                 table.Clear();
                 adapter.Fill(table);
