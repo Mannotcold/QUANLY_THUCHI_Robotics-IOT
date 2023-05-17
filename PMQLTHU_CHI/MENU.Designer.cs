@@ -33,7 +33,7 @@ namespace PMQLTHU_CHI
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.txtTuKhoa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,26 +86,27 @@ namespace PMQLTHU_CHI
             this.label1.TabIndex = 8;
             this.label1.Text = "Tìm kiếm";
             // 
-            // guna2Button1
+            // btnThem
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(35, 62);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(110, 22);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "Thêm mới";
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(35, 62);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(110, 22);
+            this.btnThem.TabIndex = 12;
+            this.btnThem.Text = "Thêm mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 598);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvPhieuTC);
             this.Controls.Add(this.btnTraCuu);
             this.Controls.Add(this.txtTuKhoa);
@@ -125,6 +126,6 @@ namespace PMQLTHU_CHI
         private System.Windows.Forms.Button btnTraCuu;
         private System.Windows.Forms.TextBox txtTuKhoa;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnThem;
     }
 }

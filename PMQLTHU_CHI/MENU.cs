@@ -61,5 +61,13 @@ namespace PMQLTHU_CHI
         {
             loaddata();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            Form thuchi = new THU_CHI();
+            this.Hide();
+            thuchi.ShowDialog();
+            this.Close();
+        }
     }
 }
