@@ -63,7 +63,42 @@ namespace PMQLTHU_CHI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            
+            DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    SqlCommand com = new SqlCommand();
+                    //Lấy dữ liệu về từ kết quả câu lệnh trên
+                    //ExecuteReader() dùng với select
+                    //ExecuteNonquery(); với inserrt update delete
+                    //com.ExecuteNonQuery();
+                    //MAPHIEUDP();
+                    com.CommandType = CommandType.Text;
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,Nguoi, Cash,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "','" + ccbkhoahoc.Text.ToString() + "',N'" + ccblophoc.Text.ToString() + "',N'" + Nguoi.Text + "','" + ccbthanhtoan.Text + "','" + mahoadon.Text + "')";
+                    com.Connection = connection;
+                    //loaddata();
+                    int kq = com.ExecuteNonQuery();
+                    if (kq > 0)
+                    {
+                        MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+
+            }
         }
 
         private void THU_CHI_Load(object sender, EventArgs e)
