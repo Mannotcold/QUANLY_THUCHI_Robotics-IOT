@@ -1,0 +1,12 @@
+D:\PMQLTHU_CHI\PMQLTHU_CHI\bin\Debug\PMQLTHU_CHI.exe.config
+D:\PMQLTHU_CHI\PMQLTHU_CHI\bin\Debug\PMQLTHU_CHI.exe
+D:\PMQLTHU_CHI\PMQLTHU_CHI\bin\Debug\PMQLTHU_CHI.pdb
+D:\PMQLTHU_CHI\PMQLTHU_CHI\bin\Debug\Guna.UI2.dll
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.csproj.AssemblyReference.cache
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.Properties.Resources.resources
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.csproj.GenerateResource.cache
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.csproj.CoreCompileInputs.cache
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.csproj.CopyComplete
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.exe
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.pdb
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.Login.resources
