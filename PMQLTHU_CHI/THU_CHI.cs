@@ -78,7 +78,7 @@ namespace PMQLTHU_CHI
                     //com.ExecuteNonQuery();
                     //MAPHIEUDP();
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,Nguoi, Cash,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "','" + ccbkhoahoc.Text.ToString() + "',N'" + ccblophoc.Text.ToString() + "',N'" + Nguoi.Text + "','" + ccbthanhtoan.Text + "','" + mahoadon.Text + "')";
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + ccbkhoahoc.Text.ToString() + "',N'" + ccblophoc.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "','" + mahoadon.Text + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
