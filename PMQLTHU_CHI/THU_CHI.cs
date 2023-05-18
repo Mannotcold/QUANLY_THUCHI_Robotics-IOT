@@ -19,6 +19,7 @@ namespace PMQLTHU_CHI
             InitializeComponent();
         }
 
+
         //Ket noi server sql
         SqlConnection connection;
         SqlCommand command;
