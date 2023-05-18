@@ -161,9 +161,25 @@ namespace PMQLTHU_CHI
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
             Form khoahoc = new KhoaHoc();
-            this.Hide();
             khoahoc.ShowDialog();
-            this.Close();
+        }
+
+        private void khthubtn_Click(object sender, EventArgs e)
+        {
+            Form khoahoc = new KhoaHoc();
+            khoahoc.ShowDialog();
+        }
+
+        private void btnlophoc_Click(object sender, EventArgs e)
+        {
+            Form lophoc = new LopHoc();
+            lophoc.ShowDialog();
+        }
+
+        private void lhthubtn_Click(object sender, EventArgs e)
+        {
+            Form lophoc = new LopHoc();
+            lophoc.ShowDialog();
         }
     }
 }

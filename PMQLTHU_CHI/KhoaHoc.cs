@@ -103,7 +103,6 @@ namespace PMQLTHU_CHI
             DialogResult rs = MessageBox.Show("Bạn có muốn cập nhật hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
-                MessageBox.Show(khoahocbd);
                 try
                 {
 
@@ -179,6 +178,11 @@ namespace PMQLTHU_CHI
 
                 }
             }
+        }
+
+        private void Quay_lai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

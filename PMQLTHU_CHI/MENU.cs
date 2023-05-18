@@ -33,7 +33,7 @@ namespace PMQLTHU_CHI
             connection = new SqlConnection(str);
             connection.Open();
             command = connection.CreateCommand();
-            command.CommandText = "select NgayLap,KhoaHoc,LopHoc,Nguoi, Cash,SoHoaDon from PHIEU_THU_CHI";
+            command.CommandText = "select NgayLap,KhoaHoc,LopHoc,thu,chi,Nguoi, Cash,SoHoaDon from PHIEU_THU_CHI";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
