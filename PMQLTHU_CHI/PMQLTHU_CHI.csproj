@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhoaHoc.Designer.cs">
+      <DependentUpon>KhoaHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="THU_CHI.Designer.cs">
       <DependentUpon>THU_CHI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="KhoaHoc.resx">
+      <DependentUpon>KhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

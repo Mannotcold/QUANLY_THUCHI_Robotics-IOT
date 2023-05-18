@@ -29,11 +29,12 @@ namespace PMQLTHU_CHI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(THU_CHI));
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.Thu = new System.Windows.Forms.TabPage();
             this.Chi = new System.Windows.Forms.TabPage();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLuuchi = new Guna.UI2.WinForms.Guna2Button();
             this.mahoadon = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ccbthanhtoan = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -51,7 +52,7 @@ namespace PMQLTHU_CHI
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtthu = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.themchi = new Guna.UI2.WinForms.Guna2Button();
+            this.themthu = new Guna.UI2.WinForms.Guna2Button();
             this.mahdthu = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.thanhtoanthu = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -65,6 +66,8 @@ namespace PMQLTHU_CHI
             this.label2 = new System.Windows.Forms.Label();
             this.timethu = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Quay_lai = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TabControl1.SuspendLayout();
             this.Thu.SuspendLayout();
             this.Chi.SuspendLayout();
@@ -125,9 +128,11 @@ namespace PMQLTHU_CHI
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.guna2ImageButton2);
+            this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
             this.guna2Panel1.Controls.Add(this.txtchi);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2Panel1.Controls.Add(this.btnLuu);
+            this.guna2Panel1.Controls.Add(this.btnLuuchi);
             this.guna2Panel1.Controls.Add(this.mahoadon);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel1.Controls.Add(this.ccbthanhtoan);
@@ -145,22 +150,22 @@ namespace PMQLTHU_CHI
             this.guna2Panel1.Size = new System.Drawing.Size(690, 412);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // btnLuu
+            // btnLuuchi
             // 
-            this.btnLuu.Animated = true;
-            this.btnLuu.BackColor = System.Drawing.Color.Transparent;
-            this.btnLuu.BorderRadius = 10;
-            this.btnLuu.FillColor = System.Drawing.Color.Blue;
-            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLuu.Location = new System.Drawing.Point(273, 358);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(131, 33);
-            this.btnLuu.TabIndex = 12;
-            this.btnLuu.Text = "Thêm";
-            this.btnLuu.UseTransparentBackground = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.btnLuuchi.Animated = true;
+            this.btnLuuchi.BackColor = System.Drawing.Color.Transparent;
+            this.btnLuuchi.BorderRadius = 10;
+            this.btnLuuchi.FillColor = System.Drawing.Color.Blue;
+            this.btnLuuchi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLuuchi.ForeColor = System.Drawing.Color.White;
+            this.btnLuuchi.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLuuchi.Location = new System.Drawing.Point(273, 358);
+            this.btnLuuchi.Name = "btnLuuchi";
+            this.btnLuuchi.Size = new System.Drawing.Size(131, 33);
+            this.btnLuuchi.TabIndex = 12;
+            this.btnLuuchi.Text = "Lưu";
+            this.btnLuuchi.UseTransparentBackground = true;
+            this.btnLuuchi.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // mahoadon
             // 
@@ -204,7 +209,7 @@ namespace PMQLTHU_CHI
             "Cà thẻ",
             "Tiền mặt",
             "Chuyển khoản"});
-            this.ccbthanhtoan.Location = new System.Drawing.Point(512, 215);
+            this.ccbthanhtoan.Location = new System.Drawing.Point(497, 215);
             this.ccbthanhtoan.Name = "ccbthanhtoan";
             this.ccbthanhtoan.Size = new System.Drawing.Size(148, 36);
             this.ccbthanhtoan.TabIndex = 9;
@@ -212,7 +217,7 @@ namespace PMQLTHU_CHI
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(442, 225);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(427, 225);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(58, 15);
             this.guna2HtmlLabel4.TabIndex = 8;
@@ -228,7 +233,7 @@ namespace PMQLTHU_CHI
             this.ccblophoc.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ccblophoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.ccblophoc.ItemHeight = 30;
-            this.ccblophoc.Location = new System.Drawing.Point(512, 121);
+            this.ccblophoc.Location = new System.Drawing.Point(497, 121);
             this.ccblophoc.Name = "ccblophoc";
             this.ccblophoc.Size = new System.Drawing.Size(148, 36);
             this.ccblophoc.TabIndex = 7;
@@ -236,7 +241,7 @@ namespace PMQLTHU_CHI
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(442, 131);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(427, 131);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(42, 15);
             this.guna2HtmlLabel3.TabIndex = 6;
@@ -277,7 +282,7 @@ namespace PMQLTHU_CHI
             this.Nguoi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Nguoi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Nguoi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Nguoi.Location = new System.Drawing.Point(511, 33);
+            this.Nguoi.Location = new System.Drawing.Point(496, 33);
             this.Nguoi.Name = "Nguoi";
             this.Nguoi.PasswordChar = '\0';
             this.Nguoi.PlaceholderText = "";
@@ -288,7 +293,7 @@ namespace PMQLTHU_CHI
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(442, 42);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(427, 42);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(61, 15);
             this.guna2HtmlLabel1.TabIndex = 2;
@@ -350,7 +355,7 @@ namespace PMQLTHU_CHI
             // 
             this.guna2Panel2.Controls.Add(this.txtthu);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel7);
-            this.guna2Panel2.Controls.Add(this.themchi);
+            this.guna2Panel2.Controls.Add(this.themthu);
             this.guna2Panel2.Controls.Add(this.mahdthu);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel8);
             this.guna2Panel2.Controls.Add(this.thanhtoanthu);
@@ -396,22 +401,22 @@ namespace PMQLTHU_CHI
             this.guna2HtmlLabel7.TabIndex = 13;
             this.guna2HtmlLabel7.Text = "Thu";
             // 
-            // themchi
+            // themthu
             // 
-            this.themchi.Animated = true;
-            this.themchi.BackColor = System.Drawing.Color.Transparent;
-            this.themchi.BorderRadius = 10;
-            this.themchi.FillColor = System.Drawing.Color.Blue;
-            this.themchi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.themchi.ForeColor = System.Drawing.Color.White;
-            this.themchi.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.themchi.Location = new System.Drawing.Point(273, 358);
-            this.themchi.Name = "themchi";
-            this.themchi.Size = new System.Drawing.Size(131, 33);
-            this.themchi.TabIndex = 12;
-            this.themchi.Text = "Thêm";
-            this.themchi.UseTransparentBackground = true;
-            this.themchi.Click += new System.EventHandler(this.themchi_Click);
+            this.themthu.Animated = true;
+            this.themthu.BackColor = System.Drawing.Color.Transparent;
+            this.themthu.BorderRadius = 10;
+            this.themthu.FillColor = System.Drawing.Color.Blue;
+            this.themthu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.themthu.ForeColor = System.Drawing.Color.White;
+            this.themthu.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.themthu.Location = new System.Drawing.Point(273, 358);
+            this.themthu.Name = "themthu";
+            this.themthu.Size = new System.Drawing.Size(131, 33);
+            this.themthu.TabIndex = 12;
+            this.themthu.Text = "Thêm";
+            this.themthu.UseTransparentBackground = true;
+            this.themthu.Click += new System.EventHandler(this.themchi_Click);
             // 
             // mahdthu
             // 
@@ -585,6 +590,34 @@ namespace PMQLTHU_CHI
             this.Quay_lai.UseTransparentBackground = true;
             this.Quay_lai.Click += new System.EventHandler(this.Quay_lai_Click);
             // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(242, 121);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(35, 36);
+            this.guna2ImageButton1.TabIndex = 15;
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(651, 121);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(35, 36);
+            this.guna2ImageButton2.TabIndex = 16;
+            // 
             // THU_CHI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,13 +657,13 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2Button btnLuu;
+        private Guna.UI2.WinForms.Guna2Button btnLuuchi;
         private Guna.UI2.WinForms.Guna2TextBox txtchi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox txtthu;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2Button themchi;
+        private Guna.UI2.WinForms.Guna2Button themthu;
         private Guna.UI2.WinForms.Guna2TextBox mahdthu;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2ComboBox thanhtoanthu;
@@ -644,5 +677,7 @@ namespace PMQLTHU_CHI
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker timethu;
         private Guna.UI2.WinForms.Guna2Button Quay_lai;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }
