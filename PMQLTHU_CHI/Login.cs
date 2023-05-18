@@ -43,5 +43,10 @@ namespace PMQLTHU_CHI
                 MessageBox.Show("Đăng nhập không thành công! Vui lòng kiểm tra lại tài khoản, mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang được phất triển, vui lòng quay lại sau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
     }
    }

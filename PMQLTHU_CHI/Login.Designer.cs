@@ -100,6 +100,7 @@ namespace PMQLTHU_CHI
             this.guna2Button2.TabIndex = 7;
             this.guna2Button2.Text = "Sign up";
             this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -263,9 +264,9 @@ namespace PMQLTHU_CHI
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(77, 46);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-127, -46);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(166, 145);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(595, 404);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
