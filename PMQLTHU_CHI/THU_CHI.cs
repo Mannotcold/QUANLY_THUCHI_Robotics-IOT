@@ -157,5 +157,13 @@ namespace PMQLTHU_CHI
 
             }
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            Form khoahoc = new KhoaHoc();
+            this.Hide();
+            khoahoc.ShowDialog();
+            this.Close();
+        }
     }
 }

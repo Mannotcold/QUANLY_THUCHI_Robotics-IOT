@@ -66,8 +66,8 @@ namespace PMQLTHU_CHI
             this.label2 = new System.Windows.Forms.Label();
             this.timethu = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Quay_lai = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnkhoahoc = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnlophoc = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TabControl1.SuspendLayout();
             this.Thu.SuspendLayout();
             this.Chi.SuspendLayout();
@@ -128,8 +128,8 @@ namespace PMQLTHU_CHI
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton2);
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
+            this.guna2Panel1.Controls.Add(this.btnlophoc);
+            this.guna2Panel1.Controls.Add(this.btnkhoahoc);
             this.guna2Panel1.Controls.Add(this.txtchi);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel6);
             this.guna2Panel1.Controls.Add(this.btnLuuchi);
@@ -159,7 +159,7 @@ namespace PMQLTHU_CHI
             this.btnLuuchi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLuuchi.ForeColor = System.Drawing.Color.White;
             this.btnLuuchi.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLuuchi.Location = new System.Drawing.Point(273, 358);
+            this.btnLuuchi.Location = new System.Drawing.Point(281, 358);
             this.btnLuuchi.Name = "btnLuuchi";
             this.btnLuuchi.Size = new System.Drawing.Size(131, 33);
             this.btnLuuchi.TabIndex = 12;
@@ -590,33 +590,34 @@ namespace PMQLTHU_CHI
             this.Quay_lai.UseTransparentBackground = true;
             this.Quay_lai.Click += new System.EventHandler(this.Quay_lai_Click);
             // 
-            // guna2ImageButton1
+            // btnkhoahoc
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(242, 121);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(35, 36);
-            this.guna2ImageButton1.TabIndex = 15;
+            this.btnkhoahoc.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnkhoahoc.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnkhoahoc.Image = ((System.Drawing.Image)(resources.GetObject("btnkhoahoc.Image")));
+            this.btnkhoahoc.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnkhoahoc.ImageRotate = 0F;
+            this.btnkhoahoc.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnkhoahoc.Location = new System.Drawing.Point(242, 111);
+            this.btnkhoahoc.Name = "btnkhoahoc";
+            this.btnkhoahoc.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnkhoahoc.Size = new System.Drawing.Size(43, 54);
+            this.btnkhoahoc.TabIndex = 15;
+            this.btnkhoahoc.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
-            // guna2ImageButton2
+            // btnlophoc
             // 
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(651, 121);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(35, 36);
-            this.guna2ImageButton2.TabIndex = 16;
+            this.btnlophoc.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnlophoc.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnlophoc.Image = ((System.Drawing.Image)(resources.GetObject("btnlophoc.Image")));
+            this.btnlophoc.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnlophoc.ImageRotate = 0F;
+            this.btnlophoc.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnlophoc.Location = new System.Drawing.Point(648, 111);
+            this.btnlophoc.Name = "btnlophoc";
+            this.btnlophoc.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnlophoc.Size = new System.Drawing.Size(39, 54);
+            this.btnlophoc.TabIndex = 16;
             // 
             // THU_CHI
             // 
@@ -677,7 +678,7 @@ namespace PMQLTHU_CHI
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker timethu;
         private Guna.UI2.WinForms.Guna2Button Quay_lai;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnlophoc;
+        private Guna.UI2.WinForms.Guna2ImageButton btnkhoahoc;
     }
 }
