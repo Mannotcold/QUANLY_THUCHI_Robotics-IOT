@@ -20,8 +20,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.97916in</Top>
-            <Left>1.38415in</Left>
+            <Top>2.19034in</Top>
+            <Left>1.76628in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <Style>
@@ -41,15 +41,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!pngaylap.Value</Value>
+                    <Value>=Parameters!pngaylapchi.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.97916in</Top>
-            <Left>2.48832in</Left>
+            <Top>2.19034in</Top>
+            <Left>2.87045in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>1</ZIndex>
@@ -78,8 +78,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.52728in</Top>
-            <Left>1.38415in</Left>
+            <Top>2.73846in</Top>
+            <Left>1.76628in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <ZIndex>2</ZIndex>
@@ -100,15 +100,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!pkhoahoc.Value</Value>
+                    <Value>=Parameters!pkhoahocchi.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>2.52728in</Top>
-            <Left>2.48832in</Left>
+            <Top>2.73846in</Top>
+            <Left>2.87045in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>3</ZIndex>
@@ -137,8 +137,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.05853in</Top>
-            <Left>1.38415in</Left>
+            <Top>3.26971in</Top>
+            <Left>1.76628in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <ZIndex>4</ZIndex>
@@ -159,15 +159,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!plophoc.Value</Value>
+                    <Value>=Parameters!plophocchi.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>3.05853in</Top>
-            <Left>2.48832in</Left>
+            <Top>3.26971in</Top>
+            <Left>2.87045in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>5</ZIndex>
@@ -188,7 +188,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Thu:</Value>
+                    <Value>Chi:</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -196,8 +196,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.63145in</Top>
-            <Left>1.38415in</Left>
+            <Top>3.84263in</Top>
+            <Left>1.76628in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <ZIndex>6</ZIndex>
@@ -218,15 +218,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!pthu.Value</Value>
+                    <Value>=Parameters!pchi.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>3.63145in</Top>
-            <Left>2.48832in</Left>
+            <Top>3.84263in</Top>
+            <Left>2.87045in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>7</ZIndex>
@@ -255,8 +255,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>4.19395in</Top>
-            <Left>1.38415in</Left>
+            <Top>4.40513in</Top>
+            <Left>1.76628in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <ZIndex>8</ZIndex>
@@ -277,15 +277,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!pkhachhang.Value</Value>
+                    <Value>=Parameters!pkhachhangchi.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.19395in</Top>
-            <Left>2.48832in</Left>
+            <Top>4.40513in</Top>
+            <Left>2.87045in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>9</ZIndex>
@@ -314,8 +314,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>4.77728in</Top>
-            <Left>1.38416in</Left>
+            <Top>4.98846in</Top>
+            <Left>1.76629in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <ZIndex>10</ZIndex>
@@ -336,15 +336,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!pthanhtoan.Value</Value>
+                    <Value>=Parameters!pthanhtoanchi.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.77728in</Top>
-            <Left>2.48832in</Left>
+            <Top>4.98846in</Top>
+            <Left>2.87045in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>11</ZIndex>
@@ -373,8 +373,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>5.30853in</Top>
-            <Left>1.38416in</Left>
+            <Top>5.51971in</Top>
+            <Left>1.76629in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <ZIndex>12</ZIndex>
@@ -395,15 +395,15 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!pmahoadon.Value</Value>
+                    <Value>=Parameters!pmahoadonchi.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>5.30853in</Top>
-            <Left>2.48832in</Left>
+            <Top>5.51971in</Top>
+            <Left>2.87045in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>13</ZIndex>
@@ -432,8 +432,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>6.40055in</Top>
-            <Left>0.73312in</Left>
+            <Top>6.61173in</Top>
+            <Left>1.11525in</Left>
             <Height>0.25in</Height>
             <Width>1.02605in</Width>
             <ZIndex>14</ZIndex>
@@ -462,8 +462,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>6.40055in</Top>
-            <Left>9.44531in</Left>
+            <Top>6.61173in</Top>
+            <Left>9.82744in</Left>
             <Height>0.25in</Height>
             <Width>1.02605in</Width>
             <ZIndex>15</ZIndex>
@@ -481,7 +481,8 @@
             <Source>Embedded</Source>
             <Value>ID6E3D613B20414632A5333B4FD745A113</Value>
             <Sizing>FitProportional</Sizing>
-            <Left>0.00396in</Left>
+            <Top>0.21118in</Top>
+            <Left>0.38609in</Left>
             <Height>1.25in</Height>
             <Width>1.39584in</Width>
             <ZIndex>16</ZIndex>
@@ -498,7 +499,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>PHIẾU THU</Value>
+                    <Value>PHIẾU CHI</Value>
                     <Style>
                       <FontSize>20pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -509,8 +510,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.16542in</Top>
-            <Left>4.80479in</Left>
+            <Top>0.3766in</Top>
+            <Left>5.18692in</Left>
             <Height>0.4375in</Height>
             <Width>1.86458in</Width>
             <ZIndex>17</ZIndex>
@@ -539,8 +540,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.77083in</Top>
-            <Left>4.905in</Left>
+            <Top>0.98201in</Top>
+            <Left>5.28713in</Left>
             <Height>0.25in</Height>
             <Width>1.65625in</Width>
             <ZIndex>18</ZIndex>
@@ -555,10 +556,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>7.21999in</Height>
+        <Height>7.07292in</Height>
         <Style />
       </Body>
-      <Width>11.15625in</Width>
+      <Width>11.23958in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
@@ -569,31 +570,31 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="pngaylap">
+    <ReportParameter Name="pngaylapchi">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="pkhoahoc">
+    <ReportParameter Name="pkhoahocchi">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="plophoc">
+    <ReportParameter Name="plophocchi">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="pthu">
+    <ReportParameter Name="pchi">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="pkhachhang">
+    <ReportParameter Name="pkhachhangchi">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="pthanhtoan">
+    <ReportParameter Name="pthanhtoanchi">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="pmahoadon">
+    <ReportParameter Name="pmahoadonchi">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -606,37 +607,37 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>pngaylap</ParameterName>
+          <ParameterName>pngaylapchi</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>pkhoahoc</ParameterName>
+          <ParameterName>pkhoahocchi</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>plophoc</ParameterName>
+          <ParameterName>plophocchi</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>3</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>pthu</ParameterName>
+          <ParameterName>pchi</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>pkhachhang</ParameterName>
+          <ParameterName>pkhachhangchi</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>pthanhtoan</ParameterName>
+          <ParameterName>pthanhtoanchi</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>pmahoadon</ParameterName>
+          <ParameterName>pmahoadonchi</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
@@ -692,5 +693,5 @@ AAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBAAAEEEEAAAQQQQAABBBBA
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>62772386-460c-4862-a805-6aa19386e8c7</rd:ReportID>
+  <rd:ReportID>dfa70bc0-77af-4b94-90e0-479e7844b247</rd:ReportID>
 </Report>

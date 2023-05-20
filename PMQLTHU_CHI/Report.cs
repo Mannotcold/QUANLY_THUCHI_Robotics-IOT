@@ -33,7 +33,6 @@ namespace PMQLTHU_CHI
 
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PMQLTHU_CHI.ReportPhieuThuChi.rdlc";
             List<Report> parameters = new List<Report>();
-            int a = 2240000;
             
             // Tạo đối tượng tham số và thêm vào danh sách
             this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pngaylap", _ngaylap));

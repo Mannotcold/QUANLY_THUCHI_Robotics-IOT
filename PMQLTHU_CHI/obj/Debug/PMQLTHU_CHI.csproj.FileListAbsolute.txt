@@ -75,3 +75,4 @@ D:\PMQLTHU_CHI\PMQLTHU_CHI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.reso
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.Report.resources
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\RdlCompile.cache
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\RdlCompile.compiled
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Debug\PMQLTHU_CHI.ReportChi.resources

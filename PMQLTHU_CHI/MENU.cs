@@ -160,11 +160,22 @@ namespace PMQLTHU_CHI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string a = "ajk";
-            using (Report frm = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon))
+            if (_thu != "")
             {
-                frm.ShowDialog();
-            };
+                using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon))
+                {
+                    frmthu.ShowDialog();
+                };
+            }
+            else
+            {
+                MessageBox.Show(_chi);
+                using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon))
+                {
+                    frmchi.ShowDialog();
+                };
+            }
+           
         }
     }
 }
