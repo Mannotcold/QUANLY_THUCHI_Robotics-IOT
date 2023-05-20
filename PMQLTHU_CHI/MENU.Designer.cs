@@ -65,6 +65,7 @@ namespace PMQLTHU_CHI
             this.dgvPhieuTC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPhieuTC.Size = new System.Drawing.Size(769, 508);
             this.dgvPhieuTC.TabIndex = 11;
+            this.dgvPhieuTC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTC_CellContentClick);
             // 
             // btnTraCuu
             // 

@@ -26,8 +26,8 @@ namespace PMQLTHU_CHI
         DataTable table = new DataTable();
 
 
-
-
+        string _ngaylap, _khoahoc, _lophoc, _thu, _chi, _khachhang, _thanhtoan, _mahoadon;
+         
         void loaddata()
         {
             connection = new SqlConnection(str);
@@ -40,6 +40,25 @@ namespace PMQLTHU_CHI
             dgvPhieuTC.DataSource = table;
             connection.Close();
         }
+
+        private void dgvPhieuTC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgvPhieuTC.CurrentRow.Index;
+            //string maphieu = dgvPhieuTC.Rows[i].Cells[0].Value.ToString();
+            MessageBox.Show(_ngaylap);
+            _ngaylap = dgvPhieuTC.Rows[i].Cells[0].Value.ToString();
+            _khoahoc = dgvPhieuTC.Rows[i].Cells[1].Value.ToString();
+            _lophoc = dgvPhieuTC.Rows[i].Cells[2].Value.ToString();
+            _thu = dgvPhieuTC.Rows[i].Cells[3].Value.ToString();
+            _chi = dgvPhieuTC.Rows[i].Cells[4].Value.ToString();
+            _khachhang = dgvPhieuTC.Rows[i].Cells[5].Value.ToString();
+            _thanhtoan = dgvPhieuTC.Rows[i].Cells[6].Value.ToString();
+            _mahoadon = dgvPhieuTC.Rows[i].Cells[7].Value.ToString();
+
+           
+        }
+
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
             if (txtTuKhoa.Text == "")
@@ -142,7 +161,7 @@ namespace PMQLTHU_CHI
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string a = "ajk";
-            using (Report frm = new Report())
+            using (Report frm = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon))
             {
                 frm.ShowDialog();
             };
