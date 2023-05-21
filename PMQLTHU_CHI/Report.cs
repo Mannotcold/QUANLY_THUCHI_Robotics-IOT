@@ -14,8 +14,8 @@ namespace PMQLTHU_CHI
     {
 
         //List<Report> _list;
-        string _ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon;
-
+        string _ngaylap, _khoahoc, _lophoc,  _khachhang, _thanhtoan, _mahoadon;
+        string _thu;
         public Report(string ngaylap, string khoahoc, string lophoc, string thu, string khachhang, string thanhtoan, string mahoadon)
         {
             InitializeComponent();

@@ -33,7 +33,7 @@ namespace PMQLTHU_CHI
             connection = new SqlConnection(str);
             connection.Open();
             command = connection.CreateCommand();
-            command.CommandText = "select NgayLap,KhoaHoc,LopHoc,thu,chi,Nguoi, Cash,SoHoaDon from PHIEU_THU_CHI";
+            command.CommandText = "select NgayLap,KhoaHoc,LopHoc,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi, Cash,SoHoaDon from PHIEU_THU_CHI";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -46,8 +46,6 @@ namespace PMQLTHU_CHI
         {
             int i;
             i = dgvPhieuTC.CurrentRow.Index;
-            //string maphieu = dgvPhieuTC.Rows[i].Cells[0].Value.ToString();
-            MessageBox.Show(_ngaylap);
             _ngaylap = dgvPhieuTC.Rows[i].Cells[0].Value.ToString();
             _khoahoc = dgvPhieuTC.Rows[i].Cells[1].Value.ToString();
             _lophoc = dgvPhieuTC.Rows[i].Cells[2].Value.ToString();
@@ -56,8 +54,86 @@ namespace PMQLTHU_CHI
             _khachhang = dgvPhieuTC.Rows[i].Cells[5].Value.ToString();
             _thanhtoan = dgvPhieuTC.Rows[i].Cells[6].Value.ToString();
             _mahoadon = dgvPhieuTC.Rows[i].Cells[7].Value.ToString();
+            mahoadon.Text = _mahoadon;
 
-           
+
+        }
+
+        private void Print_Click(object sender, EventArgs e)
+        {
+            
+
+            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn:" + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+
+                    if (_thu != "")
+                    {
+                        using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon))
+                        {
+                            frmthu.ShowDialog();
+                        };
+                    }
+                    else
+                    {
+                        MessageBox.Show(_chi);
+                        using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon))
+                        {
+                            frmchi.ShowDialog();
+                        };
+                    }
+
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+            }
+        }
+
+        private void Xoa_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn xóa mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    SqlCommand com = new SqlCommand();
+                    //Lấy dữ liệu về từ kết quả câu lệnh trên
+                    //ExecuteReader() dùng với select
+                    //ExecuteNonquery(); với inserrt update delete
+                    //com.ExecuteNonQuery();
+                    //MAPHIEUDP();
+                    com.CommandType = CommandType.Text;
+                    com.CommandText = "delete from PHIEU_THU_CHI where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
+                    com.Connection = connection;
+                    //loaddata();
+                    int kq = com.ExecuteNonQuery();
+                    if (kq > 0)
+                    {
+                        MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                    loaddata();
+
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+            }
         }
 
         private void btnTraCuu_Click(object sender, EventArgs e)
@@ -161,22 +237,7 @@ namespace PMQLTHU_CHI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (_thu != "")
-            {
-                using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon))
-                {
-                    frmthu.ShowDialog();
-                };
-            }
-            else
-            {
-                MessageBox.Show(_chi);
-                using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon))
-                {
-                    frmchi.ShowDialog();
-                };
-            }
-           
+             
         }
     }
 }
