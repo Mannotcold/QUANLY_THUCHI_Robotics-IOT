@@ -64,8 +64,34 @@ namespace PMQLTHU_CHI
             connection.Close();
         }
 
+        string MaPhieuMx;
+        private void MaPhieuMax()
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+
+          
+            string sql = "select MAX(MaPhieu) FROM PHIEU_THU_CHI";
+
+            SqlCommand com = new SqlCommand(sql, connection);
+            //Lấy dữ liệu về từ kết quả câu lệnh trên
+            //ExecuteReader() dùng với select
+            //ExecuteNonquery(); với inserrt update delete
+            SqlDataReader dta = com.ExecuteReader();
+            while (dta.Read())
+            {
+                int max = dta.GetInt32(0);
+                MaPhieuMx = max.ToString();
+
+            }
+        }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            //Tạo ma hoa don theo form sẵn
+            MaPhieuMax();
+            string mahoadonchi = mahoadon.Text + "/" + MaPhieuMx;
+            MessageBox.Show(MaPhieuMx);
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -80,8 +106,11 @@ namespace PMQLTHU_CHI
                     //ExecuteNonquery(); với inserrt update delete
                     //com.ExecuteNonQuery();
                     //MAPHIEUDP();
+
+                   
+
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + ccbkhoahoc.Text.ToString() + "',N'" + ccblophoc.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "','" + mahoadon.Text + "')";
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + ccbkhoahoc.Text.ToString() + "',N'" + ccblophoc.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "','" + mahoadonchi + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
@@ -112,14 +141,19 @@ namespace PMQLTHU_CHI
 
         private void Quay_lai_Click(object sender, EventArgs e)
         {
+            
             Form menu = new MENU();
             this.Hide();
             menu.ShowDialog();
             this.Close();
         }
 
+        //insert thu
         private void themchi_Click(object sender, EventArgs e)
         {
+            //Tạo ma hoa don theo form sẵn
+            MaPhieuMax();
+            string mahoadon = mahdthu.Text + "/" + MaPhieuMx;
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -134,8 +168,10 @@ namespace PMQLTHU_CHI
                     //ExecuteNonquery(); với inserrt update delete
                     //com.ExecuteNonQuery();
                     //MAPHIEUDP();
+
+                   
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + ccbkhthu.Text.ToString() + "',N'" + ccblhthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangchi.Text + "',N'" + thanhtoanthu.Text + "','" + mahdthu.Text + "')";
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + ccbkhthu.Text.ToString() + "',N'" + ccblhthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangchi.Text + "',N'" + thanhtoanthu.Text + "','" + mahoadon + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();

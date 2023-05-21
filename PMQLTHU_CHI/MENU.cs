@@ -41,6 +41,7 @@ namespace PMQLTHU_CHI
             connection.Close();
         }
 
+
         private void dgvPhieuTC_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
