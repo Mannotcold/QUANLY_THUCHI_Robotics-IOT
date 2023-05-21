@@ -46,7 +46,25 @@ namespace PMQLTHU_CHI
         {
             int i;
             i = dgvPhieuTC.CurrentRow.Index;
-            _ngaylap = dgvPhieuTC.Rows[i].Cells[0].Value.ToString();
+           
+            // Lấy giá trị ngày tháng năm từ DateTimePicker
+            DataGridViewRow selectedRow = dgvPhieuTC.SelectedRows[0];
+
+            // Lấy giá trị ngày tháng từ ô cụ thể trong cột
+            DateTime selectedDate = Convert.ToDateTime(selectedRow.Cells[0].Value);
+
+            // Lấy ngày
+            int day = selectedDate.Day;
+
+            // Lấy tháng
+            int month = selectedDate.Month;
+
+            // Lấy năm
+            int year = selectedDate.Year;
+
+            _ngaylap = "Ngày " + day.ToString()+ " Tháng " + month.ToString() + " Năm " + year.ToString();
+
+
             _khoahoc = dgvPhieuTC.Rows[i].Cells[1].Value.ToString();
             _lophoc = dgvPhieuTC.Rows[i].Cells[2].Value.ToString();
             _thu = dgvPhieuTC.Rows[i].Cells[3].Value.ToString();
@@ -79,7 +97,6 @@ namespace PMQLTHU_CHI
                     }
                     else
                     {
-                        MessageBox.Show(_chi);
                         using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon))
                         {
                             frmchi.ShowDialog();

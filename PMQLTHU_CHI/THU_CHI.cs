@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 using System.Data.SqlClient;
 
@@ -86,12 +89,54 @@ namespace PMQLTHU_CHI
             }
         }
 
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            //Kiểm tra textbox không được bỏ trống
+
+            if (ccbkhoahoc.Text.ToString() == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin khóa hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (ccblophoc.Text.ToString() == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin lớp hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (txtchi.Text == "" )
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin chi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (Nguoi.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin người nhận!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (ccbthanhtoan.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (mahoadon.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin mã hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Regex rgx = new Regex("[^0-9]");
+            if (rgx.IsMatch(txtchi.Text))
+            {
+                MessageBox.Show("Chi chỉ được chứa số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtthu.Clear();
+                return;
+            }
+
             //Tạo ma hoa don theo form sẵn
             MaPhieuMax();
             string mahoadonchi = mahoadon.Text + "/" + MaPhieuMx;
-            MessageBox.Show(MaPhieuMx);
+            //MessageBox.Show(MaPhieuMx);
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -151,6 +196,55 @@ namespace PMQLTHU_CHI
         //insert thu
         private void themchi_Click(object sender, EventArgs e)
         {
+
+            if (ccbkhthu.Text.ToString() == "" || ccblophoc.Text.ToString() == "" || txtthu.Text == "" || khachhangchi.Text == "" || thanhtoanthu.Text == "" || mahdthu.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            if (ccbkhthu.Text.ToString() == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin khóa hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (ccblophoc.Text.ToString() == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin lớp hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (txtthu.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin thu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (khachhangchi.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin người nộp tiền!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (thanhtoanthu.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (mahdthu.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin mã hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            Regex rgx = new Regex("[^0-9]");
+            if (rgx.IsMatch(txtthu.Text))
+            {
+                MessageBox.Show("Thu chỉ được chứa số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtthu.Clear();
+                return;
+            }
+
+
             //Tạo ma hoa don theo form sẵn
             MaPhieuMax();
             string mahoadon = mahdthu.Text + "/" + MaPhieuMx;
