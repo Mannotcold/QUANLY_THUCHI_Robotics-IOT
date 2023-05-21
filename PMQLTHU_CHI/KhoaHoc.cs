@@ -182,7 +182,12 @@ namespace PMQLTHU_CHI
 
         private void Quay_lai_Click(object sender, EventArgs e)
         {
+            // Gọi hàm từ form THU_CHI khác
+
+            Form phieutc = new THU_CHI();
             this.Hide();
+            phieutc.ShowDialog();
+            this.Close();
         }
     }
 }

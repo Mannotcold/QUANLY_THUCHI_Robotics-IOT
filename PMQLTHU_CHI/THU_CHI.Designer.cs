@@ -46,7 +46,7 @@ namespace PMQLTHU_CHI
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ccbkhthu = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.khachhangchi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.khachhangthu = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.timethu = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -132,7 +132,7 @@ namespace PMQLTHU_CHI
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel10);
             this.guna2Panel2.Controls.Add(this.ccbkhthu);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel11);
-            this.guna2Panel2.Controls.Add(this.khachhangchi);
+            this.guna2Panel2.Controls.Add(this.khachhangthu);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel12);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.timethu);
@@ -320,24 +320,24 @@ namespace PMQLTHU_CHI
             this.guna2HtmlLabel11.TabIndex = 4;
             this.guna2HtmlLabel11.Text = "Khóa học";
             // 
-            // khachhangchi
+            // khachhangthu
             // 
-            this.khachhangchi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.khachhangchi.DefaultText = "";
-            this.khachhangchi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.khachhangchi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.khachhangchi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.khachhangchi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.khachhangchi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.khachhangchi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.khachhangchi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.khachhangchi.Location = new System.Drawing.Point(473, 33);
-            this.khachhangchi.Name = "khachhangchi";
-            this.khachhangchi.PasswordChar = '\0';
-            this.khachhangchi.PlaceholderText = "";
-            this.khachhangchi.SelectedText = "";
-            this.khachhangchi.Size = new System.Drawing.Size(148, 33);
-            this.khachhangchi.TabIndex = 3;
+            this.khachhangthu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.khachhangthu.DefaultText = "";
+            this.khachhangthu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.khachhangthu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.khachhangthu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.khachhangthu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.khachhangthu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.khachhangthu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.khachhangthu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.khachhangthu.Location = new System.Drawing.Point(473, 33);
+            this.khachhangthu.Name = "khachhangthu";
+            this.khachhangthu.PasswordChar = '\0';
+            this.khachhangthu.PlaceholderText = "";
+            this.khachhangthu.SelectedText = "";
+            this.khachhangthu.Size = new System.Drawing.Size(148, 33);
+            this.khachhangthu.TabIndex = 3;
             // 
             // guna2HtmlLabel12
             // 
@@ -708,7 +708,7 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2ComboBox ccbkhthu;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2TextBox khachhangchi;
+        private Guna.UI2.WinForms.Guna2TextBox khachhangthu;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker timethu;

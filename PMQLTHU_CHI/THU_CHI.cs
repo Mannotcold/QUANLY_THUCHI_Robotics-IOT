@@ -31,7 +31,7 @@ namespace PMQLTHU_CHI
         DataTable table = new DataTable();
 
 
-        void loadkhoahoc()
+        public void loadkhoahoc()
         {
             connection = new SqlConnection(str);
             connection.Open();
@@ -49,7 +49,7 @@ namespace PMQLTHU_CHI
             connection.Close();
         }
 
-        void loadlophoc()
+        public void loadlophoc()
         {
             connection = new SqlConnection(str);
             connection.Open();
@@ -125,6 +125,7 @@ namespace PMQLTHU_CHI
                 return;
             }
 
+            //ràng buộc textbox chi chỉ được nhập số
             Regex rgx = new Regex("[^0-9]");
             if (rgx.IsMatch(txtchi.Text))
             {
@@ -197,19 +198,15 @@ namespace PMQLTHU_CHI
         private void themchi_Click(object sender, EventArgs e)
         {
 
-            if (ccbkhthu.Text.ToString() == "" || ccblophoc.Text.ToString() == "" || txtthu.Text == "" || khachhangchi.Text == "" || thanhtoanthu.Text == "" || mahdthu.Text == "")
-            {
-                MessageBox.Show("Bạn phải điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
 
+            // //ràng buộc textbox khong được để trống
             if (ccbkhthu.Text.ToString() == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin khóa hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (ccblophoc.Text.ToString() == "")
+            else if (ccblhthu.Text.ToString() == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin lớp hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -219,7 +216,7 @@ namespace PMQLTHU_CHI
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin thu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (khachhangchi.Text == "")
+            else if (khachhangthu.Text == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin người nộp tiền!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -235,7 +232,7 @@ namespace PMQLTHU_CHI
                 return;
             }
 
-
+            //ràng buộc textbox thu chỉ được nhập số
             Regex rgx = new Regex("[^0-9]");
             if (rgx.IsMatch(txtthu.Text))
             {
@@ -265,7 +262,7 @@ namespace PMQLTHU_CHI
 
                    
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + ccbkhthu.Text.ToString() + "',N'" + ccblhthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangchi.Text + "',N'" + thanhtoanthu.Text + "','" + mahoadon + "')";
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + ccbkhthu.Text.ToString() + "',N'" + ccblhthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangthu.Text + "',N'" + thanhtoanthu.Text + "','" + mahoadon + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
@@ -291,25 +288,37 @@ namespace PMQLTHU_CHI
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
             Form khoahoc = new KhoaHoc();
+
+            this.Hide();
             khoahoc.ShowDialog();
+            this.Close();
         }
 
         private void khthubtn_Click(object sender, EventArgs e)
         {
             Form khoahoc = new KhoaHoc();
+            
+            this.Hide();
             khoahoc.ShowDialog();
+            this.Close();
         }
 
         private void btnlophoc_Click(object sender, EventArgs e)
         {
             Form lophoc = new LopHoc();
+
+            this.Hide();
             lophoc.ShowDialog();
+            this.Close();
         }
 
         private void lhthubtn_Click(object sender, EventArgs e)
         {
             Form lophoc = new LopHoc();
+            
+            this.Hide();
             lophoc.ShowDialog();
+            this.Close();
         }
     }
 }
