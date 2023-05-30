@@ -33,7 +33,7 @@ namespace PMQLTHU_CHI
             connection = new SqlConnection(str);
             connection.Open();
             command = connection.CreateCommand();
-            command.CommandText = "select NgayLap,KhoaHoc,LopHoc,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi, Cash,SoHoaDon from PHIEU_THU_CHI";
+            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -165,7 +165,7 @@ namespace PMQLTHU_CHI
                 connection.Open();
                 string TenKH = txtTuKhoa.Text + '%';
                 command = connection.CreateCommand();
-                command.CommandText = "select * from PHIEU_THU_CHI WHERE Nguoi LIKE '" + TenKH + "'";
+                command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI WHERE Nguoi LIKE '" + TenKH + "'";
                 adapter.SelectCommand = command;
                 table.Clear();
                 adapter.Fill(table);
