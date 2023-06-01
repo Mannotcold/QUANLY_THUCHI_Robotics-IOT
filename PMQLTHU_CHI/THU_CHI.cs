@@ -289,36 +289,64 @@ namespace PMQLTHU_CHI
         {
             Form khoahoc = new KhoaHoc();
 
-            this.Hide();
             khoahoc.ShowDialog();
-            this.Close();
         }
 
         private void khthubtn_Click(object sender, EventArgs e)
         {
             Form khoahoc = new KhoaHoc();
-            
-            this.Hide();
             khoahoc.ShowDialog();
-            this.Close();
         }
 
         private void btnlophoc_Click(object sender, EventArgs e)
         {
             Form lophoc = new LopHoc();
 
-            this.Hide();
             lophoc.ShowDialog();
-            this.Close();
         }
 
         private void lhthubtn_Click(object sender, EventArgs e)
         {
             Form lophoc = new LopHoc();
             
-            this.Hide();
             lophoc.ShowDialog();
-            this.Close();
+        }
+
+        private void ccbkhthu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void ccbkhthu_MouseEnter(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void ccbkhthu_MouseClick(object sender, MouseEventArgs e)
+        {
+            ccbkhthu.Items.Clear();
+            loadkhoahoc();
+
+        }
+
+        private void ccblhthu_MouseClick(object sender, MouseEventArgs e)
+        {
+            ccblhthu.Items.Clear();
+            loadlophoc();
+        }
+
+        private void ccbkhoahoc_MouseClick(object sender, MouseEventArgs e)
+        {
+            ccbkhoahoc.Items.Clear();
+            loadkhoahoc();
+        }
+
+        private void ccblophoc_MouseClick(object sender, MouseEventArgs e)
+        {
+            ccblophoc.Items.Clear();
+            loadlophoc();
         }
     }
 }

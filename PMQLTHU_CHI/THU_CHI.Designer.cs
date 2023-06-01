@@ -286,6 +286,7 @@ namespace PMQLTHU_CHI
             this.ccblhthu.Name = "ccblhthu";
             this.ccblhthu.Size = new System.Drawing.Size(533, 36);
             this.ccblhthu.TabIndex = 7;
+            this.ccblhthu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ccblhthu_MouseClick);
             // 
             // guna2HtmlLabel10
             // 
@@ -310,6 +311,9 @@ namespace PMQLTHU_CHI
             this.ccbkhthu.Name = "ccbkhthu";
             this.ccbkhthu.Size = new System.Drawing.Size(533, 36);
             this.ccbkhthu.TabIndex = 5;
+            this.ccbkhthu.SelectedIndexChanged += new System.EventHandler(this.ccbkhthu_SelectedIndexChanged);
+            this.ccbkhthu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ccbkhthu_MouseClick);
+            this.ccbkhthu.MouseEnter += new System.EventHandler(this.ccbkhthu_MouseEnter);
             // 
             // guna2HtmlLabel11
             // 
@@ -551,6 +555,7 @@ namespace PMQLTHU_CHI
             this.ccblophoc.Name = "ccblophoc";
             this.ccblophoc.Size = new System.Drawing.Size(528, 36);
             this.ccblophoc.TabIndex = 7;
+            this.ccblophoc.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ccblophoc_MouseClick);
             // 
             // guna2HtmlLabel3
             // 
@@ -575,6 +580,7 @@ namespace PMQLTHU_CHI
             this.ccbkhoahoc.Name = "ccbkhoahoc";
             this.ccbkhoahoc.Size = new System.Drawing.Size(528, 36);
             this.ccbkhoahoc.TabIndex = 5;
+            this.ccbkhoahoc.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ccbkhoahoc_MouseClick);
             // 
             // guna2HtmlLabel2
             // 

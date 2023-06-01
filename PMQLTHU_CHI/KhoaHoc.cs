@@ -184,9 +184,6 @@ namespace PMQLTHU_CHI
         {
             // Gọi hàm từ form THU_CHI khác
 
-            Form phieutc = new THU_CHI();
-            this.Hide();
-            phieutc.ShowDialog();
             this.Close();
         }
     }
