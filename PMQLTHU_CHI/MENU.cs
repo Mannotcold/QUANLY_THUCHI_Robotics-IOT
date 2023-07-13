@@ -127,7 +127,43 @@ namespace PMQLTHU_CHI
 
         private void Xoa_Click_1(object sender, EventArgs e)
         {
+            DialogResult rs = MessageBox.Show("Bạn có muốn xóa mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
 
+                try
+                {
+
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    SqlCommand com = new SqlCommand();
+                    //Lấy dữ liệu về từ kết quả câu lệnh trên
+                    //ExecuteReader() dùng với select
+                    //ExecuteNonquery(); với inserrt update delete
+                    //com.ExecuteNonQuery();
+                    //MAPHIEUDP();
+                    com.CommandType = CommandType.Text;
+                    com.CommandText = "delete from PHIEU_THU_CHI where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
+                    com.Connection = connection;
+                    //loaddata();
+                    int kq = com.ExecuteNonQuery();
+                    if (kq > 0)
+                    {
+                        MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                    loaddata();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+            }
         }
 
         private void Print_Click_1(object sender, EventArgs e)
