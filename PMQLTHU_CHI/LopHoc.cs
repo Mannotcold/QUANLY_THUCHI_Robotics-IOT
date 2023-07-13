@@ -89,7 +89,7 @@ namespace PMQLTHU_CHI
                     loaddata();
 
                 }
-                catch (Exception exp)
+                catch (Exception )
                 {
                     MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
@@ -130,7 +130,7 @@ namespace PMQLTHU_CHI
                     loaddata();
 
                 }
-                catch (Exception exp)
+                catch (Exception )
                 {
                     MessageBox.Show("Cập nhật không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
@@ -172,7 +172,7 @@ namespace PMQLTHU_CHI
                     loaddata();
 
                 }
-                catch (Exception exp)
+                catch (Exception )
                 {
                     MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 

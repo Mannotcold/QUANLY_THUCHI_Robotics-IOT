@@ -170,7 +170,7 @@ namespace PMQLTHU_CHI
                     }
 
                 }
-                catch (Exception exp)
+                catch (Exception )
                 {
                     MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
@@ -276,7 +276,7 @@ namespace PMQLTHU_CHI
                     }
 
                 }
-                catch (Exception exp)
+                catch (Exception )
                 {
                     MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 

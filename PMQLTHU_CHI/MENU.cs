@@ -81,35 +81,7 @@ namespace PMQLTHU_CHI
         {
             
 
-            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn:" + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (rs == DialogResult.Yes)
-            {
-
-                try
-                {
-
-                    if (_thu != "")
-                    {
-                        using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon))
-                        {
-                            frmthu.ShowDialog();
-                        };
-                    }
-                    else
-                    {
-                        using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon))
-                        {
-                            frmchi.ShowDialog();
-                        };
-                    }
-
-                }
-                catch (Exception exp)
-                {
-                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-                }
-            }
+            
         }
 
         private void Xoa_Click(object sender, EventArgs e)
@@ -145,7 +117,45 @@ namespace PMQLTHU_CHI
                     loaddata();
 
                 }
-                catch (Exception exp)
+                catch (Exception )
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+            }
+        }
+
+        private void Xoa_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Print_Click_1(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn:" + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+
+                    if (_thu != "")
+                    {
+                        using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon))
+                        {
+                            frmthu.ShowDialog();
+                        };
+                    }
+                    else
+                    {
+                        using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon))
+                        {
+                            frmchi.ShowDialog();
+                        };
+                    }
+
+                }
+                catch (Exception)
                 {
                     MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 

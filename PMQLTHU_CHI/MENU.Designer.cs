@@ -36,8 +36,8 @@ namespace PMQLTHU_CHI
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.thêmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmMớiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Xoa = new Guna.UI2.WinForms.Guna2Button();
             this.mahoadon = new System.Windows.Forms.TextBox();
@@ -119,23 +119,23 @@ namespace PMQLTHU_CHI
             // thêmMớiToolStripMenuItem1
             // 
             this.thêmMớiToolStripMenuItem1.Name = "thêmMớiToolStripMenuItem1";
-            this.thêmMớiToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.thêmMớiToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.thêmMớiToolStripMenuItem1.Text = "Thêm mới";
             this.thêmMớiToolStripMenuItem1.Click += new System.EventHandler(this.thêmMớiToolStripMenuItem1_Click);
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // exportExcelToolStripMenuItem
             // 
             this.exportExcelToolStripMenuItem.Name = "exportExcelToolStripMenuItem";
-            this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exportExcelToolStripMenuItem.Text = "Export excel";
             this.exportExcelToolStripMenuItem.Click += new System.EventHandler(this.exportExcelToolStripMenuItem_Click);
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // guna2HtmlLabel9
             // 
@@ -161,6 +161,7 @@ namespace PMQLTHU_CHI
             this.Xoa.TabIndex = 28;
             this.Xoa.Text = "Xóa";
             this.Xoa.UseTransparentBackground = true;
+            this.Xoa.Click += new System.EventHandler(this.Xoa_Click_1);
             // 
             // mahoadon
             // 
@@ -185,11 +186,12 @@ namespace PMQLTHU_CHI
             this.Print.TabIndex = 26;
             this.Print.Text = "Print";
             this.Print.UseTransparentBackground = true;
+            this.Print.Click += new System.EventHandler(this.Print_Click_1);
             // 
             // MENU
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1254, 735);
             this.Controls.Add(this.guna2HtmlLabel9);
             this.Controls.Add(this.Xoa);
@@ -203,7 +205,6 @@ namespace PMQLTHU_CHI
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MENU";
             this.Text = "MENU";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.MENU_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTC)).EndInit();
             this.menuStrip1.ResumeLayout(false);
