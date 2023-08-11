@@ -287,7 +287,7 @@
             <Top>3.63145in</Top>
             <Left>5.87372in</Left>
             <Height>0.25in</Height>
-            <Width>2.20963in</Width>
+            <Width>1.74088in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -434,56 +434,44 @@
               </Border>
             </Style>
           </Image>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Người lập phiếu</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>4.42311in</Top>
+            <Left>0.5734in</Left>
+            <Height>0.25in</Height>
+            <Width>1.32813in</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>5.19394in</Height>
         <Style />
       </Body>
       <Width>8.54864in</Width>
       <Page>
-        <PageFooter>
-          <Height>0.47223in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox7">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Người lập phiếu</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.04167in</Top>
-              <Left>6.18969in</Left>
-              <Height>0.25in</Height>
-              <Width>1.32813in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageFooter>
         <PageHeight>5.83in</PageHeight>
         <PageWidth>8.27in</PageWidth>
-        <BottomMargin>1in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
