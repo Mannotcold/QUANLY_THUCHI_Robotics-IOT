@@ -48,5 +48,10 @@ namespace PMQLTHU_CHI
         {
             MessageBox.Show("Chức năng đang được phất triển, vui lòng quay lại sau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
         }
+
+        private void Fogetpass_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang được phất triển, vui lòng quay lại sau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
     }
    }

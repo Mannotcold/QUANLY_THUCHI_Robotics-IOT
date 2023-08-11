@@ -130,6 +130,7 @@ namespace PMQLTHU_CHI
             this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Forgot Password";
+            this.label2.Click += new System.EventHandler(this.Fogetpass_Click);
             // 
             // label1
             // 
