@@ -348,5 +348,10 @@ namespace PMQLTHU_CHI
             ccblophoc.Items.Clear();
             loadlophoc();
         }
+
+        private void guna2HtmlLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

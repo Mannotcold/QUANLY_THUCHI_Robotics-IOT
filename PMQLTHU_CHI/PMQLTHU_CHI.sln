@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMQLTHU_CHI", "PMQLTHU_CHI.csproj", "{0E3CE915-286C-44F5-BE27-687C7EF7FFF9}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QL_THUCHI", "..\QL_THUCHI\QL_THUCHI.vdproj", "{86341E19-A7E5-42B4-823E-8061AF2CA1AD}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QL_ThuChi_Robotics", "..\QL_ThuChi_Robotics\QL_ThuChi_Robotics.vdproj", "{4B0F2F2C-286D-41C8-A3EA-C21E5B8C4EEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{0E3CE915-286C-44F5-BE27-687C7EF7FFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E3CE915-286C-44F5-BE27-687C7EF7FFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E3CE915-286C-44F5-BE27-687C7EF7FFF9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86341E19-A7E5-42B4-823E-8061AF2CA1AD}.Debug|Any CPU.ActiveCfg = Debug
-		{86341E19-A7E5-42B4-823E-8061AF2CA1AD}.Release|Any CPU.ActiveCfg = Release
+		{4B0F2F2C-286D-41C8-A3EA-C21E5B8C4EEB}.Debug|Any CPU.ActiveCfg = Debug
+		{4B0F2F2C-286D-41C8-A3EA-C21E5B8C4EEB}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

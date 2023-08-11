@@ -38,12 +38,16 @@ namespace PMQLTHU_CHI
             this.thêmMớiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Xoa = new Guna.UI2.WinForms.Guna2Button();
             this.mahoadon = new System.Windows.Forms.TextBox();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Print = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTC)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPhieuTC
@@ -55,12 +59,12 @@ namespace PMQLTHU_CHI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhieuTC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhieuTC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuTC.Location = new System.Drawing.Point(35, 68);
+            this.dgvPhieuTC.Location = new System.Drawing.Point(3, 51);
             this.dgvPhieuTC.MultiSelect = false;
             this.dgvPhieuTC.Name = "dgvPhieuTC";
             this.dgvPhieuTC.ReadOnly = true;
             this.dgvPhieuTC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuTC.Size = new System.Drawing.Size(1179, 605);
+            this.dgvPhieuTC.Size = new System.Drawing.Size(1195, 553);
             this.dgvPhieuTC.TabIndex = 11;
             this.dgvPhieuTC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTC_CellContentClick);
             // 
@@ -68,7 +72,7 @@ namespace PMQLTHU_CHI
             // 
             this.btnTraCuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraCuu.Location = new System.Drawing.Point(1139, 27);
+            this.btnTraCuu.Location = new System.Drawing.Point(1103, 13);
             this.btnTraCuu.Name = "btnTraCuu";
             this.btnTraCuu.Size = new System.Drawing.Size(75, 23);
             this.btnTraCuu.TabIndex = 10;
@@ -80,7 +84,7 @@ namespace PMQLTHU_CHI
             // 
             this.txtTuKhoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTuKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTuKhoa.Location = new System.Drawing.Point(887, 29);
+            this.txtTuKhoa.Location = new System.Drawing.Point(851, 15);
             this.txtTuKhoa.Name = "txtTuKhoa";
             this.txtTuKhoa.Size = new System.Drawing.Size(223, 20);
             this.txtTuKhoa.TabIndex = 9;
@@ -90,7 +94,7 @@ namespace PMQLTHU_CHI
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(796, 32);
+            this.label1.Location = new System.Drawing.Point(760, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 8;
@@ -119,32 +123,38 @@ namespace PMQLTHU_CHI
             // thêmMớiToolStripMenuItem1
             // 
             this.thêmMớiToolStripMenuItem1.Name = "thêmMớiToolStripMenuItem1";
-            this.thêmMớiToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.thêmMớiToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.thêmMớiToolStripMenuItem1.Text = "Thêm mới";
             this.thêmMớiToolStripMenuItem1.Click += new System.EventHandler(this.thêmMớiToolStripMenuItem1_Click);
             // 
             // exportExcelToolStripMenuItem
             // 
             this.exportExcelToolStripMenuItem.Name = "exportExcelToolStripMenuItem";
-            this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportExcelToolStripMenuItem.Text = "Export excel";
             this.exportExcelToolStripMenuItem.Click += new System.EventHandler(this.exportExcelToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
-            // guna2HtmlLabel9
+            // guna2Panel1
             // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(565, 679);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(61, 15);
-            this.guna2HtmlLabel9.TabIndex = 29;
-            this.guna2HtmlLabel9.Text = "Mã hóa đơn";
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.guna2Panel1.Controls.Add(this.btnTraCuu);
+            this.guna2Panel1.Controls.Add(this.txtTuKhoa);
+            this.guna2Panel1.Controls.Add(this.dgvPhieuTC);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Location = new System.Drawing.Point(29, 46);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1201, 617);
+            this.guna2Panel1.TabIndex = 30;
             // 
             // Xoa
             // 
@@ -155,7 +165,7 @@ namespace PMQLTHU_CHI
             this.Xoa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Xoa.ForeColor = System.Drawing.Color.White;
             this.Xoa.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Xoa.Location = new System.Drawing.Point(849, 690);
+            this.Xoa.Location = new System.Drawing.Point(157, 37);
             this.Xoa.Name = "Xoa";
             this.Xoa.Size = new System.Drawing.Size(131, 33);
             this.Xoa.TabIndex = 28;
@@ -166,10 +176,19 @@ namespace PMQLTHU_CHI
             // mahoadon
             // 
             this.mahoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mahoadon.Location = new System.Drawing.Point(549, 698);
+            this.mahoadon.Location = new System.Drawing.Point(27, 37);
             this.mahoadon.Name = "mahoadon";
             this.mahoadon.Size = new System.Drawing.Size(104, 20);
             this.mahoadon.TabIndex = 27;
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(49, 16);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(61, 15);
+            this.guna2HtmlLabel9.TabIndex = 29;
+            this.guna2HtmlLabel9.Text = "Mã hóa đơn";
             // 
             // Print
             // 
@@ -180,7 +199,7 @@ namespace PMQLTHU_CHI
             this.Print.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Print.ForeColor = System.Drawing.Color.White;
             this.Print.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Print.Location = new System.Drawing.Point(211, 690);
+            this.Print.Location = new System.Drawing.Point(157, 0);
             this.Print.Name = "Print";
             this.Print.Size = new System.Drawing.Size(131, 33);
             this.Print.TabIndex = 26;
@@ -188,20 +207,27 @@ namespace PMQLTHU_CHI
             this.Print.UseTransparentBackground = true;
             this.Print.Click += new System.EventHandler(this.Print_Click_1);
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel2.AutoScroll = true;
+            this.guna2Panel2.Controls.Add(this.Print);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel9);
+            this.guna2Panel2.Controls.Add(this.mahoadon);
+            this.guna2Panel2.Controls.Add(this.Xoa);
+            this.guna2Panel2.Location = new System.Drawing.Point(942, 669);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(288, 70);
+            this.guna2Panel2.TabIndex = 31;
+            // 
             // MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 735);
-            this.Controls.Add(this.guna2HtmlLabel9);
-            this.Controls.Add(this.Xoa);
-            this.Controls.Add(this.mahoadon);
-            this.Controls.Add(this.Print);
+            this.ClientSize = new System.Drawing.Size(1254, 742);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.dgvPhieuTC);
-            this.Controls.Add(this.btnTraCuu);
-            this.Controls.Add(this.txtTuKhoa);
-            this.Controls.Add(this.label1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MENU";
             this.Text = "MENU";
@@ -209,6 +235,10 @@ namespace PMQLTHU_CHI
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTC)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,9 +255,11 @@ namespace PMQLTHU_CHI
         private System.Windows.Forms.ToolStripMenuItem thêmMớiToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportExcelToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2Button Xoa;
-        private System.Windows.Forms.TextBox mahoadon;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button Print;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private System.Windows.Forms.TextBox mahoadon;
+        private Guna.UI2.WinForms.Guna2Button Xoa;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

@@ -32,7 +32,7 @@ namespace PMQLTHU_CHI
             
             string TK = taikhoan.Text;
             string MK = matkhau.Text;
-            if (TK == "quanly" && MK == "12345")
+            if (TK == "dhthuong" && MK == "dhthuong123")
             {
                 Form quanLy = new MENU();
                 this.Hide();

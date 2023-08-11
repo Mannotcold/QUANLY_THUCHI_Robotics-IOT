@@ -20,8 +20,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.56944in</Top>
-            <Left>0.7934in</Left>
+            <Top>1.94444in</Top>
+            <Left>0.76044in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <Style>
@@ -48,10 +48,10 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>0.56944in</Top>
-            <Left>2.29688in</Left>
+            <Top>1.94444in</Top>
+            <Left>2.00523in</Left>
             <Height>0.25in</Height>
-            <Width>3.15973in</Width>
+            <Width>1.71181in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -78,8 +78,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.10069in</Top>
-            <Left>0.7934in</Left>
+            <Top>2.47569in</Top>
+            <Left>0.76044in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <ZIndex>2</ZIndex>
@@ -107,10 +107,10 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.10069in</Top>
-            <Left>2.29688in</Left>
+            <Top>2.47569in</Top>
+            <Left>2.00523in</Left>
             <Height>0.25in</Height>
-            <Width>3.15973in</Width>
+            <Width>1.71181in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -137,8 +137,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.67361in</Top>
-            <Left>0.7934in</Left>
+            <Top>3.69445in</Top>
+            <Left>0.76044in</Left>
             <Height>0.25in</Height>
             <Width>0.84375in</Width>
             <ZIndex>4</ZIndex>
@@ -166,10 +166,10 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.67361in</Top>
-            <Left>2.29688in</Left>
+            <Top>3.69445in</Top>
+            <Left>2.00523in</Left>
             <Height>0.25in</Height>
-            <Width>3.15973in</Width>
+            <Width>1.71181in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -196,10 +196,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.23611in</Top>
-            <Left>0.79341in</Left>
+            <Top>3.06944in</Top>
+            <Left>0.76044in</Left>
             <Height>0.25in</Height>
-            <Width>1.26389in</Width>
+            <Width>1.17535in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -225,10 +225,10 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>2.23611in</Top>
-            <Left>2.29688in</Left>
+            <Top>3.06944in</Top>
+            <Left>2.00523in</Left>
             <Height>0.25in</Height>
-            <Width>3.15973in</Width>
+            <Width>1.55556in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -247,7 +247,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Thanh toán:</Value>
+                    <Value>Hình thức thanh toán:</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -255,10 +255,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.81944in</Top>
-            <Left>0.79341in</Left>
+            <Top>3.69445in</Top>
+            <Left>3.7726in</Left>
             <Height>0.25in</Height>
-            <Width>0.84375in</Width>
+            <Width>1.54167in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -284,10 +284,10 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>2.81944in</Top>
-            <Left>2.29688in</Left>
+            <Top>3.69445in</Top>
+            <Left>5.44274in</Left>
             <Height>0.25in</Height>
-            <Width>3.15973in</Width>
+            <Width>1.55556in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -306,7 +306,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Mã hóa đơn:</Value>
+                    <Value>Số: </Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -314,10 +314,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.35069in</Top>
-            <Left>0.79341in</Left>
+            <Top>0.64931in</Top>
+            <Left>6.1042in</Left>
             <Height>0.25in</Height>
-            <Width>1.07639in</Width>
+            <Width>0.30208in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -343,10 +343,10 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>3.35069in</Top>
-            <Left>2.29688in</Left>
+            <Top>0.64931in</Top>
+            <Left>6.44795in</Left>
             <Height>0.25in</Height>
-            <Width>3.15973in</Width>
+            <Width>1.55556in</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -358,100 +358,90 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>PHIẾU CHI</Value>
+                    <Style>
+                      <FontSize>20pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.53473in</Top>
+            <Left>3.43926in</Left>
+            <Height>0.36458in</Height>
+            <Width>1.76041in</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Text1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!pngaylapchi.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.96876in</Top>
+            <Left>3.28476in</Left>
+            <Height>0.25in</Height>
+            <Width>2.46875in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>logo_roboticmed</Value>
+            <Sizing>FitProportional</Sizing>
+            <Left>0.10417in</Left>
+            <Height>1.00348in</Height>
+            <Width>2.63719in</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
         </ReportItems>
-        <Height>5.72677in</Height>
+        <Height>5.1125in</Height>
         <Style />
       </Body>
-      <Width>8.34375in</Width>
+      <Width>8.52435in</Width>
       <Page>
-        <PageHeader>
-          <Height>1.41666in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Image Name="Image1">
-              <Source>Embedded</Source>
-              <Value>logo_roboticmed</Value>
-              <Sizing>FitProportional</Sizing>
-              <Height>1.38542in</Height>
-              <Width>2.6823in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>PHIẾU CHI</Value>
-                      <Style>
-                        <FontSize>20pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.48264in</Top>
-              <Left>3.14236in</Left>
-              <Height>0.36458in</Height>
-              <Width>1.76041in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Text1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!pngaylapchi.Value</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <Top>0.91667in</Top>
-              <Left>2.98786in</Left>
-              <Height>0.25in</Height>
-              <Width>2.46875in</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageHeader>
         <PageFooter>
-          <Height>0.7227in</Height>
+          <Height>0.52431in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -471,7 +461,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>0.04167in</Top>
-              <Left>0.37501in</Left>
+              <Left>0.441in</Left>
               <Height>0.25in</Height>
               <Width>1.49479in</Width>
               <Style>
@@ -499,8 +489,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.05556in</Top>
-              <Left>4.96355in</Left>
+              <Top>0.04167in</Top>
+              <Left>6.3924in</Left>
               <Height>0.25in</Height>
               <Width>1.38542in</Width>
               <ZIndex>1</ZIndex>
@@ -521,9 +511,8 @@
             </Border>
           </Style>
         </PageFooter>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
+        <PageHeight>5.83in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
         <BottomMargin>1in</BottomMargin>
         <Style />
       </Page>

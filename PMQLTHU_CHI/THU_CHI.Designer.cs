@@ -266,11 +266,12 @@ namespace PMQLTHU_CHI
             // guna2HtmlLabel9
             // 
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(404, 302);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(365, 302);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(58, 15);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(103, 15);
             this.guna2HtmlLabel9.TabIndex = 8;
-            this.guna2HtmlLabel9.Text = "Thanh toán";
+            this.guna2HtmlLabel9.Text = "Hình thức thanh toán";
+            this.guna2HtmlLabel9.Click += new System.EventHandler(this.guna2HtmlLabel9_Click);
             // 
             // ccblhthu
             // 
@@ -535,11 +536,11 @@ namespace PMQLTHU_CHI
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(398, 304);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(357, 303);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(58, 15);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(103, 15);
             this.guna2HtmlLabel4.TabIndex = 8;
-            this.guna2HtmlLabel4.Text = "Thanh toán";
+            this.guna2HtmlLabel4.Text = "Hình thức thanh toán";
             // 
             // ccblophoc
             // 
