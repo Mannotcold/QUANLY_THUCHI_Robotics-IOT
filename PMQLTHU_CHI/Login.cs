@@ -35,19 +35,6 @@ namespace PMQLTHU_CHI
                 MessageBox.Show("Pass không được để trống");
                 return;
             }
-            
-           /* string TK = taikhoan.Text;
-            string MK = matkhau.Text;
-            if (TK == "dhthuong" && MK == "dhthuong123")
-            {
-                Form quanLy = new MENU();
-                this.Hide();
-                quanLy.ShowDialog();
-                this.Close();
-            }
-            else
-                MessageBox.Show("Đăng nhập không thành công! Vui lòng kiểm tra lại tài khoản, mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-*/
 
             try
             {
@@ -66,7 +53,6 @@ namespace PMQLTHU_CHI
                 com.CommandText = "select * from TaiKhoan WHERE TEN_TK = '" + username + "' AND MATKHAU = '" + password + "'";
                 com.Connection = connection;
                 //loaddata();
-                int kq = com.ExecuteNonQuery();
 
                 SqlDataReader dta = com.ExecuteReader();
                 
@@ -91,7 +77,10 @@ namespace PMQLTHU_CHI
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng đang được phất triển, vui lòng quay lại sau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            Form quanLy = new Register();
+            this.Hide();
+            quanLy.ShowDialog();
+            this.Close();
         }
 
         private void Fogetpass_Click(object sender, EventArgs e)
