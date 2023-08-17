@@ -77,3 +77,4 @@ D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.exe
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.pdb
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.csproj.AssemblyReference.cache
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.Register.resources
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.ForgotPassForm.resources

@@ -11,38 +11,30 @@ using System.Data.SqlClient;
 
 namespace PMQLTHU_CHI
 {
-    public partial class Login : Form
+    public partial class ForgotPassForm : Form
     {
-        public Login()
+        public ForgotPassForm()
         {
             InitializeComponent();
         }
+
 
         SqlConnection connection;
         SqlCommand command;
         string str = "Data Source=.;Initial Catalog=QLTC;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
+        DataTable table = new DataTable();
 
-        private void Login_Click(object sender, EventArgs e)
+        private void Thoat_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
-
-            if (taikhoan.Text == "")
-            {
-                MessageBox.Show("ID không được để trống");
-                return;
-            }
-            if (matkhau.Text == "")
-            {
-                MessageBox.Show("Pass không được để trống");
-                return;
-            }
-
+        private void QuenMK_Click(object sender, EventArgs e)
+        {
             try
             {
-                string username = taikhoan.Text;
-                string password = matkhau.Text;
-
+                string username = textBox1.Text;
                 connection = new SqlConnection(str);
                 connection.Open();
                 SqlCommand com = new SqlCommand();
@@ -52,23 +44,22 @@ namespace PMQLTHU_CHI
                 //com.ExecuteNonQuery();
                 //MAPHIEUDP();
                 com.CommandType = CommandType.Text;
-                com.CommandText = "select * from TaiKhoan WHERE TEN_TK = '" + username + "' AND MATKHAU = '" + password + "'";
+                com.CommandText = "select * from TaiKhoan WHERE TEN_TK = '" + username + "'";
                 com.Connection = connection;
                 //loaddata();
 
+                //Lấy mk của tài khoan tim kiem
                 SqlDataReader dta = com.ExecuteReader();
                 
-                
+
                 if (dta.Read() == true)
                 {
-                        Form quanLy = new MENU();
-                        this.Hide();
-                        quanLy.ShowDialog();
-                        this.Close();
+                    string pass = dta.GetString(1);
+                    MessageBox.Show("Mật khẩu của tài khoản: " + username + " là : "+ pass, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập không thành công! Vui lòng kiểm tra lại tài khoản, mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Tài khoản không tồn tại! Vui lòng kiểm tra lại tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
             }
             catch (Exception ex)
@@ -76,19 +67,5 @@ namespace PMQLTHU_CHI
                 MessageBox.Show("lỗi kết nối");
             }
         }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            Form quanLy = new Register();
-            this.Hide();
-            quanLy.ShowDialog();
-            this.Close();
-        }
-
-        private void Fogetpass_Click(object sender, EventArgs e)
-        {
-            Form quanLy = new ForgotPassForm();
-            quanLy.ShowDialog();
-        }
     }
-   }
+}
