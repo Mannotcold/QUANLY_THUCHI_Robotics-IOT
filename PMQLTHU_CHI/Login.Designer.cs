@@ -117,7 +117,7 @@ namespace PMQLTHU_CHI
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "Login";
             this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.Click += new System.EventHandler(this.Login_Click);
             // 
             // label2
             // 
