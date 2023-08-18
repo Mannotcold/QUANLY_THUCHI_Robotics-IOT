@@ -55,7 +55,7 @@ namespace PMQLTHU_CHI
                 if (dta.Read() == true)
                 {
                     string pass = dta.GetString(1);
-                    MessageBox.Show("Mật khẩu của tài khoản: " + username + " là : "+ pass, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Mật khẩu của tài khoản " + username + " là : "+ pass, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
