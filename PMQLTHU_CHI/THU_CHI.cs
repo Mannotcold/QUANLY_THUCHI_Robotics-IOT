@@ -89,8 +89,8 @@ namespace PMQLTHU_CHI
             }
         }
 
-
-        private void btnLuu_Click(object sender, EventArgs e)
+        //Them chi
+        private void Thechi_Click(object sender, EventArgs e)
         {
             //Kiểm tra textbox không được bỏ trống
 
@@ -117,6 +117,11 @@ namespace PMQLTHU_CHI
             else if (ccbthanhtoan.Text == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (discountChi.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin khuyến mãi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if (mahoadon.Text == "")
@@ -156,7 +161,7 @@ namespace PMQLTHU_CHI
                    
 
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + ccbkhoahoc.Text.ToString() + "',N'" + ccblophoc.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "','" + mahoadonchi + "')";
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + ccbkhoahoc.Text.ToString() + "',N'" + ccblophoc.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "',N'" + discountChi.Text + "','" + mahoadonchi + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
@@ -194,8 +199,12 @@ namespace PMQLTHU_CHI
             this.Close();
         }
 
+
+
+
+
         //insert thu
-        private void themchi_Click(object sender, EventArgs e)
+        private void themthu_Click(object sender, EventArgs e)
         {
 
 
@@ -224,6 +233,11 @@ namespace PMQLTHU_CHI
             else if (thanhtoanthu.Text == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (discountThu.Text == "")
+            {
+                MessageBox.Show("Bạn phải điền đầy đủ thông tin khuyến mãi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else if (mahdthu.Text == "")
@@ -262,7 +276,7 @@ namespace PMQLTHU_CHI
 
                    
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + ccbkhthu.Text.ToString() + "',N'" + ccblhthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangthu.Text + "',N'" + thanhtoanthu.Text + "','" + mahoadon + "')";
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + ccbkhthu.Text.ToString() + "',N'" + ccblhthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangthu.Text + "',N'" + thanhtoanthu.Text + "',N'" + discountThu.Text + "','" + mahoadon + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();

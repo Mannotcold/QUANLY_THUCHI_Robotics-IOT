@@ -70,6 +70,10 @@ namespace PMQLTHU_CHI
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Quay_lai = new Guna.UI2.WinForms.Guna2Button();
+            this.discountThu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.discountChi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TabControl1.SuspendLayout();
             this.Thu.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -119,6 +123,8 @@ namespace PMQLTHU_CHI
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.discountThu);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel13);
             this.guna2Panel2.Controls.Add(this.lhthubtn);
             this.guna2Panel2.Controls.Add(this.khthubtn);
             this.guna2Panel2.Controls.Add(this.txtthu);
@@ -214,7 +220,7 @@ namespace PMQLTHU_CHI
             this.themthu.TabIndex = 12;
             this.themthu.Text = "Thêm";
             this.themthu.UseTransparentBackground = true;
-            this.themthu.Click += new System.EventHandler(this.themchi_Click);
+            this.themthu.Click += new System.EventHandler(this.themthu_Click);
             // 
             // mahdthu
             // 
@@ -389,6 +395,8 @@ namespace PMQLTHU_CHI
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.discountChi);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel14);
             this.guna2Panel1.Controls.Add(this.btnlophoc);
             this.guna2Panel1.Controls.Add(this.btnkhoahoc);
             this.guna2Panel1.Controls.Add(this.txtchi);
@@ -484,7 +492,7 @@ namespace PMQLTHU_CHI
             this.btnLuuchi.TabIndex = 12;
             this.btnLuuchi.Text = "Lưu";
             this.btnLuuchi.UseTransparentBackground = true;
-            this.btnLuuchi.Click += new System.EventHandler(this.btnLuu_Click);
+            this.btnLuuchi.Click += new System.EventHandler(this.Thechi_Click);
             // 
             // mahoadon
             // 
@@ -661,6 +669,62 @@ namespace PMQLTHU_CHI
             this.Quay_lai.UseTransparentBackground = true;
             this.Quay_lai.Click += new System.EventHandler(this.Quay_lai_Click);
             // 
+            // discountThu
+            // 
+            this.discountThu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.discountThu.DefaultText = "";
+            this.discountThu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.discountThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.discountThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.discountThu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.discountThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.discountThu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.discountThu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.discountThu.Location = new System.Drawing.Point(473, 393);
+            this.discountThu.Name = "discountThu";
+            this.discountThu.PasswordChar = '\0';
+            this.discountThu.PlaceholderText = "";
+            this.discountThu.SelectedText = "";
+            this.discountThu.Size = new System.Drawing.Size(148, 33);
+            this.discountThu.TabIndex = 19;
+            // 
+            // guna2HtmlLabel13
+            // 
+            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(365, 402);
+            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(44, 15);
+            this.guna2HtmlLabel13.TabIndex = 18;
+            this.guna2HtmlLabel13.Text = "Giảm giá";
+            // 
+            // discountChi
+            // 
+            this.discountChi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.discountChi.DefaultText = "";
+            this.discountChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.discountChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.discountChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.discountChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.discountChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.discountChi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.discountChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.discountChi.Location = new System.Drawing.Point(468, 394);
+            this.discountChi.Name = "discountChi";
+            this.discountChi.PasswordChar = '\0';
+            this.discountChi.PlaceholderText = "";
+            this.discountChi.SelectedText = "";
+            this.discountChi.Size = new System.Drawing.Size(148, 33);
+            this.discountChi.TabIndex = 21;
+            // 
+            // guna2HtmlLabel14
+            // 
+            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(357, 403);
+            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(44, 15);
+            this.guna2HtmlLabel14.TabIndex = 20;
+            this.guna2HtmlLabel14.Text = "Giảm giá";
+            // 
             // THU_CHI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -724,5 +788,9 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2ImageButton btnkhoahoc;
         private Guna.UI2.WinForms.Guna2ImageButton lhthubtn;
         private Guna.UI2.WinForms.Guna2ImageButton khthubtn;
+        private Guna.UI2.WinForms.Guna2TextBox discountThu;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2TextBox discountChi;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
     }
 }
