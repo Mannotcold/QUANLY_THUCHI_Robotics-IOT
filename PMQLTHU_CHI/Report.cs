@@ -14,9 +14,9 @@ namespace PMQLTHU_CHI
     {
 
         //List<Report> _list;
-        string _ngaylap, _khoahoc, _lophoc,  _khachhang, _thanhtoan, _mahoadon;
+        string _ngaylap, _khoahoc, _lophoc,  _khachhang, _thanhtoan, _mahoadon, _discount;
         string _thu;
-        public Report(string ngaylap, string khoahoc, string lophoc, string thu, string khachhang, string thanhtoan, string mahoadon)
+        public Report(string ngaylap, string khoahoc, string lophoc, string thu, string khachhang, string thanhtoan, string mahoadon, string discount)
         {
             InitializeComponent();
             _ngaylap = ngaylap;
@@ -26,6 +26,7 @@ namespace PMQLTHU_CHI
             _khachhang = khachhang;
             _thanhtoan = thanhtoan;
             _mahoadon = mahoadon;
+            _discount = discount;
 
         }
         private void Report_Load(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace PMQLTHU_CHI
             this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pkhachhang", _khachhang));
             this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pthanhtoan", _thanhtoan));
             this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pmahoadon", _mahoadon));
+            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pkhuyenmaithu", _discount));
             //this.reportViewer1.LocalReport.SetParameters(para);
             this.reportViewer1.RefreshReport();
         }

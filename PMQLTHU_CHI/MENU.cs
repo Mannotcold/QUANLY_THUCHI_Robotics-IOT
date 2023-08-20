@@ -26,7 +26,7 @@ namespace PMQLTHU_CHI
         DataTable table = new DataTable();
 
 
-        string _ngaylap, _khoahoc, _lophoc, _thu, _chi, _khachhang, _thanhtoan, _mahoadon;
+        string _ngaylap, _khoahoc, _lophoc, _thu, _chi, _khachhang, _thanhtoan, _mahoadon, _discount;
          
         void loaddata()
         {
@@ -71,7 +71,8 @@ namespace PMQLTHU_CHI
             _chi = dgvPhieuTC.Rows[i].Cells[4].Value.ToString();
             _khachhang = dgvPhieuTC.Rows[i].Cells[5].Value.ToString();
             _thanhtoan = dgvPhieuTC.Rows[i].Cells[6].Value.ToString();
-            _mahoadon = dgvPhieuTC.Rows[i].Cells[7].Value.ToString();
+            _mahoadon = dgvPhieuTC.Rows[i].Cells[8].Value.ToString();
+            _discount = dgvPhieuTC.Rows[i].Cells[7].Value.ToString();
             mahoadon.Text = _mahoadon;
 
 
@@ -177,14 +178,14 @@ namespace PMQLTHU_CHI
 
                     if (_thu != "")
                     {
-                        using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon))
+                        using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon, _discount))
                         {
                             frmthu.ShowDialog();
                         };
                     }
                     else
                     {
-                        using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon))
+                        using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon, _discount))
                         {
                             frmchi.ShowDialog();
                         };
