@@ -43,8 +43,8 @@ namespace PMQLTHU_CHI
             // Thêm dữ liệu vào ComboBox
             while (reader.Read())
             {
-                ccbkhoahoc.Items.Add(reader["KhoaHoc"].ToString());
-                ccbkhthu.Items.Add(reader["KhoaHoc"].ToString());
+                comboBoxKHchi.Items.Add(reader["KhoaHoc"].ToString());
+                comboBoxKHthu.Items.Add(reader["KhoaHoc"].ToString());
             }
             connection.Close();
         }
@@ -61,8 +61,8 @@ namespace PMQLTHU_CHI
             // Thêm dữ liệu vào ComboBox
             while (reader.Read())
             {
-                ccblophoc.Items.Add(reader["LOPHOC"].ToString());
-                ccblhthu.Items.Add(reader["LOPHOC"].ToString());
+                comboBoxLHchi.Items.Add(reader["LOPHOC"].ToString());
+                comboBoxLHthu.Items.Add(reader["LOPHOC"].ToString());
             }
             connection.Close();
         }
@@ -94,12 +94,12 @@ namespace PMQLTHU_CHI
         {
             //Kiểm tra textbox không được bỏ trống
 
-            if (ccbkhoahoc.Text.ToString() == "")
+            if (comboBoxKHchi.Text.ToString() == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin khóa hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (ccblophoc.Text.ToString() == "")
+            else if (comboBoxLHchi.Text.ToString() == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin lớp hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -124,11 +124,6 @@ namespace PMQLTHU_CHI
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin khuyến mãi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (mahoadon.Text == "")
-            {
-                MessageBox.Show("Bạn phải điền đầy đủ thông tin mã hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
             //ràng buộc textbox chi chỉ được nhập số
             Regex rgx = new Regex("[^0-9]");
@@ -140,8 +135,12 @@ namespace PMQLTHU_CHI
             }
 
             //Tạo ma hoa don theo form sẵn
+
             MaPhieuMax();
-            string mahoadonchi = mahoadon.Text + "/" + MaPhieuMx;
+            // Lấy năm
+            DateTime selectedDate = guna2DateTimePicker1.Value;
+            int year = selectedDate.Year;
+            string mahoadonchi = "PC" + year + "/" + MaPhieuMx;
             //MessageBox.Show(MaPhieuMx);
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
@@ -161,7 +160,7 @@ namespace PMQLTHU_CHI
                    
 
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + ccbkhoahoc.Text.ToString() + "',N'" + ccblophoc.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "',N'" + discountChi.Text + "','" + mahoadonchi + "')";
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + comboBoxKHchi.Text.ToString() + "',N'" + comboBoxLHchi.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "',N'" + discountChi.Text + "','" + mahoadonchi + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
@@ -210,12 +209,12 @@ namespace PMQLTHU_CHI
 
 
             // //ràng buộc textbox khong được để trống
-            if (ccbkhthu.Text.ToString() == "")
+            if (comboBoxKHthu.Text.ToString() == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin khóa hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (ccblhthu.Text.ToString() == "")
+            else if (comboBoxLHthu.Text.ToString() == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin lớp hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -240,11 +239,7 @@ namespace PMQLTHU_CHI
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin khuyến mãi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (mahdthu.Text == "")
-            {
-                MessageBox.Show("Bạn phải điền đầy đủ thông tin mã hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+           
 
             //ràng buộc textbox thu chỉ được nhập số
             Regex rgx = new Regex("[^0-9]");
@@ -258,7 +253,11 @@ namespace PMQLTHU_CHI
 
             //Tạo ma hoa don theo form sẵn
             MaPhieuMax();
-            string mahoadon = mahdthu.Text + "/" + MaPhieuMx;
+            DateTime selectedDate = timethu.Value;
+            int year = selectedDate.Year;
+            string mahoadonthu = "PT" + year + "/" + MaPhieuMx;
+
+
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -276,7 +275,7 @@ namespace PMQLTHU_CHI
 
                    
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + ccbkhthu.Text.ToString() + "',N'" + ccblhthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangthu.Text + "',N'" + thanhtoanthu.Text + "',N'" + discountThu.Text + "','" + mahoadon + "')";
+                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + comboBoxKHthu.Text.ToString() + "',N'" + comboBoxLHthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangthu.Text + "',N'" + thanhtoanthu.Text + "',N'" + discountThu.Text + "','" + mahoadonthu + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
@@ -340,30 +339,35 @@ namespace PMQLTHU_CHI
 
         private void ccbkhthu_MouseClick(object sender, MouseEventArgs e)
         {
-            ccbkhthu.Items.Clear();
+            comboBoxKHthu.Items.Clear();
             loadkhoahoc();
 
         }
 
         private void ccblhthu_MouseClick(object sender, MouseEventArgs e)
         {
-            ccblhthu.Items.Clear();
+            comboBoxLHthu.Items.Clear();
             loadlophoc();
         }
 
         private void ccbkhoahoc_MouseClick(object sender, MouseEventArgs e)
         {
-            ccbkhoahoc.Items.Clear();
+            comboBoxKHchi.Items.Clear();
             loadkhoahoc();
         }
 
         private void ccblophoc_MouseClick(object sender, MouseEventArgs e)
         {
-            ccblophoc.Items.Clear();
+            comboBoxLHchi.Items.Clear();
             loadlophoc();
         }
 
         private void guna2HtmlLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void khachhangthu_TextChanged(object sender, EventArgs e)
         {
 
         }

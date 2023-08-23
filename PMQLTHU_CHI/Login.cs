@@ -90,5 +90,10 @@ namespace PMQLTHU_CHI
             Form quanLy = new ForgotPassForm();
             quanLy.ShowDialog();
         }
+
+        private void taikhoan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
    }

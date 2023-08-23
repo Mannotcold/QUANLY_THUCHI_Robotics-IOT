@@ -229,6 +229,7 @@ namespace PMQLTHU_CHI
             this.taikhoan.SelectedText = "";
             this.taikhoan.Size = new System.Drawing.Size(251, 36);
             this.taikhoan.TabIndex = 1;
+            this.taikhoan.TextChanged += new System.EventHandler(this.taikhoan_TextChanged);
             // 
             // guna2ShadowForm1
             // 
