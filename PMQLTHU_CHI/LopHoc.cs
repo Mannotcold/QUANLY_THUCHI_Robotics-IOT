@@ -53,6 +53,7 @@ namespace PMQLTHU_CHI
             int i;
             i = dgvlh.CurrentRow.Index;
             txtLopHoc.Text = dgvlh.Rows[i].Cells[0].Value.ToString();
+            chitietLH.Text = dgvlh.Rows[i].Cells[1].Value.ToString();
             lophocbd = txtLopHoc.Text;
         }
 
@@ -74,24 +75,24 @@ namespace PMQLTHU_CHI
                     //com.ExecuteNonQuery();
                     //MAPHIEUDP();
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into LOPHOC (LOPHOC) VALUES (N'" + txtLopHoc.Text.ToString() + "')";
+                    com.CommandText = "insert into LOPHOC (LOPHOC, ChiTiet) VALUES (N'" + txtLopHoc.Text.ToString() + "', N'" + chitietLH.Text.ToString() + "')";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
-                        MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                     loaddata();
 
                 }
                 catch (Exception )
                 {
-                    MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                 }
 
@@ -115,7 +116,7 @@ namespace PMQLTHU_CHI
                     //com.ExecuteNonQuery();
                     //MAPHIEUDP();
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "Update LOPHOC set LOPHOC = N'" + txtLopHoc.Text.ToString() + "' where LOPHOC = N'" + lophocbd + "'";
+                    com.CommandText = "Update LOPHOC set LOPHOC = N'" + txtLopHoc.Text.ToString() + "', ChiTiet = N'" + chitietLH.Text.ToString() + "' where LOPHOC = N'" + lophocbd + "'";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
@@ -184,6 +185,26 @@ namespace PMQLTHU_CHI
         {
             
             this.Close();
+        }
+
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            if (txtTuKhoa.Text == "")
+            {
+                loaddata();
+            }
+            else
+            {
+                connection = new SqlConnection(str);
+                connection.Open();
+                string Key = txtTuKhoa.Text + '%';
+                command = connection.CreateCommand();
+                command.CommandText = "select * from KhoaHoc WHERE lophoc LIKE '" + Key + "'";
+                adapter.SelectCommand = command;
+                table.Clear();
+                adapter.Fill(table);
+                dgvlh.DataSource = table;
+            }
         }
     }
 }

@@ -29,9 +29,9 @@ namespace PMQLTHU_CHI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtLopHoc = new Guna.UI2.WinForms.Guna2TextBox();
             this.Quay_lai = new Guna.UI2.WinForms.Guna2Button();
             this.dgvlh = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -39,7 +39,14 @@ namespace PMQLTHU_CHI
             this.Xoa = new Guna.UI2.WinForms.Guna2Button();
             this.CAPNHAT = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTraCuu = new System.Windows.Forms.Button();
+            this.txtTuKhoa = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.chitietLH = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlh)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtLopHoc
@@ -53,12 +60,12 @@ namespace PMQLTHU_CHI
             this.txtLopHoc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLopHoc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLopHoc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLopHoc.Location = new System.Drawing.Point(156, 401);
+            this.txtLopHoc.Location = new System.Drawing.Point(6, 29);
             this.txtLopHoc.Name = "txtLopHoc";
             this.txtLopHoc.PasswordChar = '\0';
             this.txtLopHoc.PlaceholderText = "";
             this.txtLopHoc.SelectedText = "";
-            this.txtLopHoc.Size = new System.Drawing.Size(200, 36);
+            this.txtLopHoc.Size = new System.Drawing.Size(504, 36);
             this.txtLopHoc.TabIndex = 26;
             // 
             // Quay_lai
@@ -70,7 +77,7 @@ namespace PMQLTHU_CHI
             this.Quay_lai.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Quay_lai.ForeColor = System.Drawing.Color.White;
             this.Quay_lai.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Quay_lai.Location = new System.Drawing.Point(191, 518);
+            this.Quay_lai.Location = new System.Drawing.Point(580, 572);
             this.Quay_lai.Name = "Quay_lai";
             this.Quay_lai.Size = new System.Drawing.Size(131, 33);
             this.Quay_lai.TabIndex = 25;
@@ -80,31 +87,31 @@ namespace PMQLTHU_CHI
             // 
             // dgvlh
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvlh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvlh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvlh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvlh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvlh.ColumnHeadersHeight = 4;
             this.dgvlh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvlh.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvlh.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvlh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvlh.Location = new System.Drawing.Point(30, 92);
+            this.dgvlh.Location = new System.Drawing.Point(41, 92);
             this.dgvlh.Name = "dgvlh";
             this.dgvlh.RowHeadersVisible = false;
-            this.dgvlh.Size = new System.Drawing.Size(454, 294);
+            this.dgvlh.Size = new System.Drawing.Size(670, 294);
             this.dgvlh.TabIndex = 24;
             this.dgvlh.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvlh.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -133,7 +140,7 @@ namespace PMQLTHU_CHI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 31);
+            this.label1.Location = new System.Drawing.Point(230, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(265, 26);
@@ -149,7 +156,7 @@ namespace PMQLTHU_CHI
             this.Xoa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Xoa.ForeColor = System.Drawing.Color.White;
             this.Xoa.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Xoa.Location = new System.Drawing.Point(364, 452);
+            this.Xoa.Location = new System.Drawing.Point(41, 508);
             this.Xoa.Name = "Xoa";
             this.Xoa.Size = new System.Drawing.Size(131, 33);
             this.Xoa.TabIndex = 22;
@@ -166,7 +173,7 @@ namespace PMQLTHU_CHI
             this.CAPNHAT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.CAPNHAT.ForeColor = System.Drawing.Color.White;
             this.CAPNHAT.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.CAPNHAT.Location = new System.Drawing.Point(191, 452);
+            this.CAPNHAT.Location = new System.Drawing.Point(41, 469);
             this.CAPNHAT.Name = "CAPNHAT";
             this.CAPNHAT.Size = new System.Drawing.Size(131, 33);
             this.CAPNHAT.TabIndex = 21;
@@ -183,7 +190,7 @@ namespace PMQLTHU_CHI
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLuu.Location = new System.Drawing.Point(18, 452);
+            this.btnLuu.Location = new System.Drawing.Point(41, 430);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(131, 33);
             this.btnLuu.TabIndex = 20;
@@ -191,12 +198,76 @@ namespace PMQLTHU_CHI
             this.btnLuu.UseTransparentBackground = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // btnTraCuu
+            // 
+            this.btnTraCuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTraCuu.Location = new System.Drawing.Point(643, 63);
+            this.btnTraCuu.Name = "btnTraCuu";
+            this.btnTraCuu.Size = new System.Drawing.Size(75, 23);
+            this.btnTraCuu.TabIndex = 28;
+            this.btnTraCuu.Text = "Tra cứu";
+            this.btnTraCuu.UseVisualStyleBackColor = true;
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
+            // 
+            // txtTuKhoa
+            // 
+            this.txtTuKhoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTuKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTuKhoa.Location = new System.Drawing.Point(414, 63);
+            this.txtTuKhoa.Name = "txtTuKhoa";
+            this.txtTuKhoa.Size = new System.Drawing.Size(223, 20);
+            this.txtTuKhoa.TabIndex = 27;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.chitietLH);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtLopHoc);
+            this.panel3.Location = new System.Drawing.Point(201, 401);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(533, 157);
+            this.panel3.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Chi tiết";
+            // 
+            // chitietLH
+            // 
+            this.chitietLH.Location = new System.Drawing.Point(6, 88);
+            this.chitietLH.Name = "chitietLH";
+            this.chitietLH.Size = new System.Drawing.Size(504, 54);
+            this.chitietLH.TabIndex = 26;
+            this.chitietLH.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Khóa học";
+            // 
             // LopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 580);
-            this.Controls.Add(this.txtLopHoc);
+            this.ClientSize = new System.Drawing.Size(745, 617);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.btnTraCuu);
+            this.Controls.Add(this.txtTuKhoa);
             this.Controls.Add(this.Quay_lai);
             this.Controls.Add(this.dgvlh);
             this.Controls.Add(this.label1);
@@ -207,6 +278,8 @@ namespace PMQLTHU_CHI
             this.Text = "LopHoc";
             this.Load += new System.EventHandler(this.LopHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvlh)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +294,11 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2Button Xoa;
         private Guna.UI2.WinForms.Guna2Button CAPNHAT;
         private Guna.UI2.WinForms.Guna2Button btnLuu;
+        private System.Windows.Forms.Button btnTraCuu;
+        private System.Windows.Forms.TextBox txtTuKhoa;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox chitietLH;
+        private System.Windows.Forms.Label label2;
     }
 }

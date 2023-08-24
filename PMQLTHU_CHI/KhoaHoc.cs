@@ -52,7 +52,7 @@ namespace PMQLTHU_CHI
             int i;
             i = dgvkh.CurrentRow.Index;
             txtKhoaHoc.Text = dgvkh.Rows[i].Cells[0].Value.ToString();
-            chitietKH.Text = dgvkh.Rows[i].Cells[0].Value.ToString();
+            chitietKH.Text = dgvkh.Rows[i].Cells[1].Value.ToString();
             khoahocbd = txtKhoaHoc.Text;
 
         }
@@ -96,18 +96,18 @@ namespace PMQLTHU_CHI
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
-                        MessageBox.Show("Lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                     loaddata();
 
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                 }
 
