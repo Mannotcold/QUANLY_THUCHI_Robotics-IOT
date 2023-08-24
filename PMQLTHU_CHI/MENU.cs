@@ -167,6 +167,16 @@ namespace PMQLTHU_CHI
             }
         }
 
+        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Print_Click_1(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn:" + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
