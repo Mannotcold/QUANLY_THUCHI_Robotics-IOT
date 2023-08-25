@@ -32,8 +32,9 @@ namespace PMQLTHU_CHI
             this.dgvPhieuTC = new System.Windows.Forms.DataGridView();
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.txtTuKhoa = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.CheckBoxChi = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CheckBoxThu = new Guna.UI2.WinForms.Guna2CheckBox();
             this.Xoa = new Guna.UI2.WinForms.Guna2Button();
             this.mahoadon = new System.Windows.Forms.TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -59,12 +60,12 @@ namespace PMQLTHU_CHI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhieuTC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhieuTC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuTC.Location = new System.Drawing.Point(3, 51);
+            this.dgvPhieuTC.Location = new System.Drawing.Point(3, 64);
             this.dgvPhieuTC.MultiSelect = false;
             this.dgvPhieuTC.Name = "dgvPhieuTC";
             this.dgvPhieuTC.ReadOnly = true;
             this.dgvPhieuTC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuTC.Size = new System.Drawing.Size(1195, 553);
+            this.dgvPhieuTC.Size = new System.Drawing.Size(1195, 540);
             this.dgvPhieuTC.TabIndex = 11;
             this.dgvPhieuTC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTC_CellContentClick);
             // 
@@ -90,32 +91,55 @@ namespace PMQLTHU_CHI
             this.txtTuKhoa.TabIndex = 9;
             this.txtTuKhoa.TextChanged += new System.EventHandler(this.txtTuKhoa_TextChanged);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(760, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Tìm kiếm";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.guna2Panel1.Controls.Add(this.CheckBoxChi);
+            this.guna2Panel1.Controls.Add(this.CheckBoxThu);
             this.guna2Panel1.Controls.Add(this.btnTraCuu);
             this.guna2Panel1.Controls.Add(this.txtTuKhoa);
             this.guna2Panel1.Controls.Add(this.dgvPhieuTC);
-            this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Location = new System.Drawing.Point(29, 46);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1201, 617);
             this.guna2Panel1.TabIndex = 30;
+            // 
+            // CheckBoxChi
+            // 
+            this.CheckBoxChi.AutoSize = true;
+            this.CheckBoxChi.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CheckBoxChi.CheckedState.BorderRadius = 0;
+            this.CheckBoxChi.CheckedState.BorderThickness = 0;
+            this.CheckBoxChi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CheckBoxChi.Location = new System.Drawing.Point(902, 41);
+            this.CheckBoxChi.Name = "CheckBoxChi";
+            this.CheckBoxChi.Size = new System.Drawing.Size(41, 17);
+            this.CheckBoxChi.TabIndex = 13;
+            this.CheckBoxChi.Text = "Chi";
+            this.CheckBoxChi.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CheckBoxChi.UncheckedState.BorderRadius = 0;
+            this.CheckBoxChi.UncheckedState.BorderThickness = 0;
+            this.CheckBoxChi.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // CheckBoxThu
+            // 
+            this.CheckBoxThu.AutoSize = true;
+            this.CheckBoxThu.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CheckBoxThu.CheckedState.BorderRadius = 0;
+            this.CheckBoxThu.CheckedState.BorderThickness = 0;
+            this.CheckBoxThu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CheckBoxThu.Location = new System.Drawing.Point(851, 41);
+            this.CheckBoxThu.Name = "CheckBoxThu";
+            this.CheckBoxThu.Size = new System.Drawing.Size(45, 17);
+            this.CheckBoxThu.TabIndex = 12;
+            this.CheckBoxThu.Text = "Thu";
+            this.CheckBoxThu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CheckBoxThu.UncheckedState.BorderRadius = 0;
+            this.CheckBoxThu.UncheckedState.BorderThickness = 0;
+            this.CheckBoxThu.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // Xoa
             // 
@@ -194,21 +218,21 @@ namespace PMQLTHU_CHI
             // thêmMớiToolStripMenuItem1
             // 
             this.thêmMớiToolStripMenuItem1.Name = "thêmMớiToolStripMenuItem1";
-            this.thêmMớiToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.thêmMớiToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.thêmMớiToolStripMenuItem1.Text = "Thêm mới";
             this.thêmMớiToolStripMenuItem1.Click += new System.EventHandler(this.thêmMớiToolStripMenuItem1_Click);
             // 
             // exportExcelToolStripMenuItem
             // 
             this.exportExcelToolStripMenuItem.Name = "exportExcelToolStripMenuItem";
-            this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exportExcelToolStripMenuItem.Text = "Export excel";
             this.exportExcelToolStripMenuItem.Click += new System.EventHandler(this.exportExcelToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -251,7 +275,6 @@ namespace PMQLTHU_CHI
         private System.Windows.Forms.DataGridView dgvPhieuTC;
         private System.Windows.Forms.Button btnTraCuu;
         private System.Windows.Forms.TextBox txtTuKhoa;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button Print;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
@@ -263,5 +286,7 @@ namespace PMQLTHU_CHI
         private System.Windows.Forms.ToolStripMenuItem exportExcelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private Guna.UI2.WinForms.Guna2CheckBox CheckBoxChi;
+        private Guna.UI2.WinForms.Guna2CheckBox CheckBoxThu;
     }
 }

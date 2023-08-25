@@ -212,17 +212,92 @@ namespace PMQLTHU_CHI
 
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
-            if (txtTuKhoa.Text == "")
+            if (CheckBoxChi.Checked == true & CheckBoxThu.Checked == true)
             {
-                loaddata();
+                if (txtTuKhoa.Text == "")
+                {
+                    loaddata();
+                }
+                else
+                {
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    string Key = txtTuKhoa.Text + '%';
+                    command = connection.CreateCommand();
+                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
+                    adapter.SelectCommand = command;
+                    table.Clear();
+                    adapter.Fill(table);
+                    dgvPhieuTC.DataSource = table;
+                }
             }
-            else
+
+            else if (CheckBoxThu.Checked == true)
+            {
+                if (txtTuKhoa.Text == "")
+                {
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    string Key = txtTuKhoa.Text + '%';
+                    command = connection.CreateCommand();
+                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán," +
+                        "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI " +
+                        "WHERE thu is not null";
+                    adapter.SelectCommand = command;
+                    table.Clear();
+                    adapter.Fill(table);
+                    dgvPhieuTC.DataSource = table;
+                }
+                else
+                {
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    string Key = txtTuKhoa.Text + '%';
+                    command = connection.CreateCommand();
+                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
+                        "from PHIEU_THU_CHI WHERE thu is not null and Nguoi LIKE '" + Key + "' or thu is not null and KhoaHoc LIKE '" + Key + "' or thu is not null and LopHoc LIKE '" + Key + "'";
+                    adapter.SelectCommand = command;
+                    table.Clear();
+                    adapter.Fill(table);
+                    dgvPhieuTC.DataSource = table;
+                }
+            }
+            else if (CheckBoxChi.Checked == true)
+            {
+                if (txtTuKhoa.Text == "")
+                {
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    string Key = txtTuKhoa.Text + '%';
+                    command = connection.CreateCommand();
+                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
+                        "from PHIEU_THU_CHI WHERE chi is not null";
+                    adapter.SelectCommand = command;
+                    table.Clear();
+                    adapter.Fill(table);
+                    dgvPhieuTC.DataSource = table;
+                }
+                else
+                {
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    string Key = txtTuKhoa.Text + '%';
+                    command = connection.CreateCommand();
+                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI WHERE chi is not null and Nguoi LIKE '" + Key + "' or chi is not null and KhoaHoc LIKE '" + Key + "' or chi is not null and LopHoc LIKE '" + Key + "'";
+                    adapter.SelectCommand = command;
+                    table.Clear();
+                    adapter.Fill(table);
+                    dgvPhieuTC.DataSource = table;
+                }
+            }
+            
+            else 
             {
                 connection = new SqlConnection(str);
                 connection.Open();
                 string Key = txtTuKhoa.Text + '%';
                 command = connection.CreateCommand();
-                command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI WHERE Nguoi LIKE '" + Key + "'";
+                command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
                 adapter.SelectCommand = command;
                 table.Clear();
                 adapter.Fill(table);
