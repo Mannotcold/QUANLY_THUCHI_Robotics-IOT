@@ -58,15 +58,7 @@ namespace PMQLTHU_CHI
         }
 
 
-        
-
-
-        private void Quay_lai_Click(object sender, EventArgs e)
-        {
-            // Gọi hàm từ form THU_CHI khác
-
-            this.Close();
-        }
+       
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -214,6 +206,13 @@ namespace PMQLTHU_CHI
                 adapter.Fill(table);
                 dgvkh.DataSource = table;
             }
+        }
+
+        private void Quay_lai_Click_1(object sender, EventArgs e)
+        {
+            // Gọi hàm từ form THU_CHI khác
+
+            this.Close();
         }
     }
 }

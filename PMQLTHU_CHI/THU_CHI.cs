@@ -140,7 +140,7 @@ namespace PMQLTHU_CHI
             // Lấy năm
             DateTime selectedDate = guna2DateTimePicker1.Value;
             int year = selectedDate.Year;
-            string mahoadonchi = "PC" + year + "/" + MaPhieuMx;
+            string mahoadonchi = "PC" + "/"  + year + "/" + MaPhieuMx;
             //MessageBox.Show(MaPhieuMx);
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
@@ -255,7 +255,7 @@ namespace PMQLTHU_CHI
             MaPhieuMax();
             DateTime selectedDate = timethu.Value;
             int year = selectedDate.Year;
-            string mahoadonthu = "PT" + year + "/" + MaPhieuMx;
+            string mahoadonthu = "PT" + "/" + year + "/" + MaPhieuMx;
 
 
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);

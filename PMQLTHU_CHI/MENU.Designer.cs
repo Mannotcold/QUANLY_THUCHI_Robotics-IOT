@@ -33,6 +33,7 @@ namespace PMQLTHU_CHI
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.txtTuKhoa = new System.Windows.Forms.TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.datetimetracuu = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.CheckBoxChi = new Guna.UI2.WinForms.Guna2CheckBox();
             this.CheckBoxThu = new Guna.UI2.WinForms.Guna2CheckBox();
             this.Xoa = new Guna.UI2.WinForms.Guna2Button();
@@ -97,6 +98,7 @@ namespace PMQLTHU_CHI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.guna2Panel1.Controls.Add(this.datetimetracuu);
             this.guna2Panel1.Controls.Add(this.CheckBoxChi);
             this.guna2Panel1.Controls.Add(this.CheckBoxThu);
             this.guna2Panel1.Controls.Add(this.btnTraCuu);
@@ -106,6 +108,20 @@ namespace PMQLTHU_CHI
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1201, 617);
             this.guna2Panel1.TabIndex = 30;
+            // 
+            // datetimetracuu
+            // 
+            this.datetimetracuu.Checked = true;
+            this.datetimetracuu.CustomFormat = "yyyy-MM-dd";
+            this.datetimetracuu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.datetimetracuu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetimetracuu.Location = new System.Drawing.Point(955, 37);
+            this.datetimetracuu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.datetimetracuu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datetimetracuu.Name = "datetimetracuu";
+            this.datetimetracuu.Size = new System.Drawing.Size(119, 24);
+            this.datetimetracuu.TabIndex = 14;
+            this.datetimetracuu.Value = new System.DateTime(2023, 8, 29, 0, 0, 0, 0);
             // 
             // CheckBoxChi
             // 
@@ -288,5 +304,6 @@ namespace PMQLTHU_CHI
         private System.Windows.Forms.MenuStrip menuStrip1;
         private Guna.UI2.WinForms.Guna2CheckBox CheckBoxChi;
         private Guna.UI2.WinForms.Guna2CheckBox CheckBoxThu;
+        private Guna.UI2.WinForms.Guna2DateTimePicker datetimetracuu;
     }
 }
