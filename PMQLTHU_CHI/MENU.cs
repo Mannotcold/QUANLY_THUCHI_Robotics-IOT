@@ -33,7 +33,7 @@ namespace PMQLTHU_CHI
             connection = new SqlConnection(str);
             connection.Open();
             command = connection.CreateCommand();
-            command.CommandText = "select CONVERT(nvarchar, NgayLap, 103) AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI";
+            command.CommandText = "select CONVERT(nvarchar, NgayLap, 103) AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_THU";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -68,11 +68,10 @@ namespace PMQLTHU_CHI
             _khoahoc = dgvPhieuThu.Rows[i].Cells[1].Value.ToString();
             _lophoc = dgvPhieuThu.Rows[i].Cells[2].Value.ToString();
             _thu = dgvPhieuThu.Rows[i].Cells[3].Value.ToString();
-            _chi = dgvPhieuThu.Rows[i].Cells[4].Value.ToString();
-            _khachhang = dgvPhieuThu.Rows[i].Cells[5].Value.ToString();
-            _thanhtoan = dgvPhieuThu.Rows[i].Cells[6].Value.ToString();
-            _mahoadon = dgvPhieuThu.Rows[i].Cells[8].Value.ToString();
-            _discount = dgvPhieuThu.Rows[i].Cells[7].Value.ToString();
+            _khachhang = dgvPhieuThu.Rows[i].Cells[4].Value.ToString();
+            _thanhtoan = dgvPhieuThu.Rows[i].Cells[5].Value.ToString();
+            _discount = dgvPhieuThu.Rows[i].Cells[6].Value.ToString();
+            _mahoadon = dgvPhieuThu.Rows[i].Cells[7].Value.ToString();
             mahoadon.Text = _mahoadon;
 
 
@@ -103,7 +102,7 @@ namespace PMQLTHU_CHI
                     //com.ExecuteNonQuery();
                     //MAPHIEUDP();
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "delete from PHIEU_THU_CHI where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
+                    com.CommandText = "delete from PHIEU_THU where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
@@ -144,7 +143,7 @@ namespace PMQLTHU_CHI
                     //com.ExecuteNonQuery();
                     //MAPHIEUDP();
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "delete from PHIEU_THU_CHI where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
+                    com.CommandText = "delete from PHIEU_THU where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
                     com.Connection = connection;
                     //loaddata();
                     int kq = com.ExecuteNonQuery();
@@ -167,48 +166,7 @@ namespace PMQLTHU_CHI
             }
         }
 
-        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Print_Click_1(object sender, EventArgs e)
-        {
-            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (rs == DialogResult.Yes)
-            {
-
-                try
-                {
-
-                    if (_thu != "")
-                    {
-                        using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon, _discount))
-                        {
-                            frmthu.ShowDialog();
-                        };
-                    }
-                    else
-                    {
-                        using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon, _discount))
-                        {
-                            frmchi.ShowDialog();
-                        };
-                    }
-
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-                }
-            }
-        }
+      
 
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
@@ -230,7 +188,7 @@ namespace PMQLTHU_CHI
                         connection.Open();
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
+                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
@@ -247,7 +205,7 @@ namespace PMQLTHU_CHI
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
                         command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán," +
-                            "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI " +
+                            "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
                             "WHERE thu is not null";
                         adapter.SelectCommand = command;
                         table.Clear();
@@ -261,7 +219,7 @@ namespace PMQLTHU_CHI
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
                         command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
-                            "from PHIEU_THU_CHI WHERE thu is not null and Nguoi LIKE '" + Key + "' or thu is not null and KhoaHoc LIKE '" + Key + "' or thu is not null and LopHoc LIKE '" + Key + "'";
+                            "from PHIEU_THU WHERE thu is not null and Nguoi LIKE '" + Key + "' or thu is not null and KhoaHoc LIKE '" + Key + "' or thu is not null and LopHoc LIKE '" + Key + "'";
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
@@ -276,8 +234,8 @@ namespace PMQLTHU_CHI
                         connection.Open();
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
-                            "from PHIEU_THU_CHI WHERE chi is not null";
+                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
+                            "from PHIEU_THU WHERE chi is not null";
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
@@ -289,7 +247,7 @@ namespace PMQLTHU_CHI
                         connection.Open();
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI WHERE chi is not null and Nguoi LIKE '" + Key + "' or chi is not null and KhoaHoc LIKE '" + Key + "' or chi is not null and LopHoc LIKE '" + Key + "'";
+                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE chi is not null and Nguoi LIKE '" + Key + "' or chi is not null and KhoaHoc LIKE '" + Key + "' or chi is not null and LopHoc LIKE '" + Key + "'";
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
@@ -303,7 +261,7 @@ namespace PMQLTHU_CHI
                     connection.Open();
                     string Key = txtTuKhoa.Text + '%';
                     command = connection.CreateCommand();
-                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
+                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
                     adapter.SelectCommand = command;
                     table.Clear();
                     adapter.Fill(table);
@@ -326,7 +284,7 @@ namespace PMQLTHU_CHI
                         connection.Open();
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI " +
+                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
                             "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and Nguoi LIKE '" + Key + "'or NgayLap =  '" + datetimetracuu.ToString() + "'  and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and LopHoc LIKE '" + Key + "'";
                         adapter.SelectCommand = command;
                         table.Clear();
@@ -343,7 +301,7 @@ namespace PMQLTHU_CHI
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
                         command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán," +
-                            "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI " +
+                            "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
                             "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null ";
                         adapter.SelectCommand = command;
                         table.Clear();
@@ -357,7 +315,7 @@ namespace PMQLTHU_CHI
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
                         command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
-                            "from PHIEU_THU_CHI WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null and Nguoi LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null and KhoaHoc LIKE '" + Key + "' or NgayLap = '" + datetimetracuu.ToString() + "'  and thu is not null and LopHoc LIKE '" + Key + "'";
+                            "from PHIEU_THU_ WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null and Nguoi LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null and KhoaHoc LIKE '" + Key + "' or NgayLap = '" + datetimetracuu.ToString() + "'  and thu is not null and LopHoc LIKE '" + Key + "'";
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
@@ -372,8 +330,8 @@ namespace PMQLTHU_CHI
                         connection.Open();
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
-                            "from PHIEU_THU_CHI WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null";
+                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
+                            "from PHIEU_THU WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null";
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
@@ -385,7 +343,7 @@ namespace PMQLTHU_CHI
                         connection.Open();
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI " +
+                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
                             "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and Nguoi LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and LopHoc LIKE '" + Key + "'";
                         adapter.SelectCommand = command;
                         table.Clear();
@@ -400,7 +358,7 @@ namespace PMQLTHU_CHI
                     connection.Open();
                     string Key = txtTuKhoa.Text + '%';
                     command = connection.CreateCommand();
-                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU_CHI " +
+                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
                         "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and Nguoi LIKE '" + Key + "'or NgayLap =  '" + datetimetracuu.ToString() + "'  and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and LopHoc LIKE '" + Key + "'";
                     adapter.SelectCommand = command;
                     table.Clear();
@@ -494,6 +452,49 @@ namespace PMQLTHU_CHI
         private void guna2Button1_Click(object sender, EventArgs e)
         {
              
+        }
+
+        private void txtTuKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Print_Click_1(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+
+                    if (_thu != "")
+                    {
+                        using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon, _discount))
+                        {
+                            frmthu.ShowDialog();
+                        };
+                    }
+                    else
+                    {
+                        using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon, _discount))
+                        {
+                            frmchi.ShowDialog();
+                        };
+                    }
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+            }
         }
     }
 }

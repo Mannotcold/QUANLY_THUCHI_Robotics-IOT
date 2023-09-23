@@ -46,7 +46,7 @@ namespace PMQLTHU_CHI
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.PhieuThu = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvPhieuChi = new System.Windows.Forms.DataGridView();
@@ -59,7 +59,7 @@ namespace PMQLTHU_CHI
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.PhieuThu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuChi)).BeginInit();
@@ -111,7 +111,7 @@ namespace PMQLTHU_CHI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.guna2Panel1.Controls.Add(this.tabControl1);
+            this.guna2Panel1.Controls.Add(this.PhieuThu);
             this.guna2Panel1.Location = new System.Drawing.Point(29, 37);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1201, 626);
@@ -270,15 +270,15 @@ namespace PMQLTHU_CHI
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // tabControl1
+            // PhieuThu
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1195, 623);
-            this.tabControl1.TabIndex = 15;
+            this.PhieuThu.Controls.Add(this.tabPage1);
+            this.PhieuThu.Controls.Add(this.tabPage2);
+            this.PhieuThu.Location = new System.Drawing.Point(3, 3);
+            this.PhieuThu.Name = "PhieuThu";
+            this.PhieuThu.SelectedIndex = 0;
+            this.PhieuThu.Size = new System.Drawing.Size(1195, 623);
+            this.PhieuThu.TabIndex = 15;
             // 
             // tabPage1
             // 
@@ -293,7 +293,7 @@ namespace PMQLTHU_CHI
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1187, 597);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Phiếu Thu";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -309,7 +309,7 @@ namespace PMQLTHU_CHI
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1187, 597);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Phiếu Chi";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dgvPhieuChi
@@ -415,7 +415,7 @@ namespace PMQLTHU_CHI
             this.guna2Panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.PhieuThu.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -445,7 +445,7 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2CheckBox CheckBoxChi;
         private Guna.UI2.WinForms.Guna2CheckBox CheckBoxThu;
         private Guna.UI2.WinForms.Guna2DateTimePicker datetimetracuu;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl PhieuThu;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dgvPhieuChi;
