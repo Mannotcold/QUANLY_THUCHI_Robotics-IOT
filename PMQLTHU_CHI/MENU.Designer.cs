@@ -29,7 +29,7 @@ namespace PMQLTHU_CHI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvPhieuTC = new System.Windows.Forms.DataGridView();
+            this.dgvPhieuThu = new System.Windows.Forms.DataGridView();
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.txtTuKhoa = new System.Windows.Forms.TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -46,35 +46,48 @@ namespace PMQLTHU_CHI
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTC)).BeginInit();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgvPhieuChi = new System.Windows.Forms.DataGridView();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThu)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuChi)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvPhieuTC
+            // dgvPhieuThu
             // 
-            this.dgvPhieuTC.AllowUserToAddRows = false;
-            this.dgvPhieuTC.AllowUserToDeleteRows = false;
-            this.dgvPhieuTC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvPhieuThu.AllowUserToAddRows = false;
+            this.dgvPhieuThu.AllowUserToDeleteRows = false;
+            this.dgvPhieuThu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPhieuTC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPhieuTC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuTC.Location = new System.Drawing.Point(3, 64);
-            this.dgvPhieuTC.MultiSelect = false;
-            this.dgvPhieuTC.Name = "dgvPhieuTC";
-            this.dgvPhieuTC.ReadOnly = true;
-            this.dgvPhieuTC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuTC.Size = new System.Drawing.Size(1195, 540);
-            this.dgvPhieuTC.TabIndex = 11;
-            this.dgvPhieuTC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTC_CellContentClick);
+            this.dgvPhieuThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPhieuThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuThu.Location = new System.Drawing.Point(6, 55);
+            this.dgvPhieuThu.MultiSelect = false;
+            this.dgvPhieuThu.Name = "dgvPhieuThu";
+            this.dgvPhieuThu.ReadOnly = true;
+            this.dgvPhieuThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhieuThu.Size = new System.Drawing.Size(1175, 529);
+            this.dgvPhieuThu.TabIndex = 11;
+            this.dgvPhieuThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuTC_CellContentClick);
             // 
             // btnTraCuu
             // 
             this.btnTraCuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTraCuu.Location = new System.Drawing.Point(1103, 13);
+            this.btnTraCuu.Location = new System.Drawing.Point(1106, 4);
             this.btnTraCuu.Name = "btnTraCuu";
             this.btnTraCuu.Size = new System.Drawing.Size(75, 23);
             this.btnTraCuu.TabIndex = 10;
@@ -86,7 +99,7 @@ namespace PMQLTHU_CHI
             // 
             this.txtTuKhoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTuKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTuKhoa.Location = new System.Drawing.Point(851, 15);
+            this.txtTuKhoa.Location = new System.Drawing.Point(854, 6);
             this.txtTuKhoa.Name = "txtTuKhoa";
             this.txtTuKhoa.Size = new System.Drawing.Size(223, 20);
             this.txtTuKhoa.TabIndex = 9;
@@ -98,15 +111,10 @@ namespace PMQLTHU_CHI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.guna2Panel1.Controls.Add(this.datetimetracuu);
-            this.guna2Panel1.Controls.Add(this.CheckBoxChi);
-            this.guna2Panel1.Controls.Add(this.CheckBoxThu);
-            this.guna2Panel1.Controls.Add(this.btnTraCuu);
-            this.guna2Panel1.Controls.Add(this.txtTuKhoa);
-            this.guna2Panel1.Controls.Add(this.dgvPhieuTC);
-            this.guna2Panel1.Location = new System.Drawing.Point(29, 46);
+            this.guna2Panel1.Controls.Add(this.tabControl1);
+            this.guna2Panel1.Location = new System.Drawing.Point(29, 37);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1201, 617);
+            this.guna2Panel1.Size = new System.Drawing.Size(1201, 626);
             this.guna2Panel1.TabIndex = 30;
             // 
             // datetimetracuu
@@ -115,7 +123,7 @@ namespace PMQLTHU_CHI
             this.datetimetracuu.CustomFormat = "yyyy-MM-dd";
             this.datetimetracuu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.datetimetracuu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datetimetracuu.Location = new System.Drawing.Point(955, 37);
+            this.datetimetracuu.Location = new System.Drawing.Point(931, 28);
             this.datetimetracuu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datetimetracuu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.datetimetracuu.Name = "datetimetracuu";
@@ -130,7 +138,7 @@ namespace PMQLTHU_CHI
             this.CheckBoxChi.CheckedState.BorderRadius = 0;
             this.CheckBoxChi.CheckedState.BorderThickness = 0;
             this.CheckBoxChi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CheckBoxChi.Location = new System.Drawing.Point(902, 41);
+            this.CheckBoxChi.Location = new System.Drawing.Point(878, 32);
             this.CheckBoxChi.Name = "CheckBoxChi";
             this.CheckBoxChi.Size = new System.Drawing.Size(41, 17);
             this.CheckBoxChi.TabIndex = 13;
@@ -147,7 +155,7 @@ namespace PMQLTHU_CHI
             this.CheckBoxThu.CheckedState.BorderRadius = 0;
             this.CheckBoxThu.CheckedState.BorderThickness = 0;
             this.CheckBoxThu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CheckBoxThu.Location = new System.Drawing.Point(851, 41);
+            this.CheckBoxThu.Location = new System.Drawing.Point(827, 32);
             this.CheckBoxThu.Name = "CheckBoxThu";
             this.CheckBoxThu.Size = new System.Drawing.Size(45, 17);
             this.CheckBoxThu.TabIndex = 12;
@@ -262,6 +270,133 @@ namespace PMQLTHU_CHI
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1195, 623);
+            this.tabControl1.TabIndex = 15;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dgvPhieuThu);
+            this.tabPage1.Controls.Add(this.datetimetracuu);
+            this.tabPage1.Controls.Add(this.txtTuKhoa);
+            this.tabPage1.Controls.Add(this.CheckBoxChi);
+            this.tabPage1.Controls.Add(this.btnTraCuu);
+            this.tabPage1.Controls.Add(this.CheckBoxThu);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1187, 597);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgvPhieuChi);
+            this.tabPage2.Controls.Add(this.guna2DateTimePicker1);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.guna2CheckBox1);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.guna2CheckBox2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1187, 597);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgvPhieuChi
+            // 
+            this.dgvPhieuChi.AllowUserToAddRows = false;
+            this.dgvPhieuChi.AllowUserToDeleteRows = false;
+            this.dgvPhieuChi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPhieuChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPhieuChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhieuChi.Location = new System.Drawing.Point(6, 59);
+            this.dgvPhieuChi.MultiSelect = false;
+            this.dgvPhieuChi.Name = "dgvPhieuChi";
+            this.dgvPhieuChi.ReadOnly = true;
+            this.dgvPhieuChi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhieuChi.Size = new System.Drawing.Size(1175, 529);
+            this.dgvPhieuChi.TabIndex = 17;
+            // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(931, 32);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(119, 24);
+            this.guna2DateTimePicker1.TabIndex = 20;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 8, 29, 0, 0, 0, 0);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(854, 10);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(223, 20);
+            this.textBox1.TabIndex = 15;
+            // 
+            // guna2CheckBox1
+            // 
+            this.guna2CheckBox1.AutoSize = true;
+            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.Location = new System.Drawing.Point(878, 36);
+            this.guna2CheckBox1.Name = "guna2CheckBox1";
+            this.guna2CheckBox1.Size = new System.Drawing.Size(41, 17);
+            this.guna2CheckBox1.TabIndex = 19;
+            this.guna2CheckBox1.Text = "Chi";
+            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1106, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Tra cứu";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // guna2CheckBox2
+            // 
+            this.guna2CheckBox2.AutoSize = true;
+            this.guna2CheckBox2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox2.CheckedState.BorderRadius = 0;
+            this.guna2CheckBox2.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox2.Location = new System.Drawing.Point(827, 36);
+            this.guna2CheckBox2.Name = "guna2CheckBox2";
+            this.guna2CheckBox2.Size = new System.Drawing.Size(45, 17);
+            this.guna2CheckBox2.TabIndex = 18;
+            this.guna2CheckBox2.Text = "Thu";
+            this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox2.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBox2.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
             // MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,13 +409,18 @@ namespace PMQLTHU_CHI
             this.Name = "MENU";
             this.Text = "MENU";
             this.Load += new System.EventHandler(this.MENU_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuTC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThu)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuChi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,7 +428,7 @@ namespace PMQLTHU_CHI
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvPhieuTC;
+        private System.Windows.Forms.DataGridView dgvPhieuThu;
         private System.Windows.Forms.Button btnTraCuu;
         private System.Windows.Forms.TextBox txtTuKhoa;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
@@ -305,5 +445,14 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2CheckBox CheckBoxChi;
         private Guna.UI2.WinForms.Guna2CheckBox CheckBoxThu;
         private Guna.UI2.WinForms.Guna2DateTimePicker datetimetracuu;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dgvPhieuChi;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.TextBox textBox1;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
+        private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
     }
 }

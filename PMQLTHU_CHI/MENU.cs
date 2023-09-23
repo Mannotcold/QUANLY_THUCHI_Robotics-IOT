@@ -37,7 +37,7 @@ namespace PMQLTHU_CHI
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
-            dgvPhieuTC.DataSource = table;
+            dgvPhieuThu.DataSource = table;
             connection.Close();
         }
 
@@ -45,10 +45,10 @@ namespace PMQLTHU_CHI
         private void dgvPhieuTC_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
-            i = dgvPhieuTC.CurrentRow.Index;
+            i = dgvPhieuThu.CurrentRow.Index;
            
             // Lấy giá trị ngày tháng năm từ DateTimePicker
-            DataGridViewRow selectedRow = dgvPhieuTC.SelectedRows[0];
+            DataGridViewRow selectedRow = dgvPhieuThu.SelectedRows[0];
 
             // Lấy giá trị ngày tháng từ ô cụ thể trong cột
             DateTime selectedDate = Convert.ToDateTime(selectedRow.Cells[0].Value);
@@ -65,14 +65,14 @@ namespace PMQLTHU_CHI
             _ngaylap = "Ngày " + day.ToString()+ " Tháng " + month.ToString() + " Năm " + year.ToString();
 
 
-            _khoahoc = dgvPhieuTC.Rows[i].Cells[1].Value.ToString();
-            _lophoc = dgvPhieuTC.Rows[i].Cells[2].Value.ToString();
-            _thu = dgvPhieuTC.Rows[i].Cells[3].Value.ToString();
-            _chi = dgvPhieuTC.Rows[i].Cells[4].Value.ToString();
-            _khachhang = dgvPhieuTC.Rows[i].Cells[5].Value.ToString();
-            _thanhtoan = dgvPhieuTC.Rows[i].Cells[6].Value.ToString();
-            _mahoadon = dgvPhieuTC.Rows[i].Cells[8].Value.ToString();
-            _discount = dgvPhieuTC.Rows[i].Cells[7].Value.ToString();
+            _khoahoc = dgvPhieuThu.Rows[i].Cells[1].Value.ToString();
+            _lophoc = dgvPhieuThu.Rows[i].Cells[2].Value.ToString();
+            _thu = dgvPhieuThu.Rows[i].Cells[3].Value.ToString();
+            _chi = dgvPhieuThu.Rows[i].Cells[4].Value.ToString();
+            _khachhang = dgvPhieuThu.Rows[i].Cells[5].Value.ToString();
+            _thanhtoan = dgvPhieuThu.Rows[i].Cells[6].Value.ToString();
+            _mahoadon = dgvPhieuThu.Rows[i].Cells[8].Value.ToString();
+            _discount = dgvPhieuThu.Rows[i].Cells[7].Value.ToString();
             mahoadon.Text = _mahoadon;
 
 
@@ -234,7 +234,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                 }
 
@@ -252,7 +252,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                     else
                     {
@@ -265,7 +265,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                 }
                 else if (CheckBoxChi.Checked == true)
@@ -281,7 +281,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                     else
                     {
@@ -293,7 +293,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                 }
 
@@ -307,7 +307,7 @@ namespace PMQLTHU_CHI
                     adapter.SelectCommand = command;
                     table.Clear();
                     adapter.Fill(table);
-                    dgvPhieuTC.DataSource = table;
+                    dgvPhieuThu.DataSource = table;
                 }
             }
 
@@ -331,7 +331,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                 }
                 else if (CheckBoxThu.Checked == true)
@@ -348,7 +348,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                     else
                     {
@@ -361,7 +361,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                 }
                 else if (CheckBoxChi.Checked == true)
@@ -377,7 +377,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                     else
                     {
@@ -390,7 +390,7 @@ namespace PMQLTHU_CHI
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
-                        dgvPhieuTC.DataSource = table;
+                        dgvPhieuThu.DataSource = table;
                     }
                 }
 
@@ -405,7 +405,7 @@ namespace PMQLTHU_CHI
                     adapter.SelectCommand = command;
                     table.Clear();
                     adapter.Fill(table);
-                    dgvPhieuTC.DataSource = table;
+                    dgvPhieuThu.DataSource = table;
                 }
             }
 
@@ -488,7 +488,7 @@ namespace PMQLTHU_CHI
 
         private void exportExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ToExcel(dgvPhieuTC);
+            ToExcel(dgvPhieuThu);
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

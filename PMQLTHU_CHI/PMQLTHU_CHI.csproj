@@ -103,6 +103,12 @@
     <Compile Include="MENU.Designer.cs">
       <DependentUpon>MENU.cs</DependentUpon>
     </Compile>
+    <Compile Include="NoiDungChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoiDungChi.Designer.cs">
+      <DependentUpon>NoiDungChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhieuThu_Chi.cs">
       <DependentUpon>PhieuThu_Chi.xsd</DependentUpon>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MENU.resx">
       <DependentUpon>MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoiDungChi.resx">
+      <DependentUpon>NoiDungChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

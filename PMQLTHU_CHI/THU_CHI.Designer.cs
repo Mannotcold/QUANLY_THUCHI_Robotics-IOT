@@ -188,9 +188,9 @@ namespace PMQLTHU_CHI
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.Location = new System.Drawing.Point(18, 385);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(44, 15);
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(40, 15);
             this.guna2HtmlLabel13.TabIndex = 18;
-            this.guna2HtmlLabel13.Text = "Giảm giá";
+            this.guna2HtmlLabel13.Text = "Ghi chú";
             // 
             // lhthubtn
             // 
@@ -342,9 +342,9 @@ namespace PMQLTHU_CHI
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel12.Location = new System.Drawing.Point(404, 42);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(61, 15);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(59, 15);
             this.guna2HtmlLabel12.TabIndex = 2;
-            this.guna2HtmlLabel12.Text = "Khách hàng";
+            this.guna2HtmlLabel12.Text = "Người đóng";
             // 
             // label2
             // 
@@ -451,9 +451,9 @@ namespace PMQLTHU_CHI
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel14.Location = new System.Drawing.Point(19, 391);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(44, 15);
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(40, 15);
             this.guna2HtmlLabel14.TabIndex = 20;
-            this.guna2HtmlLabel14.Text = "Giảm giá";
+            this.guna2HtmlLabel14.Text = "Ghi chú";
             // 
             // btnlophoc
             // 
@@ -565,18 +565,18 @@ namespace PMQLTHU_CHI
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(18, 219);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(42, 15);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(46, 15);
             this.guna2HtmlLabel3.TabIndex = 6;
-            this.guna2HtmlLabel3.Text = "Lớp học";
+            this.guna2HtmlLabel3.Text = "Nội dung";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(18, 131);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(49, 15);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(28, 15);
             this.guna2HtmlLabel2.TabIndex = 4;
-            this.guna2HtmlLabel2.Text = "Khóa học";
+            this.guna2HtmlLabel2.Text = "Khóa";
             // 
             // Nguoi
             // 
@@ -603,9 +603,9 @@ namespace PMQLTHU_CHI
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(399, 42);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(61, 15);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(58, 15);
             this.guna2HtmlLabel1.TabIndex = 2;
-            this.guna2HtmlLabel1.Text = "Khách hàng";
+            this.guna2HtmlLabel1.Text = "Người nhận";
             // 
             // label1
             // 
