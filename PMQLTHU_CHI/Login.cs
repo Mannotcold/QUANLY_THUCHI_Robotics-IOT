@@ -54,7 +54,7 @@ namespace PMQLTHU_CHI
                 com.CommandType = CommandType.Text;
                 com.CommandText = "select * from TaiKhoan WHERE TEN_TK = '" + username + "' AND MATKHAU = '" + password + "'";
                 com.Connection = connection;
-                //loaddata();
+                //loaddata_PhieuThu();
 
                 SqlDataReader dta = com.ExecuteReader();
                 

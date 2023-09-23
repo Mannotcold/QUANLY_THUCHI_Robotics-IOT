@@ -46,7 +46,7 @@ namespace PMQLTHU_CHI
                 com.CommandType = CommandType.Text;
                 com.CommandText = "select * from TaiKhoan WHERE TEN_TK = '" + username + "'";
                 com.Connection = connection;
-                //loaddata();
+                //loaddata_PhieuThu();
 
                 //Lấy mk của tài khoan tim kiem
                 SqlDataReader dta = com.ExecuteReader();

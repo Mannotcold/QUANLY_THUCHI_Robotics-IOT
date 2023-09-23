@@ -77,7 +77,7 @@ namespace PMQLTHU_CHI
                     com.CommandType = CommandType.Text;
                     com.CommandText = "insert into LOPHOC (LOPHOC, ChiTiet) VALUES (N'" + txtLopHoc.Text.ToString() + "', N'" + chitietLH.Text.ToString() + "')";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
@@ -118,7 +118,7 @@ namespace PMQLTHU_CHI
                     com.CommandType = CommandType.Text;
                     com.CommandText = "Update LOPHOC set LOPHOC = N'" + txtLopHoc.Text.ToString() + "', ChiTiet = N'" + chitietLH.Text.ToString() + "' where LOPHOC = N'" + lophocbd + "'";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
@@ -160,7 +160,7 @@ namespace PMQLTHU_CHI
                     com.CommandType = CommandType.Text;
                     com.CommandText = "delete from LOPHOC where LOPHOC = N'" + txtLopHoc.Text.ToString() + "'";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {

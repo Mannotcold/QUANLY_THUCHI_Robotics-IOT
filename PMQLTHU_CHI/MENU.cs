@@ -25,10 +25,12 @@ namespace PMQLTHU_CHI
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
+        DataTable table1 = new DataTable();
+
 
         string _ngaylap, _khoahoc, _lophoc, _thu, _chi, _khachhang, _thanhtoan, _mahoadon, _discount;
          
-        void loaddata()
+        void loaddata_PhieuThu()
         {
             connection = new SqlConnection(str);
             connection.Open();
@@ -41,8 +43,23 @@ namespace PMQLTHU_CHI
             connection.Close();
         }
 
+        void loaddata_PhieuChi()
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+            command = connection.CreateCommand();
+            command.CommandText = "select CONVERT(nvarchar, NgayLap, 103) AS Ngày_lập,KhoaHoc AS Khóa ,NoiDung AS Nội_dung ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_CHI";
+            adapter.SelectCommand = command;
+            table1.Clear();
+            adapter.Fill(table1);
+            dgvPhieuChi.DataSource = table1;
+            connection.Close();
+        }
 
-        private void dgvPhieuTC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+
+        private void dgvPhieuThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
             i = dgvPhieuThu.CurrentRow.Index;
@@ -77,12 +94,7 @@ namespace PMQLTHU_CHI
 
         }
 
-        private void Print_Click(object sender, EventArgs e)
-        {
-            
-
-            
-        }
+       
 
         private void Xoa_Click(object sender, EventArgs e)
         {
@@ -104,7 +116,7 @@ namespace PMQLTHU_CHI
                     com.CommandType = CommandType.Text;
                     com.CommandText = "delete from PHIEU_THU where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
@@ -114,7 +126,7 @@ namespace PMQLTHU_CHI
                     {
                         MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
-                    loaddata();
+                    loaddata_PhieuThu();
 
                 }
                 catch (Exception )
@@ -145,7 +157,7 @@ namespace PMQLTHU_CHI
                     com.CommandType = CommandType.Text;
                     com.CommandText = "delete from PHIEU_THU where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
@@ -155,7 +167,7 @@ namespace PMQLTHU_CHI
                     {
                         MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
-                    loaddata();
+                    loaddata_PhieuThu();
 
                 }
                 catch (Exception)
@@ -167,6 +179,7 @@ namespace PMQLTHU_CHI
         }
 
       
+// Tra cuu thu
 
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
@@ -180,7 +193,7 @@ namespace PMQLTHU_CHI
                 {
                     if (txtTuKhoa.Text == "")
                     {
-                        loaddata();
+                        loaddata_PhieuThu();
                     }
                     else
                     {
@@ -276,7 +289,7 @@ namespace PMQLTHU_CHI
                 {
                     if (txtTuKhoa.Text == "")
                     {
-                        loaddata();
+                        loaddata_PhieuThu();
                     }
                     else
                     {
@@ -372,7 +385,8 @@ namespace PMQLTHU_CHI
 
         private void MENU_Load(object sender, EventArgs e)
         {
-            loaddata();
+            loaddata_PhieuThu();
+           loaddata_PhieuChi();
         }
 
 

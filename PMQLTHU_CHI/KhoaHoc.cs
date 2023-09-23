@@ -84,7 +84,7 @@ namespace PMQLTHU_CHI
                     com.CommandType = CommandType.Text;
                     com.CommandText = "insert into KHOAHOC (khoahoc, ChiTiet) VALUES (N'" + txtKhoaHoc.Text.ToString() + "', N'" + chitietKH.Text.ToString() + "')";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
@@ -125,7 +125,7 @@ namespace PMQLTHU_CHI
                     com.CommandType = CommandType.Text;
                     com.CommandText = "Update KHOAHOC set khoahoc = N'" + txtKhoaHoc.Text.ToString() + "', ChiTiet = N'" + chitietKH.Text.ToString() + "' where khoahoc = N'" + khoahocbd + "'";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
@@ -167,7 +167,7 @@ namespace PMQLTHU_CHI
                     com.CommandType = CommandType.Text;
                     com.CommandText = "delete from KHOAHOC where khoahoc = N'" + txtKhoaHoc.Text.ToString() + "'";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {

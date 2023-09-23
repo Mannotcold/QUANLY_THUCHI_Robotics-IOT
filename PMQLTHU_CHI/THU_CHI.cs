@@ -74,7 +74,7 @@ namespace PMQLTHU_CHI
             connection.Open();
 
           
-            string sql = "select MAX(MaPhieu) FROM PHIEU_THU_CHI";
+            string sql = "select MAX(MaPhieu) FROM PHIEU_THU";
 
             SqlCommand com = new SqlCommand(sql, connection);
             //Lấy dữ liệu về từ kết quả câu lệnh trên
@@ -160,9 +160,9 @@ namespace PMQLTHU_CHI
                    
 
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + comboBoxKHchi.Text.ToString() + "',N'" + comboBoxLHchi.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "',N'" + discountChi.Text + "','" + mahoadonchi + "')";
+                    com.CommandText = "insert into PHIEU_THU (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + comboBoxKHchi.Text.ToString() + "',N'" + comboBoxLHchi.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "',N'" + discountChi.Text + "','" + mahoadonchi + "')";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
@@ -275,9 +275,9 @@ namespace PMQLTHU_CHI
 
                    
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU_CHI (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + comboBoxKHthu.Text.ToString() + "',N'" + comboBoxLHthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangthu.Text + "',N'" + thanhtoanthu.Text + "',N'" + discountThu.Text + "','" + mahoadonthu + "')";
+                    com.CommandText = "insert into PHIEU_THU (NgayLap,KhoaHoc,LopHoc,thu,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + timethu.Text + "',N'" + comboBoxKHthu.Text.ToString() + "',N'" + comboBoxLHthu.Text.ToString() + "','" + txtthu.Text + "',N'" + khachhangthu.Text + "',N'" + thanhtoanthu.Text + "',N'" + discountThu.Text + "','" + mahoadonthu + "')";
                     com.Connection = connection;
-                    //loaddata();
+                    //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
                     if (kq > 0)
                     {
