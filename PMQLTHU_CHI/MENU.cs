@@ -27,9 +27,10 @@ namespace PMQLTHU_CHI
 
         DataTable table1 = new DataTable();
 
+        //Bien thu
+        string _ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon, _discount;
+       
 
-        string _ngaylap, _khoahoc, _lophoc, _thu, _chi, _khachhang, _thanhtoan, _mahoadon, _discount;
-         
         void loaddata_PhieuThu()
         {
             connection = new SqlConnection(str);
@@ -43,19 +44,7 @@ namespace PMQLTHU_CHI
             connection.Close();
         }
 
-        void loaddata_PhieuChi()
-        {
-            connection = new SqlConnection(str);
-            connection.Open();
-            command = connection.CreateCommand();
-            command.CommandText = "select CONVERT(nvarchar, NgayLap, 103) AS Ngày_lập,KhoaHoc AS Khóa ,NoiDung AS Nội_dung ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_CHI";
-            adapter.SelectCommand = command;
-            table1.Clear();
-            adapter.Fill(table1);
-            dgvPhieuChi.DataSource = table1;
-            connection.Close();
-        }
-
+        
 
 
 
@@ -383,12 +372,70 @@ namespace PMQLTHU_CHI
         
         }
 
+
+
+        //Phiếu chi
+
+        // bien ch
+        string _ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi;
+        
+        void loaddata_PhieuChi()
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+            command = connection.CreateCommand();
+            command.CommandText = "select CONVERT(nvarchar, NgayLap, 103) AS Ngày_lập,KhoaHoc AS Khóa ,NoiDung AS Nội_dung ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_CHI";
+            adapter.SelectCommand = command;
+            table1.Clear();
+            adapter.Fill(table1);
+            dgvPhieuChi.DataSource = table1;
+            connection.Close();
+        }
+
+        private void dgvPhieuChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgvPhieuChi.CurrentRow.Index;
+
+            // Lấy giá trị ngày tháng năm từ DateTimePicker
+            DataGridViewRow selectedRow = dgvPhieuChi.SelectedRows[0];
+
+            // Lấy giá trị ngày tháng từ ô cụ thể trong cột
+            DateTime selectedDate = Convert.ToDateTime(selectedRow.Cells[0].Value);
+
+            // Lấy ngày
+            int day = selectedDate.Day;
+
+            // Lấy tháng
+            int month = selectedDate.Month;
+
+            // Lấy năm
+            int year = selectedDate.Year;
+
+            _ngaylap = "Ngày " + day.ToString() + " Tháng " + month.ToString() + " Năm " + year.ToString();
+
+
+            _khoachi = dgvPhieuChi.Rows[i].Cells[1].Value.ToString();
+            _noidungchi = dgvPhieuChi.Rows[i].Cells[2].Value.ToString();
+            _chi = dgvPhieuChi.Rows[i].Cells[3].Value.ToString();
+            _khachhangchi = dgvPhieuChi.Rows[i].Cells[4].Value.ToString();
+            _thanhtoanchi = dgvPhieuChi.Rows[i].Cells[5].Value.ToString();
+            _discountchi = dgvPhieuChi.Rows[i].Cells[6].Value.ToString();
+            _mahoadonchi = dgvPhieuChi.Rows[i].Cells[7].Value.ToString();
+            
+            mahoadon.Text = _mahoadonchi;
+        }
+
+
+
+
         private void MENU_Load(object sender, EventArgs e)
         {
             loaddata_PhieuThu();
            loaddata_PhieuChi();
         }
 
+       
 
         private void thêmMớiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
