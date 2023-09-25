@@ -370,6 +370,7 @@ namespace PMQLTHU_CHI
         private void khachhangthu_TextChanged(object sender, EventArgs e)
         {
 
+          
         }
     }
 }
