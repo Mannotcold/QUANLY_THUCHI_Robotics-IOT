@@ -52,8 +52,8 @@ namespace PMQLTHU_CHI
             this.timethu = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Chi = new System.Windows.Forms.TabPage();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.comboBoxLHchi = new System.Windows.Forms.ComboBox();
-            this.comboBoxKHchi = new System.Windows.Forms.ComboBox();
+            this.comboBoxNDchi = new System.Windows.Forms.ComboBox();
+            this.comboBoxKhoachi = new System.Windows.Forms.ComboBox();
             this.discountChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnlophoc = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -382,8 +382,8 @@ namespace PMQLTHU_CHI
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.comboBoxLHchi);
-            this.guna2Panel1.Controls.Add(this.comboBoxKHchi);
+            this.guna2Panel1.Controls.Add(this.comboBoxNDchi);
+            this.guna2Panel1.Controls.Add(this.comboBoxKhoachi);
             this.guna2Panel1.Controls.Add(this.discountChi);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel14);
             this.guna2Panel1.Controls.Add(this.btnlophoc);
@@ -404,27 +404,27 @@ namespace PMQLTHU_CHI
             this.guna2Panel1.Size = new System.Drawing.Size(690, 481);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // comboBoxLHchi
+            // comboBoxNDchi
             // 
-            this.comboBoxLHchi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxLHchi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxLHchi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxLHchi.FormattingEnabled = true;
-            this.comboBoxLHchi.Location = new System.Drawing.Point(88, 215);
-            this.comboBoxLHchi.Name = "comboBoxLHchi";
-            this.comboBoxLHchi.Size = new System.Drawing.Size(528, 33);
-            this.comboBoxLHchi.TabIndex = 23;
+            this.comboBoxNDchi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxNDchi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxNDchi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxNDchi.FormattingEnabled = true;
+            this.comboBoxNDchi.Location = new System.Drawing.Point(88, 215);
+            this.comboBoxNDchi.Name = "comboBoxNDchi";
+            this.comboBoxNDchi.Size = new System.Drawing.Size(528, 33);
+            this.comboBoxNDchi.TabIndex = 23;
             // 
-            // comboBoxKHchi
+            // comboBoxKhoachi
             // 
-            this.comboBoxKHchi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxKHchi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxKHchi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxKHchi.FormattingEnabled = true;
-            this.comboBoxKHchi.Location = new System.Drawing.Point(88, 125);
-            this.comboBoxKHchi.Name = "comboBoxKHchi";
-            this.comboBoxKHchi.Size = new System.Drawing.Size(528, 33);
-            this.comboBoxKHchi.TabIndex = 22;
+            this.comboBoxKhoachi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxKhoachi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxKhoachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxKhoachi.FormattingEnabled = true;
+            this.comboBoxKhoachi.Location = new System.Drawing.Point(88, 125);
+            this.comboBoxKhoachi.Name = "comboBoxKhoachi";
+            this.comboBoxKhoachi.Size = new System.Drawing.Size(528, 33);
+            this.comboBoxKhoachi.TabIndex = 22;
             // 
             // discountChi
             // 
@@ -468,7 +468,7 @@ namespace PMQLTHU_CHI
             this.btnlophoc.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnlophoc.Size = new System.Drawing.Size(57, 54);
             this.btnlophoc.TabIndex = 16;
-            this.btnlophoc.Click += new System.EventHandler(this.btnlophoc_Click);
+            this.btnlophoc.Click += new System.EventHandler(this.btnnoidung_Click);
             // 
             // btnkhoahoc
             // 
@@ -707,8 +707,8 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2TextBox discountChi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-        private System.Windows.Forms.ComboBox comboBoxKHchi;
-        private System.Windows.Forms.ComboBox comboBoxLHchi;
+        private System.Windows.Forms.ComboBox comboBoxKhoachi;
+        private System.Windows.Forms.ComboBox comboBoxNDchi;
         private System.Windows.Forms.ComboBox comboBoxKHthu;
         private System.Windows.Forms.ComboBox comboBoxLHthu;
     }

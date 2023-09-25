@@ -43,7 +43,7 @@ namespace PMQLTHU_CHI
             // Thêm dữ liệu vào ComboBox
             while (reader.Read())
             {
-                comboBoxKHchi.Items.Add(reader["KhoaHoc"].ToString());
+                comboBoxKhoachi.Items.Add(reader["KhoaHoc"].ToString());
                 comboBoxKHthu.Items.Add(reader["KhoaHoc"].ToString());
             }
             connection.Close();
@@ -61,20 +61,41 @@ namespace PMQLTHU_CHI
             // Thêm dữ liệu vào ComboBox
             while (reader.Read())
             {
-                comboBoxLHchi.Items.Add(reader["LOPHOC"].ToString());
                 comboBoxLHthu.Items.Add(reader["LOPHOC"].ToString());
             }
             connection.Close();
         }
 
-        string MaPhieuMx;
-        private void MaPhieuMax()
+        public void loadNoiDungChi()
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+            command = connection.CreateCommand();
+            command.CommandText = "select NoiDung from NoiDungChi";
+            // Thực thi câu lệnh SQL và đọc dữ liệu từ SqlDataReader
+            SqlDataReader reader = command.ExecuteReader();
+
+            // Thêm dữ liệu vào ComboBox
+            while (reader.Read())
+            {
+                comboBoxNDchi.Items.Add(reader["NoiDung"].ToString());
+            }
+            connection.Close();
+        }
+
+
+
+
+        //Them chi
+
+        string MaPhieuMxChi;
+        private void MaPhieuMaxChi()
         {
             connection = new SqlConnection(str);
             connection.Open();
 
-          
-            string sql = "select MAX(MaPhieu) FROM PHIEU_THU";
+
+            string sql = "select MAX(MaPhieu) FROM PHIEU_CHI";
 
             SqlCommand com = new SqlCommand(sql, connection);
             //Lấy dữ liệu về từ kết quả câu lệnh trên
@@ -84,22 +105,20 @@ namespace PMQLTHU_CHI
             while (dta.Read())
             {
                 int max = dta.GetInt32(0);
-                MaPhieuMx = max.ToString();
+                MaPhieuMxChi = max.ToString();
 
             }
         }
-
-        //Them chi
         private void Thechi_Click(object sender, EventArgs e)
         {
             //Kiểm tra textbox không được bỏ trống
 
-            if (comboBoxKHchi.Text.ToString() == "")
+            if (comboBoxKhoachi.Text.ToString() == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin khóa hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (comboBoxLHchi.Text.ToString() == "")
+            else if (comboBoxNDchi.Text.ToString() == "")
             {
                 MessageBox.Show("Bạn phải điền đầy đủ thông tin lớp hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -136,12 +155,12 @@ namespace PMQLTHU_CHI
 
             //Tạo ma hoa don theo form sẵn
 
-            MaPhieuMax();
+            MaPhieuMaxChi();
             // Lấy năm
             DateTime selectedDate = guna2DateTimePicker1.Value;
             int year = selectedDate.Year;
-            string mahoadonchi = "PC" + "/"  + year + "/" + MaPhieuMx;
-            //MessageBox.Show(MaPhieuMx);
+            string mahoadonchi = "PC" + "/"  + year + "/" + MaPhieuMxChi;
+            //MessageBox.Show(MaPhieuMxThu);
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -160,7 +179,7 @@ namespace PMQLTHU_CHI
                    
 
                     com.CommandType = CommandType.Text;
-                    com.CommandText = "insert into PHIEU_THU (NgayLap,KhoaHoc,LopHoc,chi,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + comboBoxKHchi.Text.ToString() + "',N'" + comboBoxLHchi.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "',N'" + discountChi.Text + "','" + mahoadonchi + "')";
+                    com.CommandText = "insert into PHIEU_CHI (NgayLap,KhoaHoc,NoiDung,chi,Nguoi, Cash,Discount,SoHoaDon) VALUES ('" + guna2DateTimePicker1.Text + "',N'" + comboBoxKhoachi.Text.ToString() + "',N'" + comboBoxNDchi.Text.ToString() + "','" + txtchi.Text + "',N'" + Nguoi.Text + "',N'" + ccbthanhtoan.Text + "',N'" + discountChi.Text + "','" + mahoadonchi + "')";
                     com.Connection = connection;
                     //loaddata_PhieuThu();
                     int kq = com.ExecuteNonQuery();
@@ -187,6 +206,7 @@ namespace PMQLTHU_CHI
         {
             loadkhoahoc();
             loadlophoc();
+            loadNoiDungChi();
         }
 
         private void Quay_lai_Click(object sender, EventArgs e)
@@ -203,6 +223,29 @@ namespace PMQLTHU_CHI
 
 
         //insert thu
+
+
+        string MaPhieuMxThu;
+        private void MaPhieuMaxThu()
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+
+
+            string sql = "select MAX(MaPhieu) FROM PHIEU_THU";
+
+            SqlCommand com = new SqlCommand(sql, connection);
+            //Lấy dữ liệu về từ kết quả câu lệnh trên
+            //ExecuteReader() dùng với select
+            //ExecuteNonquery(); với inserrt update delete
+            SqlDataReader dta = com.ExecuteReader();
+            while (dta.Read())
+            {
+                int max = dta.GetInt32(0);
+                MaPhieuMxThu = max.ToString();
+
+            }
+        }
         private void themthu_Click(object sender, EventArgs e)
         {
 
@@ -252,10 +295,10 @@ namespace PMQLTHU_CHI
 
 
             //Tạo ma hoa don theo form sẵn
-            MaPhieuMax();
+            MaPhieuMaxThu();
             DateTime selectedDate = timethu.Value;
             int year = selectedDate.Year;
-            string mahoadonthu = "PT" + "/" + year + "/" + MaPhieuMx;
+            string mahoadonthu = "PT" + "/" + year + "/" + MaPhieuMxThu;
 
 
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -311,11 +354,11 @@ namespace PMQLTHU_CHI
             khoahoc.ShowDialog();
         }
 
-        private void btnlophoc_Click(object sender, EventArgs e)
+        private void btnnoidung_Click(object sender, EventArgs e)
         {
-            Form lophoc = new LopHoc();
+            Form Noidung = new NoiDungChi();
 
-            lophoc.ShowDialog();
+            Noidung.ShowDialog();
         }
 
         private void lhthubtn_Click(object sender, EventArgs e)
@@ -352,13 +395,13 @@ namespace PMQLTHU_CHI
 
         private void ccbkhoahoc_MouseClick(object sender, MouseEventArgs e)
         {
-            comboBoxKHchi.Items.Clear();
+            comboBoxKhoachi.Items.Clear();
             loadkhoahoc();
         }
 
         private void ccblophoc_MouseClick(object sender, MouseEventArgs e)
         {
-            comboBoxLHchi.Items.Clear();
+            comboBoxNDchi.Items.Clear();
             loadlophoc();
         }
 
