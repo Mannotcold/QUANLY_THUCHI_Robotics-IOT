@@ -35,40 +35,40 @@ namespace PMQLTHU_CHI
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.PhieuThu = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Print = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.mahoadon = new System.Windows.Forms.TextBox();
+            this.Xoa = new Guna.UI2.WinForms.Guna2Button();
             this.datetimetracuu = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.CheckBoxChi = new Guna.UI2.WinForms.Guna2CheckBox();
             this.CheckBoxThu = new Guna.UI2.WinForms.Guna2CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Print_Chi = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.mahoadonchi = new System.Windows.Forms.TextBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.dgvPhieuChi = new System.Windows.Forms.DataGridView();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.Xoa = new Guna.UI2.WinForms.Guna2Button();
-            this.mahoadon = new System.Windows.Forms.TextBox();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Print = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.thêmMớiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmMớiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Print_Chi = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThu)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.PhieuThu.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuChi)).BeginInit();
             this.guna2Panel2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuChi)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPhieuThu
@@ -153,6 +153,70 @@ namespace PMQLTHU_CHI
             this.tabPage1.Text = "Phiếu Thu";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel2.AutoScroll = true;
+            this.guna2Panel2.Controls.Add(this.Print);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel9);
+            this.guna2Panel2.Controls.Add(this.mahoadon);
+            this.guna2Panel2.Controls.Add(this.Xoa);
+            this.guna2Panel2.Location = new System.Drawing.Point(884, 572);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(288, 70);
+            this.guna2Panel2.TabIndex = 31;
+            // 
+            // Print
+            // 
+            this.Print.Animated = true;
+            this.Print.BackColor = System.Drawing.Color.Transparent;
+            this.Print.BorderRadius = 10;
+            this.Print.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.Print.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Print.ForeColor = System.Drawing.Color.White;
+            this.Print.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Print.Location = new System.Drawing.Point(157, 0);
+            this.Print.Name = "Print";
+            this.Print.Size = new System.Drawing.Size(131, 33);
+            this.Print.TabIndex = 26;
+            this.Print.Text = "Print";
+            this.Print.UseTransparentBackground = true;
+            this.Print.Click += new System.EventHandler(this.Print_Thu);
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(49, 16);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(61, 15);
+            this.guna2HtmlLabel9.TabIndex = 29;
+            this.guna2HtmlLabel9.Text = "Mã hóa đơn";
+            // 
+            // mahoadon
+            // 
+            this.mahoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mahoadon.Location = new System.Drawing.Point(27, 37);
+            this.mahoadon.Name = "mahoadon";
+            this.mahoadon.Size = new System.Drawing.Size(104, 20);
+            this.mahoadon.TabIndex = 27;
+            // 
+            // Xoa
+            // 
+            this.Xoa.Animated = true;
+            this.Xoa.BackColor = System.Drawing.Color.Transparent;
+            this.Xoa.BorderRadius = 10;
+            this.Xoa.FillColor = System.Drawing.Color.Blue;
+            this.Xoa.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Xoa.ForeColor = System.Drawing.Color.White;
+            this.Xoa.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Xoa.Location = new System.Drawing.Point(157, 37);
+            this.Xoa.Name = "Xoa";
+            this.Xoa.Size = new System.Drawing.Size(131, 33);
+            this.Xoa.TabIndex = 28;
+            this.Xoa.Text = "Xóa";
+            this.Xoa.UseTransparentBackground = true;
+            this.Xoa.Click += new System.EventHandler(this.Xoa_Click_1);
+            // 
             // datetimetracuu
             // 
             this.datetimetracuu.Checked = true;
@@ -217,6 +281,69 @@ namespace PMQLTHU_CHI
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Phiếu Chi";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel3.AutoScroll = true;
+            this.guna2Panel3.Controls.Add(this.Print_Chi);
+            this.guna2Panel3.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel3.Controls.Add(this.mahoadonchi);
+            this.guna2Panel3.Controls.Add(this.guna2Button2);
+            this.guna2Panel3.Location = new System.Drawing.Point(890, 572);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(288, 70);
+            this.guna2Panel3.TabIndex = 32;
+            // 
+            // Print_Chi
+            // 
+            this.Print_Chi.Animated = true;
+            this.Print_Chi.BackColor = System.Drawing.Color.Transparent;
+            this.Print_Chi.BorderRadius = 10;
+            this.Print_Chi.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.Print_Chi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Print_Chi.ForeColor = System.Drawing.Color.White;
+            this.Print_Chi.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Print_Chi.Location = new System.Drawing.Point(157, 0);
+            this.Print_Chi.Name = "Print_Chi";
+            this.Print_Chi.Size = new System.Drawing.Size(131, 33);
+            this.Print_Chi.TabIndex = 26;
+            this.Print_Chi.Text = "Print";
+            this.Print_Chi.UseTransparentBackground = true;
+            this.Print_Chi.Click += new System.EventHandler(this.Print_Chi_Click);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(49, 16);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(61, 15);
+            this.guna2HtmlLabel1.TabIndex = 29;
+            this.guna2HtmlLabel1.Text = "Mã hóa đơn";
+            // 
+            // mahoadonchi
+            // 
+            this.mahoadonchi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mahoadonchi.Location = new System.Drawing.Point(27, 37);
+            this.mahoadonchi.Name = "mahoadonchi";
+            this.mahoadonchi.Size = new System.Drawing.Size(104, 20);
+            this.mahoadonchi.TabIndex = 27;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.FillColor = System.Drawing.Color.Blue;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2Button2.Location = new System.Drawing.Point(157, 37);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(131, 33);
+            this.guna2Button2.TabIndex = 28;
+            this.guna2Button2.Text = "Xóa";
+            this.guna2Button2.UseTransparentBackground = true;
             // 
             // dgvPhieuChi
             // 
@@ -304,70 +431,6 @@ namespace PMQLTHU_CHI
             this.guna2CheckBox2.UncheckedState.BorderThickness = 0;
             this.guna2CheckBox2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
-            // Xoa
-            // 
-            this.Xoa.Animated = true;
-            this.Xoa.BackColor = System.Drawing.Color.Transparent;
-            this.Xoa.BorderRadius = 10;
-            this.Xoa.FillColor = System.Drawing.Color.Blue;
-            this.Xoa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Xoa.ForeColor = System.Drawing.Color.White;
-            this.Xoa.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Xoa.Location = new System.Drawing.Point(157, 37);
-            this.Xoa.Name = "Xoa";
-            this.Xoa.Size = new System.Drawing.Size(131, 33);
-            this.Xoa.TabIndex = 28;
-            this.Xoa.Text = "Xóa";
-            this.Xoa.UseTransparentBackground = true;
-            this.Xoa.Click += new System.EventHandler(this.Xoa_Click_1);
-            // 
-            // mahoadon
-            // 
-            this.mahoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mahoadon.Location = new System.Drawing.Point(27, 37);
-            this.mahoadon.Name = "mahoadon";
-            this.mahoadon.Size = new System.Drawing.Size(104, 20);
-            this.mahoadon.TabIndex = 27;
-            // 
-            // guna2HtmlLabel9
-            // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(49, 16);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(61, 15);
-            this.guna2HtmlLabel9.TabIndex = 29;
-            this.guna2HtmlLabel9.Text = "Mã hóa đơn";
-            // 
-            // Print
-            // 
-            this.Print.Animated = true;
-            this.Print.BackColor = System.Drawing.Color.Transparent;
-            this.Print.BorderRadius = 10;
-            this.Print.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.Print.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Print.ForeColor = System.Drawing.Color.White;
-            this.Print.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Print.Location = new System.Drawing.Point(157, 0);
-            this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(131, 33);
-            this.Print.TabIndex = 26;
-            this.Print.Text = "Print";
-            this.Print.UseTransparentBackground = true;
-            this.Print.Click += new System.EventHandler(this.Print_Thu);
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel2.AutoScroll = true;
-            this.guna2Panel2.Controls.Add(this.Print);
-            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel9);
-            this.guna2Panel2.Controls.Add(this.mahoadon);
-            this.guna2Panel2.Controls.Add(this.Xoa);
-            this.guna2Panel2.Location = new System.Drawing.Point(884, 572);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(288, 70);
-            this.guna2Panel2.TabIndex = 31;
-            // 
             // thêmMớiToolStripMenuItem
             // 
             this.thêmMớiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -409,69 +472,6 @@ namespace PMQLTHU_CHI
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel3.AutoScroll = true;
-            this.guna2Panel3.Controls.Add(this.Print_Chi);
-            this.guna2Panel3.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel3.Controls.Add(this.textBox2);
-            this.guna2Panel3.Controls.Add(this.guna2Button2);
-            this.guna2Panel3.Location = new System.Drawing.Point(890, 572);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(288, 70);
-            this.guna2Panel3.TabIndex = 32;
-            // 
-            // Print_Chi
-            // 
-            this.Print_Chi.Animated = true;
-            this.Print_Chi.BackColor = System.Drawing.Color.Transparent;
-            this.Print_Chi.BorderRadius = 10;
-            this.Print_Chi.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.Print_Chi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Print_Chi.ForeColor = System.Drawing.Color.White;
-            this.Print_Chi.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Print_Chi.Location = new System.Drawing.Point(157, 0);
-            this.Print_Chi.Name = "Print_Chi";
-            this.Print_Chi.Size = new System.Drawing.Size(131, 33);
-            this.Print_Chi.TabIndex = 26;
-            this.Print_Chi.Text = "Print";
-            this.Print_Chi.UseTransparentBackground = true;
-            this.Print_Chi.Click += new System.EventHandler(this.Print_Chi_Click);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(49, 16);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(61, 15);
-            this.guna2HtmlLabel1.TabIndex = 29;
-            this.guna2HtmlLabel1.Text = "Mã hóa đơn";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(27, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(104, 20);
-            this.textBox2.TabIndex = 27;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.FillColor = System.Drawing.Color.Blue;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.Location = new System.Drawing.Point(157, 37);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(131, 33);
-            this.guna2Button2.TabIndex = 28;
-            this.guna2Button2.Text = "Xóa";
-            this.guna2Button2.UseTransparentBackground = true;
-            // 
             // MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,15 +488,15 @@ namespace PMQLTHU_CHI
             this.PhieuThu.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuChi)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuChi)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,7 +533,7 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Button Print_Chi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox mahoadonchi;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

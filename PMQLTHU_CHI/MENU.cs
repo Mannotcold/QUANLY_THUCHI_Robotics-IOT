@@ -367,7 +367,7 @@ namespace PMQLTHU_CHI
 
         private void Print_Chi_Click(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadonchi.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
 
@@ -432,7 +432,7 @@ namespace PMQLTHU_CHI
             _discountchi = dgvPhieuChi.Rows[i].Cells[6].Value.ToString();
             _mahoadonchi = dgvPhieuChi.Rows[i].Cells[7].Value.ToString();
             
-            mahoadon.Text = _mahoadonchi;
+            mahoadonchi.Text = _mahoadonchi;
         }
 
 
