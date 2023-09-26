@@ -36,7 +36,7 @@ namespace PMQLTHU_CHI
             connection = new SqlConnection(str);
             connection.Open();
             command = connection.CreateCommand();
-            command.CommandText = "select CONVERT(nvarchar, NgayLap, 103) AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_THU";
+            command.CommandText = "select CONVERT(nvarchar, NgayLap, 101) AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_THU";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -85,47 +85,7 @@ namespace PMQLTHU_CHI
 
        
 
-        private void Xoa_Click(object sender, EventArgs e)
-        {
-            DialogResult rs = MessageBox.Show("Bạn có muốn xóa mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (rs == DialogResult.Yes)
-            {
-
-                try
-                {
-
-                    connection = new SqlConnection(str);
-                    connection.Open();
-                    SqlCommand com = new SqlCommand();
-                    //Lấy dữ liệu về từ kết quả câu lệnh trên
-                    //ExecuteReader() dùng với select
-                    //ExecuteNonquery(); với inserrt update delete
-                    //com.ExecuteNonQuery();
-                    //MAPHIEUDP();
-                    com.CommandType = CommandType.Text;
-                    com.CommandText = "delete from PHIEU_THU where SoHoaDon = '" + mahoadon.Text.ToString() + "'";
-                    com.Connection = connection;
-                    //loaddata_PhieuThu();
-                    int kq = com.ExecuteNonQuery();
-                    if (kq > 0)
-                    {
-                        MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    }
-                    loaddata_PhieuThu();
-
-                }
-                catch (Exception )
-                {
-                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-                }
-            }
-        }
-
+        
         private void Xoa_Click_1(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn xóa mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -157,11 +117,13 @@ namespace PMQLTHU_CHI
                         MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                     loaddata_PhieuThu();
+                    mahoadon.Clear();
 
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    mahoadon.Clear();
 
                 }
             }
@@ -190,7 +152,7 @@ namespace PMQLTHU_CHI
                         connection.Open();
                         string Key = txtTuKhoa.Text + '%';
                         command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
+                        command.CommandText = "select CONVERT(varchar, NgayLap, 101) AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
                         adapter.SelectCommand = command;
                         table.Clear();
                         adapter.Fill(table);
@@ -372,19 +334,66 @@ namespace PMQLTHU_CHI
         
         }
 
+        private void Print_Thu(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+
+                    using (Report frmthu = new Report(_ngaylap.ToString(), _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon, _discount))
+                    {
+                        frmthu.ShowDialog();
+                    };
+                    mahoadon.Clear();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("In không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    mahoadon.Clear();
+
+                }
+            }
+        }
+
 
 
         //Phiếu chi
 
-        // bien ch
+        // bien chi
         string _ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi;
-        
+
+        private void Print_Chi_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+                    using (ReportChi frmchi = new ReportChi(_ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi))
+                    {
+                        frmchi.ShowDialog();
+                    };
+                    mahoadon.Clear();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    mahoadon.Clear();
+
+                }
+            }
+        }
+
         void loaddata_PhieuChi()
         {
             connection = new SqlConnection(str);
             connection.Open();
             command = connection.CreateCommand();
-            command.CommandText = "select CONVERT(nvarchar, NgayLap, 103) AS Ngày_lập,KhoaHoc AS Khóa ,NoiDung AS Nội_dung ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_CHI";
+            command.CommandText = "select CONVERT(nvarchar, NgayLap, 101) AS Ngày_lập,KhoaHoc AS Khóa ,NoiDung AS Nội_dung ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_CHI";
             adapter.SelectCommand = command;
             table1.Clear();
             adapter.Fill(table1);
@@ -412,7 +421,7 @@ namespace PMQLTHU_CHI
             // Lấy năm
             int year = selectedDate.Year;
 
-            _ngaylap = "Ngày " + day.ToString() + " Tháng " + month.ToString() + " Năm " + year.ToString();
+            _ngaylapchi = "Ngày " + day.ToString() + " Tháng " + month.ToString() + " Năm " + year.ToString();
 
 
             _khoachi = dgvPhieuChi.Rows[i].Cells[1].Value.ToString();
@@ -525,37 +534,6 @@ namespace PMQLTHU_CHI
 
         }
 
-        private void Print_Click_1(object sender, EventArgs e)
-        {
-            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (rs == DialogResult.Yes)
-            {
-
-                try
-                {
-
-                    if (_thu != "")
-                    {
-                        using (Report frmthu = new Report(_ngaylap, _khoahoc, _lophoc, _thu, _khachhang, _thanhtoan, _mahoadon, _discount))
-                        {
-                            frmthu.ShowDialog();
-                        };
-                    }
-                    else
-                    {
-                        using (ReportChi frmchi = new ReportChi(_ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon, _discount))
-                        {
-                            frmchi.ShowDialog();
-                        };
-                    }
-
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-                }
-            }
-        }
+        
     }
 }

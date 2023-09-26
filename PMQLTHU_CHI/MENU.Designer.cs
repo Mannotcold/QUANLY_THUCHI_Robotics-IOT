@@ -55,6 +55,11 @@ namespace PMQLTHU_CHI
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Print_Chi = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThu)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.PhieuThu.SuspendLayout();
@@ -63,6 +68,7 @@ namespace PMQLTHU_CHI
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuChi)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPhieuThu
@@ -79,7 +85,7 @@ namespace PMQLTHU_CHI
             this.dgvPhieuThu.Name = "dgvPhieuThu";
             this.dgvPhieuThu.ReadOnly = true;
             this.dgvPhieuThu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuThu.Size = new System.Drawing.Size(1175, 529);
+            this.dgvPhieuThu.Size = new System.Drawing.Size(1166, 515);
             this.dgvPhieuThu.TabIndex = 11;
             this.dgvPhieuThu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuThu_CellContentClick);
             // 
@@ -114,7 +120,7 @@ namespace PMQLTHU_CHI
             this.guna2Panel1.Controls.Add(this.PhieuThu);
             this.guna2Panel1.Location = new System.Drawing.Point(29, 37);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1201, 626);
+            this.guna2Panel1.Size = new System.Drawing.Size(1201, 693);
             this.guna2Panel1.TabIndex = 30;
             // 
             // PhieuThu
@@ -127,11 +133,12 @@ namespace PMQLTHU_CHI
             this.PhieuThu.Location = new System.Drawing.Point(3, 3);
             this.PhieuThu.Name = "PhieuThu";
             this.PhieuThu.SelectedIndex = 0;
-            this.PhieuThu.Size = new System.Drawing.Size(1195, 623);
+            this.PhieuThu.Size = new System.Drawing.Size(1195, 671);
             this.PhieuThu.TabIndex = 15;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.guna2Panel2);
             this.tabPage1.Controls.Add(this.dgvPhieuThu);
             this.tabPage1.Controls.Add(this.datetimetracuu);
             this.tabPage1.Controls.Add(this.txtTuKhoa);
@@ -141,7 +148,7 @@ namespace PMQLTHU_CHI
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1187, 597);
+            this.tabPage1.Size = new System.Drawing.Size(1187, 645);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Phiếu Thu";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -196,6 +203,7 @@ namespace PMQLTHU_CHI
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.guna2Panel3);
             this.tabPage2.Controls.Add(this.dgvPhieuChi);
             this.tabPage2.Controls.Add(this.guna2DateTimePicker1);
             this.tabPage2.Controls.Add(this.textBox1);
@@ -205,7 +213,7 @@ namespace PMQLTHU_CHI
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1187, 597);
+            this.tabPage2.Size = new System.Drawing.Size(1187, 645);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Phiếu Chi";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -219,12 +227,12 @@ namespace PMQLTHU_CHI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhieuChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhieuChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhieuChi.Location = new System.Drawing.Point(6, 59);
+            this.dgvPhieuChi.Location = new System.Drawing.Point(16, 59);
             this.dgvPhieuChi.MultiSelect = false;
             this.dgvPhieuChi.Name = "dgvPhieuChi";
             this.dgvPhieuChi.ReadOnly = true;
             this.dgvPhieuChi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuChi.Size = new System.Drawing.Size(1175, 529);
+            this.dgvPhieuChi.Size = new System.Drawing.Size(1162, 510);
             this.dgvPhieuChi.TabIndex = 17;
             this.dgvPhieuChi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuChi_CellContentClick);
             // 
@@ -345,7 +353,7 @@ namespace PMQLTHU_CHI
             this.Print.TabIndex = 26;
             this.Print.Text = "Print";
             this.Print.UseTransparentBackground = true;
-            this.Print.Click += new System.EventHandler(this.Print_Click_1);
+            this.Print.Click += new System.EventHandler(this.Print_Thu);
             // 
             // guna2Panel2
             // 
@@ -355,7 +363,7 @@ namespace PMQLTHU_CHI
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel9);
             this.guna2Panel2.Controls.Add(this.mahoadon);
             this.guna2Panel2.Controls.Add(this.Xoa);
-            this.guna2Panel2.Location = new System.Drawing.Point(942, 669);
+            this.guna2Panel2.Location = new System.Drawing.Point(884, 572);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(288, 70);
             this.guna2Panel2.TabIndex = 31;
@@ -401,12 +409,74 @@ namespace PMQLTHU_CHI
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel3.AutoScroll = true;
+            this.guna2Panel3.Controls.Add(this.Print_Chi);
+            this.guna2Panel3.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel3.Controls.Add(this.textBox2);
+            this.guna2Panel3.Controls.Add(this.guna2Button2);
+            this.guna2Panel3.Location = new System.Drawing.Point(890, 572);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(288, 70);
+            this.guna2Panel3.TabIndex = 32;
+            // 
+            // Print_Chi
+            // 
+            this.Print_Chi.Animated = true;
+            this.Print_Chi.BackColor = System.Drawing.Color.Transparent;
+            this.Print_Chi.BorderRadius = 10;
+            this.Print_Chi.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.Print_Chi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Print_Chi.ForeColor = System.Drawing.Color.White;
+            this.Print_Chi.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Print_Chi.Location = new System.Drawing.Point(157, 0);
+            this.Print_Chi.Name = "Print_Chi";
+            this.Print_Chi.Size = new System.Drawing.Size(131, 33);
+            this.Print_Chi.TabIndex = 26;
+            this.Print_Chi.Text = "Print";
+            this.Print_Chi.UseTransparentBackground = true;
+            this.Print_Chi.Click += new System.EventHandler(this.Print_Chi_Click);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(49, 16);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(61, 15);
+            this.guna2HtmlLabel1.TabIndex = 29;
+            this.guna2HtmlLabel1.Text = "Mã hóa đơn";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(27, 37);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(104, 20);
+            this.textBox2.TabIndex = 27;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.FillColor = System.Drawing.Color.Blue;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.guna2Button2.Location = new System.Drawing.Point(157, 37);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(131, 33);
+            this.guna2Button2.TabIndex = 28;
+            this.guna2Button2.Text = "Xóa";
+            this.guna2Button2.UseTransparentBackground = true;
+            // 
             // MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1254, 742);
-            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -425,6 +495,8 @@ namespace PMQLTHU_CHI
             this.guna2Panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,5 +530,10 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Button Print_Chi;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private System.Windows.Forms.TextBox textBox2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

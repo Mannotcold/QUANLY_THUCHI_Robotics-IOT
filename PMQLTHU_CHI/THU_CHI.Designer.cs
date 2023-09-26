@@ -358,7 +358,7 @@ namespace PMQLTHU_CHI
             // timethu
             // 
             this.timethu.Checked = true;
-            this.timethu.CustomFormat = "yyyy-MM-dd";
+            this.timethu.CustomFormat = "MM-dd-yyyy";
             this.timethu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timethu.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timethu.Location = new System.Drawing.Point(88, 34);

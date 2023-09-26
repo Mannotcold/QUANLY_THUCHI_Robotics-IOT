@@ -14,7 +14,7 @@ namespace PMQLTHU_CHI
     {
 
 
-        string _ngaylap, _khoahoc, _lophoc, _chi, _khachhang, _thanhtoan, _mahoadon, _discount;
+        string _ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi;
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
@@ -24,14 +24,14 @@ namespace PMQLTHU_CHI
         public ReportChi(string ngaylap, string khoahoc, string lophoc, string chi, string khachhang, string thanhtoan, string mahoadon, string discount)
         {
             InitializeComponent();
-            _ngaylap = ngaylap;
-            _khoahoc = khoahoc;
-            _lophoc = lophoc;
+            _ngaylapchi = ngaylap;
+            _khoachi = khoahoc;
+            _noidungchi = lophoc;
             _chi = chi;
-            _khachhang = khachhang;
-            _thanhtoan = thanhtoan;
-            _mahoadon = mahoadon;
-            _discount = discount;
+            _khachhangchi = khachhang;
+            _thanhtoanchi = thanhtoan;
+            _mahoadonchi = mahoadon;
+            _discountchi = discount;
         }
 
 
@@ -42,14 +42,14 @@ namespace PMQLTHU_CHI
             List<ReportChi> parameters = new List<ReportChi>();
 
             // Tạo đối tượng tham số và thêm vào danh sách
-            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pngaylapchi", _ngaylap));
-            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pkhoahocchi", _khoahoc));
-            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("plophocchi", _lophoc));
+            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pngaylapchi", _ngaylapchi));
+            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pkhoahocchi", _khoachi));
+            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("plophocchi", _noidungchi));
             this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pchi", _chi.ToString()));
-            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pkhachhangchi", _khachhang));
-            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pthanhtoanchi", _thanhtoan));
-            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pmahoadonchi", _mahoadon));
-            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pkhuyenmaichi", _discount));
+            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pkhachhangchi", _khachhangchi));
+            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pthanhtoanchi", _thanhtoanchi));
+            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pmahoadonchi", _mahoadonchi));
+            this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("pkhuyenmaichi", _discountchi));
             this.reportViewer1.RefreshReport();
         }
     }

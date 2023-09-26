@@ -102,6 +102,8 @@ namespace PMQLTHU_CHI
                     MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                 }
+                txtKhoaHoc.Clear();
+                chitietKH.Clear();
 
             }
         }
@@ -143,7 +145,8 @@ namespace PMQLTHU_CHI
                     MessageBox.Show("Cập nhật không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                 }
-
+                txtKhoaHoc.Clear();
+                chitietKH.Clear();
             }
         }
 
@@ -185,6 +188,8 @@ namespace PMQLTHU_CHI
                     MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                 }
+                txtKhoaHoc.Clear();
+                chitietKH.Clear();
             }
         }
 
@@ -206,6 +211,7 @@ namespace PMQLTHU_CHI
                 adapter.Fill(table);
                 dgvkh.DataSource = table;
             }
+            txtTuKhoa.Clear();
         }
 
         private void Quay_lai_Click_1(object sender, EventArgs e)
