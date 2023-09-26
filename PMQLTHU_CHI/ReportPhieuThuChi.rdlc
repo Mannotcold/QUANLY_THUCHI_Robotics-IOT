@@ -441,7 +441,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Người lập phiếu</Value>
+                    <Value>Người nộp</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -513,6 +513,36 @@
             <Height>0.25in</Height>
             <Width>1.55556in</Width>
             <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox9">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Người lập phiếu</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>4.42311in</Top>
+            <Left>6.38761in</Left>
+            <Height>0.25in</Height>
+            <Width>1.32813in</Width>
+            <ZIndex>18</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
