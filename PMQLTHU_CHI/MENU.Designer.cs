@@ -119,6 +119,9 @@ namespace PMQLTHU_CHI
             // 
             // PhieuThu
             // 
+            this.PhieuThu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PhieuThu.Controls.Add(this.tabPage1);
             this.PhieuThu.Controls.Add(this.tabPage2);
             this.PhieuThu.Location = new System.Drawing.Point(3, 3);

@@ -199,6 +199,43 @@ namespace PMQLTHU_CHI
 
                 }
 
+                if (comboBoxKhoachi.Text.ToString() == "")
+                {
+                    MessageBox.Show("Bạn phải điền đầy đủ thông tin khóa hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (comboBoxNDchi.Text.ToString() == "")
+                {
+                    MessageBox.Show("Bạn phải điền đầy đủ thông tin lớp hoc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (txtchi.Text == "")
+                {
+                    MessageBox.Show("Bạn phải điền đầy đủ thông tin chi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (Nguoi.Text == "")
+                {
+                    MessageBox.Show("Bạn phải điền đầy đủ thông tin người nhận!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (ccbthanhtoan.Text == "")
+                {
+                    MessageBox.Show("Bạn phải điền đầy đủ thông tin thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (discountChi.Text == "")
+                {
+                    MessageBox.Show("Bạn phải điền đầy đủ thông tin khuyến mãi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                comboBoxKhoachi.SelectedIndex = -1;
+                comboBoxNDchi.SelectedIndex = -1;
+                txtchi.Clear();
+                Nguoi.Clear();
+                ccbthanhtoan.SelectedIndex = -1;
+                discountChi.Clear();
             }
         }
 
@@ -337,6 +374,13 @@ namespace PMQLTHU_CHI
                     MessageBox.Show("Lưu không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                 }
+               
+                comboBoxKHthu.SelectedIndex = -1;
+                comboBoxLHthu.SelectedIndex = -1;
+                txtthu.Clear();
+                khachhangthu.Clear();
+                thanhtoanthu.SelectedIndex = -1;
+                discountThu.Clear();
 
             }
         }
