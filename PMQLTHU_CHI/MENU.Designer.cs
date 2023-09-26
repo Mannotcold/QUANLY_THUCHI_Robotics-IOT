@@ -60,6 +60,8 @@ namespace PMQLTHU_CHI
             this.exportExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ToExcelChi = new Guna.UI2.WinForms.Guna2Button();
+            this.ToExcelThu = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThu)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.PhieuThu.SuspendLayout();
@@ -138,6 +140,7 @@ namespace PMQLTHU_CHI
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ToExcelThu);
             this.tabPage1.Controls.Add(this.guna2Panel2);
             this.tabPage1.Controls.Add(this.dgvPhieuThu);
             this.tabPage1.Controls.Add(this.datetimetracuu);
@@ -267,6 +270,7 @@ namespace PMQLTHU_CHI
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ToExcelChi);
             this.tabPage2.Controls.Add(this.guna2Panel3);
             this.tabPage2.Controls.Add(this.dgvPhieuChi);
             this.tabPage2.Controls.Add(this.guna2DateTimePicker1);
@@ -444,21 +448,21 @@ namespace PMQLTHU_CHI
             // thêmMớiToolStripMenuItem1
             // 
             this.thêmMớiToolStripMenuItem1.Name = "thêmMớiToolStripMenuItem1";
-            this.thêmMớiToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.thêmMớiToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.thêmMớiToolStripMenuItem1.Text = "Thêm mới";
             this.thêmMớiToolStripMenuItem1.Click += new System.EventHandler(this.thêmMớiToolStripMenuItem1_Click);
             // 
             // exportExcelToolStripMenuItem
             // 
             this.exportExcelToolStripMenuItem.Name = "exportExcelToolStripMenuItem";
-            this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.exportExcelToolStripMenuItem.Text = "Export excel";
+            this.exportExcelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportExcelToolStripMenuItem.Text = "Import excel";
             this.exportExcelToolStripMenuItem.Click += new System.EventHandler(this.exportExcelToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -471,6 +475,40 @@ namespace PMQLTHU_CHI
             this.menuStrip1.Size = new System.Drawing.Size(1254, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ToExcelChi
+            // 
+            this.ToExcelChi.Animated = true;
+            this.ToExcelChi.BackColor = System.Drawing.Color.Transparent;
+            this.ToExcelChi.BorderRadius = 10;
+            this.ToExcelChi.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.ToExcelChi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ToExcelChi.ForeColor = System.Drawing.Color.White;
+            this.ToExcelChi.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.ToExcelChi.Location = new System.Drawing.Point(703, 575);
+            this.ToExcelChi.Name = "ToExcelChi";
+            this.ToExcelChi.Size = new System.Drawing.Size(131, 33);
+            this.ToExcelChi.TabIndex = 30;
+            this.ToExcelChi.Text = "Xuất Excel";
+            this.ToExcelChi.UseTransparentBackground = true;
+            this.ToExcelChi.Click += new System.EventHandler(this.ToExcelChi_Click);
+            // 
+            // ToExcelThu
+            // 
+            this.ToExcelThu.Animated = true;
+            this.ToExcelThu.BackColor = System.Drawing.Color.Transparent;
+            this.ToExcelThu.BorderRadius = 10;
+            this.ToExcelThu.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.ToExcelThu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ToExcelThu.ForeColor = System.Drawing.Color.White;
+            this.ToExcelThu.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.ToExcelThu.Location = new System.Drawing.Point(707, 576);
+            this.ToExcelThu.Name = "ToExcelThu";
+            this.ToExcelThu.Size = new System.Drawing.Size(131, 33);
+            this.ToExcelThu.TabIndex = 32;
+            this.ToExcelThu.Text = "Xuất Excel";
+            this.ToExcelThu.UseTransparentBackground = true;
+            this.ToExcelThu.Click += new System.EventHandler(this.ToExcelThu_Click);
             // 
             // MENU
             // 
@@ -535,5 +573,7 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.TextBox mahoadonchi;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button ToExcelChi;
+        private Guna.UI2.WinForms.Guna2Button ToExcelThu;
     }
 }

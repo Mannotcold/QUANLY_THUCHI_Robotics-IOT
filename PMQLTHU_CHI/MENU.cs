@@ -331,7 +331,6 @@ namespace PMQLTHU_CHI
                 }
             }
 
-        
         }
 
         private void Print_Thu(object sender, EventArgs e)
@@ -358,12 +357,23 @@ namespace PMQLTHU_CHI
             }
         }
 
+        private void ToExcelThu_Click(object sender, EventArgs e)
+        {
+            ToExcel(dgvPhieuThu);
+        }
 
 
         //Phiếu chi
 
         // bien chi
         string _ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi;
+
+        
+
+        private void ToExcelChi_Click(object sender, EventArgs e)
+        {
+            ToExcel(dgvPhieuChi);
+        }
 
         private void Print_Chi_Click(object sender, EventArgs e)
         {
@@ -516,7 +526,7 @@ namespace PMQLTHU_CHI
 
         private void exportExcelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ToExcel(dgvPhieuThu);
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
