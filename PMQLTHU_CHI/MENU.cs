@@ -79,7 +79,7 @@ namespace PMQLTHU_CHI
 
             _ngaylap = "Ngày " + day.ToString()+ " Tháng " + month.ToString() + " Năm " + year.ToString();
 
-
+            string _ngaylapThu = dgvPhieuThu.Rows[i].Cells[0].Value.ToString();
             _khoahoc = dgvPhieuThu.Rows[i].Cells[1].Value.ToString();
             _lophoc = dgvPhieuThu.Rows[i].Cells[2].Value.ToString();
             _thu = dgvPhieuThu.Rows[i].Cells[3].Value.ToString();
@@ -87,15 +87,22 @@ namespace PMQLTHU_CHI
             _thanhtoan = dgvPhieuThu.Rows[i].Cells[5].Value.ToString();
             _discount = dgvPhieuThu.Rows[i].Cells[6].Value.ToString();
             _mahoadon = dgvPhieuThu.Rows[i].Cells[7].Value.ToString();
-            mahoadon.Text = _mahoadon;
+            
 
+            txtNgayLapThu.Text = _ngaylapThu;
+            txtKhoaHocThu.Text = _khoahoc;
+            txtLopHocThu.Text = _lophoc;
+            txtThu.Text = _thu;
+            txtKhachHang.Text = _khachhang;
+            txtPTTTThu.Text = _thanhtoan;
+            txtGhiChuThu.Text = _discount;
+            mahoadon.Text = _mahoadon;
 
         }
 
-       
+      
 
-        
-        private void Xoa_Click_1(object sender, EventArgs e)
+        private void btnXoaThu_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn xóa mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
@@ -138,211 +145,210 @@ namespace PMQLTHU_CHI
             }
         }
 
-      
-// Tra cuu thu
+        // Tra cuu thu
 
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
-            DateTime selectedDate = datetimetracuu.Value.Date;
-            DateTime currentDate = DateTime.Today;
+            //DateTime selectedDate = datetimetracuu.Value.Date;
+            //DateTime currentDate = DateTime.Today;
 
-            // tra cuu khi nguoi dùng khong chon ngày
-            if (selectedDate == currentDate)
-            {
-                if (CheckBoxChi.Checked == true & CheckBoxThu.Checked == true)
-                {
-                    if (txtTuKhoa.Text == "")
-                    {
-                        loaddata_PhieuThu();
-                    }
-                    else
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select CONVERT(varchar, NgayLap, 101) AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                }
+            //// tra cuu khi nguoi dùng khong chon ngày
+            //if (selectedDate == currentDate)
+            //{
+            //    if (CheckBoxChi.Checked == true & CheckBoxThu.Checked == true)
+            //    {
+            //        if (txtTuKhoa.Text == "")
+            //        {
+            //            loaddata_PhieuThu();
+            //        }
+            //        else
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select CONVERT(varchar, NgayLap, 101) AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //    }
 
-                else if (CheckBoxThu.Checked == true)
-                {
-                    if (txtTuKhoa.Text == "")
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán," +
-                            "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
-                            "WHERE thu is not null";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                    else
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
-                            "from PHIEU_THU WHERE thu is not null and Nguoi LIKE '" + Key + "' or thu is not null and KhoaHoc LIKE '" + Key + "' or thu is not null and LopHoc LIKE '" + Key + "'";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                }
-                else if (CheckBoxChi.Checked == true)
-                {
-                    if (txtTuKhoa.Text == "")
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
-                            "from PHIEU_THU WHERE chi is not null";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                    else
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE chi is not null and Nguoi LIKE '" + Key + "' or chi is not null and KhoaHoc LIKE '" + Key + "' or chi is not null and LopHoc LIKE '" + Key + "'";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                }
+            //    else if (CheckBoxThu.Checked == true)
+            //    {
+            //        if (txtTuKhoa.Text == "")
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán," +
+            //                "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
+            //                "WHERE thu is not null";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //        else
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
+            //                "from PHIEU_THU WHERE thu is not null and Nguoi LIKE '" + Key + "' or thu is not null and KhoaHoc LIKE '" + Key + "' or thu is not null and LopHoc LIKE '" + Key + "'";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //    }
+            //    else if (CheckBoxChi.Checked == true)
+            //    {
+            //        if (txtTuKhoa.Text == "")
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
+            //                "from PHIEU_THU WHERE chi is not null";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //        else
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE chi is not null and Nguoi LIKE '" + Key + "' or chi is not null and KhoaHoc LIKE '" + Key + "' or chi is not null and LopHoc LIKE '" + Key + "'";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //    }
 
-                else
-                {
-                    connection = new SqlConnection(str);
-                    connection.Open();
-                    string Key = txtTuKhoa.Text + '%';
-                    command = connection.CreateCommand();
-                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
-                    adapter.SelectCommand = command;
-                    table.Clear();
-                    adapter.Fill(table);
-                    dgvPhieuThu.DataSource = table;
-                }
-            }
+            //    else
+            //    {
+            //        connection = new SqlConnection(str);
+            //        connection.Open();
+            //        string Key = txtTuKhoa.Text + '%';
+            //        command = connection.CreateCommand();
+            //        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU WHERE Nguoi LIKE '" + Key + "'or KhoaHoc LIKE '" + Key + "' or LopHoc LIKE '" + Key + "'";
+            //        adapter.SelectCommand = command;
+            //        table.Clear();
+            //        adapter.Fill(table);
+            //        dgvPhieuThu.DataSource = table;
+            //    }
+            //}
 
-            // tra cuu khi nguoi dùng chon ngày cua phieu
-            else
-            {
-                if (CheckBoxChi.Checked == true & CheckBoxThu.Checked == true)
-                {
-                    if (txtTuKhoa.Text == "")
-                    {
-                        loaddata_PhieuThu();
-                    }
-                    else
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
-                            "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and Nguoi LIKE '" + Key + "'or NgayLap =  '" + datetimetracuu.ToString() + "'  and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and LopHoc LIKE '" + Key + "'";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                }
-                else if (CheckBoxThu.Checked == true)
-                {
-                    if (txtTuKhoa.Text == "")
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán," +
-                            "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
-                            "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null ";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                    else
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
-                            "from PHIEU_THU_ WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null and Nguoi LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null and KhoaHoc LIKE '" + Key + "' or NgayLap = '" + datetimetracuu.ToString() + "'  and thu is not null and LopHoc LIKE '" + Key + "'";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                }
-                else if (CheckBoxChi.Checked == true)
-                {
-                    if (txtTuKhoa.Text == "")
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
-                            "from PHIEU_THU WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                    else
-                    {
-                        connection = new SqlConnection(str);
-                        connection.Open();
-                        string Key = txtTuKhoa.Text + '%';
-                        command = connection.CreateCommand();
-                        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
-                            "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and Nguoi LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and LopHoc LIKE '" + Key + "'";
-                        adapter.SelectCommand = command;
-                        table.Clear();
-                        adapter.Fill(table);
-                        dgvPhieuThu.DataSource = table;
-                    }
-                }
+            //// tra cuu khi nguoi dùng chon ngày cua phieu
+            //else
+            //{
+            //    if (CheckBoxChi.Checked == true & CheckBoxThu.Checked == true)
+            //    {
+            //        if (txtTuKhoa.Text == "")
+            //        {
+            //            loaddata_PhieuThu();
+            //        }
+            //        else
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
+            //                "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and Nguoi LIKE '" + Key + "'or NgayLap =  '" + datetimetracuu.ToString() + "'  and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and LopHoc LIKE '" + Key + "'";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //    }
+            //    else if (CheckBoxThu.Checked == true)
+            //    {
+            //        if (txtTuKhoa.Text == "")
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán," +
+            //                "Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
+            //                "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null ";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //        else
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
+            //                "from PHIEU_THU_ WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null and Nguoi LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and thu is not null and KhoaHoc LIKE '" + Key + "' or NgayLap = '" + datetimetracuu.ToString() + "'  and thu is not null and LopHoc LIKE '" + Key + "'";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //    }
+            //    else if (CheckBoxChi.Checked == true)
+            //    {
+            //        if (txtTuKhoa.Text == "")
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn " +
+            //                "from PHIEU_THU WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //        else
+            //        {
+            //            connection = new SqlConnection(str);
+            //            connection.Open();
+            //            string Key = txtTuKhoa.Text + '%';
+            //            command = connection.CreateCommand();
+            //            command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
+            //                "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and Nguoi LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and chi is not null and LopHoc LIKE '" + Key + "'";
+            //            adapter.SelectCommand = command;
+            //            table.Clear();
+            //            adapter.Fill(table);
+            //            dgvPhieuThu.DataSource = table;
+            //        }
+            //    }
 
-                else
-                {
-                    connection = new SqlConnection(str);
-                    connection.Open();
-                    string Key = txtTuKhoa.Text + '%';
-                    command = connection.CreateCommand();
-                    command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
-                        "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and Nguoi LIKE '" + Key + "'or NgayLap =  '" + datetimetracuu.ToString() + "'  and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and LopHoc LIKE '" + Key + "'";
-                    adapter.SelectCommand = command;
-                    table.Clear();
-                    adapter.Fill(table);
-                    dgvPhieuThu.DataSource = table;
-                }
-            }
+            //    else
+            //    {
+            //        connection = new SqlConnection(str);
+            //        connection.Open();
+            //        string Key = txtTuKhoa.Text + '%';
+            //        command = connection.CreateCommand();
+            //        command.CommandText = "select NgayLap AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá, SoHoaDon AS Số_hóa_đơn from PHIEU_THU " +
+            //            "WHERE NgayLap =  '" + datetimetracuu.ToString() + "'  and Nguoi LIKE '" + Key + "'or NgayLap =  '" + datetimetracuu.ToString() + "'  and KhoaHoc LIKE '" + Key + "' or NgayLap =  '" + datetimetracuu.ToString() + "'  and LopHoc LIKE '" + Key + "'";
+            //        adapter.SelectCommand = command;
+            //        table.Clear();
+            //        adapter.Fill(table);
+            //        dgvPhieuThu.DataSource = table;
+            //    }
+            //}
 
         }
 
-        private void Print_Thu(object sender, EventArgs e)
+        private void btnInThu_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadon.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
@@ -366,16 +372,148 @@ namespace PMQLTHU_CHI
             }
         }
 
-        private void ToExcelThu_Click(object sender, EventArgs e)
+
+        private void btnInportExThu_Click(object sender, EventArgs e)
+        {
+            Form Import = new ImportExcel();
+            this.Hide();
+            Import.ShowDialog();
+            this.Close();
+        }
+
+        private void btnExportThu_Click(object sender, EventArgs e)
         {
             ToExcel(dgvPhieuThu);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //Phiếu chi
 
         // bien chi
         string _ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi;
+        string _ngaylapchi2;
+
+        
+
+        private void btnImportEx_Click(object sender, EventArgs e)
+        {
+            Form Import = new ImportExcel();
+            this.Hide();
+            Import.ShowDialog();
+            this.Close();
+        }
+
+        void loaddata_PhieuChi()
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+            command = connection.CreateCommand();
+            command.CommandText = "select CONVERT(nvarchar, NgayLap, 101) AS Ngày_lập,KhoaHoc AS Khóa ,NoiDung AS Nội_dung ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_CHI";
+            adapter.SelectCommand = command;
+            table1.Clear();
+            adapter.Fill(table1);
+            dgvPhieuChi.DataSource = table1;
+
+            dgvPhieuChi.Columns[0].HeaderText = "Ngày lập";
+            dgvPhieuChi.Columns[1].HeaderText = "Khóa";
+            dgvPhieuChi.Columns[2].HeaderText = "Nội dung";
+            dgvPhieuChi.Columns[3].HeaderText = "Chi";
+            dgvPhieuChi.Columns[4].HeaderText = "Người nhận";
+            dgvPhieuChi.Columns[5].HeaderText = "Thanh toán";
+            dgvPhieuChi.Columns[6].HeaderText = "Ghi chú";
+            dgvPhieuChi.Columns[7].HeaderText = "Mã hóa đơn";
+            connection.Close();
+        }
+
+
+        private void btnExportEx_Click(object sender, EventArgs e)
+        {
+            ToExcel(dgvPhieuChi);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn xóa mã hóa đơn: " + mahoadonchi.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    SqlCommand com = new SqlCommand();
+                    //Lấy dữ liệu về từ kết quả câu lệnh trên
+                    //ExecuteReader() dùng với select
+                    //ExecuteNonquery(); với inserrt update delete
+                    //com.ExecuteNonQuery();
+                    //MAPHIEUDP();
+                    com.CommandType = CommandType.Text;
+                    com.CommandText = "delete from PHIEU_CHI where SoHoaDon = '" + mahoadonchi.Text.ToString() + "'";
+                    com.Connection = connection;
+                    //loaddata_PhieuThu();
+                    int kq = com.ExecuteNonQuery();
+                    if (kq > 0)
+                    {
+                        MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                    loaddata_PhieuThu();
+                    mahoadon.Clear();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    mahoadon.Clear();
+
+                }
+            }
+        }
+
+        private void btnInChi_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadonchi.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+                try
+                {
+                    using (ReportChi frmchi = new ReportChi(_ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi))
+                    {
+                        frmchi.ShowDialog();
+                    };
+                    mahoadon.Clear();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    mahoadon.Clear();
+
+                }
+            }
+        }
 
         private void dgvPhieuChi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -399,7 +537,7 @@ namespace PMQLTHU_CHI
 
             _ngaylapchi = "Ngày " + day.ToString() + " Tháng " + month.ToString() + " Năm " + year.ToString();
 
-
+            _ngaylapchi2 = dgvPhieuChi.Rows[i].Cells[0].Value.ToString(); 
             _khoachi = dgvPhieuChi.Rows[i].Cells[1].Value.ToString();
             _noidungchi = dgvPhieuChi.Rows[i].Cells[2].Value.ToString();
             _chi = dgvPhieuChi.Rows[i].Cells[3].Value.ToString();
@@ -408,49 +546,26 @@ namespace PMQLTHU_CHI
             _discountchi = dgvPhieuChi.Rows[i].Cells[6].Value.ToString();
             _mahoadonchi = dgvPhieuChi.Rows[i].Cells[7].Value.ToString();
 
+            txtNgayLapchi.Text = _ngaylapchi2;
+            txtKhoa.Text = _khoachi;
+            txtNoiDung.Text = _noidungchi;
+            txtChi.Text = _chi;
+            txtNguoiNhan.Text = _khachhangchi;
+            txtPTTT.Text = _thanhtoanchi;
+            txtGhiChu.Text = _discountchi;
             mahoadonchi.Text = _mahoadonchi;
         }
 
-        private void ToExcelChi_Click(object sender, EventArgs e)
-        {
-            ToExcel(dgvPhieuChi);
-        }
 
-        private void Print_Chi_Click(object sender, EventArgs e)
-        {
-            DialogResult rs = MessageBox.Show("Bạn có muốn in mã hóa đơn: " + mahoadonchi.Text.ToString() + "", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (rs == DialogResult.Yes)
-            {
 
-                try
-                {
-                    using (ReportChi frmchi = new ReportChi(_ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi))
-                    {
-                        frmchi.ShowDialog();
-                    };
-                    mahoadon.Clear();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    mahoadon.Clear();
 
-                }
-            }
-        }
 
-        void loaddata_PhieuChi()
-        {
-            connection = new SqlConnection(str);
-            connection.Open();
-            command = connection.CreateCommand();
-            command.CommandText = "select CONVERT(nvarchar, NgayLap, 101) AS Ngày_lập,KhoaHoc AS Khóa ,NoiDung AS Nội_dung ,FORMAT(chi, '#,##0') AS Chi,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_CHI";
-            adapter.SelectCommand = command;
-            table1.Clear();
-            adapter.Fill(table1);
-            dgvPhieuChi.DataSource = table1;
-            connection.Close();
-        }
+
+
+
+
+
+
 
 
 
