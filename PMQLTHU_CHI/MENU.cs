@@ -36,11 +36,22 @@ namespace PMQLTHU_CHI
             connection = new SqlConnection(str);
             connection.Open();
             command = connection.CreateCommand();
-            command.CommandText = "select CONVERT(nvarchar, NgayLap, 101) AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_THU";
+            command.CommandText = "select CONVERT(nvarchar, NgayLap, 101) " +
+                "AS Ngày_lập,KhoaHoc AS Khóa_học ,LopHoc AS Lớp_học ,FORMAT(thu, '#,##0') AS Thu,Nguoi AS Khách_hàng, " +
+                "Cash AS Thanh_toán,Discount as Giảm_giá,SoHoaDon AS Số_hóa_đơn from PHIEU_THU";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
             dgvPhieuThu.DataSource = table;
+            dgvPhieuThu.Columns[0].HeaderText = "Ngày lập";
+            dgvPhieuThu.Columns[1].HeaderText = "Khóa học";
+            dgvPhieuThu.Columns[2].HeaderText = "Lớp học";
+            dgvPhieuThu.Columns[3].HeaderText = "Thu";
+            dgvPhieuThu.Columns[4].HeaderText = "Khách hàng";
+            dgvPhieuThu.Columns[5].HeaderText = "Thanh toán";
+            dgvPhieuThu.Columns[6].HeaderText = "Ghi chú";
+            dgvPhieuThu.Columns[7].HeaderText = "Mã hóa đơn";
+
             connection.Close();
         }
 
@@ -366,7 +377,39 @@ namespace PMQLTHU_CHI
         // bien chi
         string _ngaylapchi, _khoachi, _noidungchi, _chi, _khachhangchi, _thanhtoanchi, _mahoadonchi, _discountchi;
 
-        
+        private void dgvPhieuChi_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgvPhieuChi.CurrentRow.Index;
+
+            // Lấy giá trị ngày tháng năm từ DateTimePicker
+            DataGridViewRow selectedRow = dgvPhieuChi.SelectedRows[0];
+
+            // Lấy giá trị ngày tháng từ ô cụ thể trong cột
+            DateTime selectedDate = Convert.ToDateTime(selectedRow.Cells[0].Value);
+
+            // Lấy ngày
+            int day = selectedDate.Day;
+
+            // Lấy tháng
+            int month = selectedDate.Month;
+
+            // Lấy năm
+            int year = selectedDate.Year;
+
+            _ngaylapchi = "Ngày " + day.ToString() + " Tháng " + month.ToString() + " Năm " + year.ToString();
+
+
+            _khoachi = dgvPhieuChi.Rows[i].Cells[1].Value.ToString();
+            _noidungchi = dgvPhieuChi.Rows[i].Cells[2].Value.ToString();
+            _chi = dgvPhieuChi.Rows[i].Cells[3].Value.ToString();
+            _khachhangchi = dgvPhieuChi.Rows[i].Cells[4].Value.ToString();
+            _thanhtoanchi = dgvPhieuChi.Rows[i].Cells[5].Value.ToString();
+            _discountchi = dgvPhieuChi.Rows[i].Cells[6].Value.ToString();
+            _mahoadonchi = dgvPhieuChi.Rows[i].Cells[7].Value.ToString();
+
+            mahoadonchi.Text = _mahoadonchi;
+        }
 
         private void ToExcelChi_Click(object sender, EventArgs e)
         {
@@ -409,39 +452,6 @@ namespace PMQLTHU_CHI
             connection.Close();
         }
 
-        private void dgvPhieuChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i;
-            i = dgvPhieuChi.CurrentRow.Index;
-
-            // Lấy giá trị ngày tháng năm từ DateTimePicker
-            DataGridViewRow selectedRow = dgvPhieuChi.SelectedRows[0];
-
-            // Lấy giá trị ngày tháng từ ô cụ thể trong cột
-            DateTime selectedDate = Convert.ToDateTime(selectedRow.Cells[0].Value);
-
-            // Lấy ngày
-            int day = selectedDate.Day;
-
-            // Lấy tháng
-            int month = selectedDate.Month;
-
-            // Lấy năm
-            int year = selectedDate.Year;
-
-            _ngaylapchi = "Ngày " + day.ToString() + " Tháng " + month.ToString() + " Năm " + year.ToString();
-
-
-            _khoachi = dgvPhieuChi.Rows[i].Cells[1].Value.ToString();
-            _noidungchi = dgvPhieuChi.Rows[i].Cells[2].Value.ToString();
-            _chi = dgvPhieuChi.Rows[i].Cells[3].Value.ToString();
-            _khachhangchi = dgvPhieuChi.Rows[i].Cells[4].Value.ToString();
-            _thanhtoanchi = dgvPhieuChi.Rows[i].Cells[5].Value.ToString();
-            _discountchi = dgvPhieuChi.Rows[i].Cells[6].Value.ToString();
-            _mahoadonchi = dgvPhieuChi.Rows[i].Cells[7].Value.ToString();
-            
-            mahoadonchi.Text = _mahoadonchi;
-        }
 
 
 
