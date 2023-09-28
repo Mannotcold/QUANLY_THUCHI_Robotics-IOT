@@ -67,7 +67,9 @@ namespace PMQLTHU_CHI
             this.Close();
         }
 
-        private void btnLuu_Click_1(object sender, EventArgs e)
+        
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn thêm hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
@@ -110,6 +112,11 @@ namespace PMQLTHU_CHI
 
         private void CAPNHAT_Click_1(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
             DialogResult rs = MessageBox.Show("Bạn có muốn cập nhật hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -149,7 +156,8 @@ namespace PMQLTHU_CHI
             }
         }
 
-        private void Xoa_Click_1(object sender, EventArgs e)
+
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có muốn xóa hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
@@ -190,6 +198,7 @@ namespace PMQLTHU_CHI
             }
         }
 
+
         private void btnTraCuu_Click_1(object sender, EventArgs e)
         {
             if (txtTuKhoa.Text == "")
@@ -210,5 +219,6 @@ namespace PMQLTHU_CHI
             }
         }
 
+        
     }
 }

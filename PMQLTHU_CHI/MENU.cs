@@ -46,8 +46,6 @@ namespace PMQLTHU_CHI
 
         
 
-
-
         private void dgvPhieuThu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
@@ -524,9 +522,12 @@ namespace PMQLTHU_CHI
             }
         }
 
-        private void exportExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ImportExcel_Click(object sender, EventArgs e)
         {
-            
+            Form Import = new ImportExcel();
+            this.Hide();
+            Import.ShowDialog();
+            this.Close();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
