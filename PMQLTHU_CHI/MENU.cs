@@ -421,6 +421,8 @@ namespace PMQLTHU_CHI
             this.Close();
         }
 
+        
+
         void loaddata_PhieuChi()
         {
             connection = new SqlConnection(str);
@@ -581,19 +583,13 @@ namespace PMQLTHU_CHI
 
         private void thêmMớiToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form thuchi = new THU_CHI();
-            this.Hide();
-            thuchi.ShowDialog();
-            this.Close();
+            
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            Form log = new Login();
-            this.Hide();
-            log.ShowDialog();
-            this.Close();
+            
         }
 
 
@@ -652,6 +648,22 @@ namespace PMQLTHU_CHI
             Form Import = new ImportExcel();
             this.Hide();
             Import.ShowDialog();
+            this.Close();
+        }
+
+        private void btnThemPhieu_Click(object sender, EventArgs e)
+        {
+            Form thuchi = new THU_CHI();
+            this.Hide();
+            thuchi.ShowDialog();
+            this.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Form log = new Login();
+            this.Hide();
+            log.ShowDialog();
             this.Close();
         }
 
