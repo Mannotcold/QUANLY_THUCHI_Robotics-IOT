@@ -94,7 +94,6 @@ namespace PMQLTHU_CHI
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPhieuChi = new System.Windows.Forms.DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnEmployee = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnStatistic = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.btnLogout = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -1258,7 +1257,6 @@ namespace PMQLTHU_CHI
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.guna2Panel2.Controls.Add(this.btnEmployee);
             this.guna2Panel2.Controls.Add(this.btnStatistic);
             this.guna2Panel2.Controls.Add(this.guna2Separator1);
             this.guna2Panel2.Controls.Add(this.btnLogout);
@@ -1272,33 +1270,6 @@ namespace PMQLTHU_CHI
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(167, 742);
             this.guna2Panel2.TabIndex = 31;
-            // 
-            // btnEmployee
-            // 
-            this.btnEmployee.Animated = true;
-            this.btnEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmployee.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmployee.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEmployee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEmployee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEmployee.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEmployee.FillColor = System.Drawing.Color.Empty;
-            this.btnEmployee.FillColor2 = System.Drawing.Color.Empty;
-            this.btnEmployee.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnEmployee.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
-            this.btnEmployee.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.btnEmployee.Location = new System.Drawing.Point(3, 401);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(194, 45);
-            this.btnEmployee.TabIndex = 3;
-            this.btnEmployee.Text = "Nhân viên";
-            this.btnEmployee.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEmployee.TextOffset = new System.Drawing.Point(50, 0);
-            this.btnEmployee.UseTransparentBackground = true;
             // 
             // btnStatistic
             // 
@@ -1326,14 +1297,14 @@ namespace PMQLTHU_CHI
             this.btnStatistic.TabIndex = 9;
             this.btnStatistic.Text = "Thêm phiếu";
             this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStatistic.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnStatistic.TextOffset = new System.Drawing.Point(10, 0);
             this.btnStatistic.UseTransparentBackground = true;
             this.btnStatistic.Click += new System.EventHandler(this.btnThemPhieu_Click);
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.Gray;
-            this.guna2Separator1.Location = new System.Drawing.Point(3, 475);
+            this.guna2Separator1.Location = new System.Drawing.Point(-3, 401);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(200, 10);
             this.guna2Separator1.TabIndex = 3;
@@ -1356,13 +1327,16 @@ namespace PMQLTHU_CHI
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnLogout.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLogout.Location = new System.Drawing.Point(0, 697);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(167, 45);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnLogout.TextOffset = new System.Drawing.Point(10, 0);
             this.btnLogout.UseTransparentBackground = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -1384,13 +1358,15 @@ namespace PMQLTHU_CHI
             this.btnAccount.ForeColor = System.Drawing.Color.White;
             this.btnAccount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnAccount.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
+            this.btnAccount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAccount.Location = new System.Drawing.Point(3, 350);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(194, 45);
             this.btnAccount.TabIndex = 7;
             this.btnAccount.Text = "Tài khoản";
             this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAccount.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnAccount.TextOffset = new System.Drawing.Point(10, 0);
             this.btnAccount.UseTransparentBackground = true;
             // 
             // btnBill
@@ -1411,13 +1387,15 @@ namespace PMQLTHU_CHI
             this.btnBill.ForeColor = System.Drawing.Color.White;
             this.btnBill.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnBill.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
+            this.btnBill.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBill.Location = new System.Drawing.Point(3, 299);
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(194, 45);
             this.btnBill.TabIndex = 6;
-            this.btnBill.Text = "Hoá đơn";
+            this.btnBill.Text = "Thêm nội dung chi";
             this.btnBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBill.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnBill.TextOffset = new System.Drawing.Point(10, 0);
             this.btnBill.UseTransparentBackground = true;
             // 
             // btnCustomer
@@ -1438,13 +1416,15 @@ namespace PMQLTHU_CHI
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnCustomer.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomer.Location = new System.Drawing.Point(3, 248);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(194, 45);
             this.btnCustomer.TabIndex = 5;
-            this.btnCustomer.Text = "Khách hàng";
+            this.btnCustomer.Text = "Thêm lớp học";
             this.btnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCustomer.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnCustomer.TextOffset = new System.Drawing.Point(10, 0);
             this.btnCustomer.UseTransparentBackground = true;
             // 
             // btnProduct
@@ -1465,13 +1445,15 @@ namespace PMQLTHU_CHI
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(62)))), ((int)(((byte)(103)))));
             this.btnProduct.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.Location = new System.Drawing.Point(3, 197);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(194, 45);
             this.btnProduct.TabIndex = 4;
-            this.btnProduct.Text = "Sản phẩm";
+            this.btnProduct.Text = "Thêm khóa học";
             this.btnProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnProduct.TextOffset = new System.Drawing.Point(50, 0);
+            this.btnProduct.TextOffset = new System.Drawing.Point(10, 0);
             this.btnProduct.UseTransparentBackground = true;
             // 
             // guna2PictureBox1
@@ -1579,7 +1561,6 @@ namespace PMQLTHU_CHI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2GradientButton btnEmployee;
         private Guna.UI2.WinForms.Guna2GradientButton btnStatistic;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogout;
