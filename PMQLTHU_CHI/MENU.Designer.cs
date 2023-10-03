@@ -29,10 +29,10 @@ namespace PMQLTHU_CHI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MENU));
             this.dgvPhieuThu = new System.Windows.Forms.DataGridView();
             this.btnTraCuu = new System.Windows.Forms.Button();
@@ -102,6 +102,8 @@ namespace PMQLTHU_CHI
             this.btnCustomer = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnSua = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnsuathu = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuThu)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.PhieuThu.SuspendLayout();
@@ -125,23 +127,23 @@ namespace PMQLTHU_CHI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhieuThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhieuThu.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPhieuThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhieuThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPhieuThu.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPhieuThu.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPhieuThu.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPhieuThu.EnableHeadersVisualStyles = false;
             this.dgvPhieuThu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPhieuThu.Location = new System.Drawing.Point(3, 296);
@@ -215,6 +217,7 @@ namespace PMQLTHU_CHI
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.guna2Panel3.Controls.Add(this.btnsuathu);
             this.guna2Panel3.Controls.Add(this.panel1);
             this.guna2Panel3.Controls.Add(this.txtNgayLapThu);
             this.guna2Panel3.Controls.Add(this.mahoadon);
@@ -498,7 +501,7 @@ namespace PMQLTHU_CHI
             this.btnInThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnInThu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnInThu.ForeColor = System.Drawing.Color.White;
-            this.btnInThu.Location = new System.Drawing.Point(528, 31);
+            this.btnInThu.Location = new System.Drawing.Point(528, 224);
             this.btnInThu.Name = "btnInThu";
             this.btnInThu.Size = new System.Drawing.Size(135, 45);
             this.btnInThu.TabIndex = 0;
@@ -518,7 +521,7 @@ namespace PMQLTHU_CHI
             this.btnExportThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnExportThu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnExportThu.ForeColor = System.Drawing.Color.White;
-            this.btnExportThu.Location = new System.Drawing.Point(528, 226);
+            this.btnExportThu.Location = new System.Drawing.Point(708, 233);
             this.btnExportThu.Name = "btnExportThu";
             this.btnExportThu.Size = new System.Drawing.Size(135, 45);
             this.btnExportThu.TabIndex = 3;
@@ -538,7 +541,7 @@ namespace PMQLTHU_CHI
             this.btnXoaThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXoaThu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnXoaThu.ForeColor = System.Drawing.Color.White;
-            this.btnXoaThu.Location = new System.Drawing.Point(528, 96);
+            this.btnXoaThu.Location = new System.Drawing.Point(528, 118);
             this.btnXoaThu.Name = "btnXoaThu";
             this.btnXoaThu.Size = new System.Drawing.Size(135, 45);
             this.btnXoaThu.TabIndex = 1;
@@ -558,7 +561,7 @@ namespace PMQLTHU_CHI
             this.btnInportExThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnInportExThu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnInportExThu.ForeColor = System.Drawing.Color.White;
-            this.btnInportExThu.Location = new System.Drawing.Point(528, 161);
+            this.btnInportExThu.Location = new System.Drawing.Point(879, 233);
             this.btnInportExThu.Name = "btnInportExThu";
             this.btnInportExThu.Size = new System.Drawing.Size(135, 45);
             this.btnInportExThu.TabIndex = 2;
@@ -732,6 +735,7 @@ namespace PMQLTHU_CHI
             // guna2Panel4
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.guna2Panel4.Controls.Add(this.btnSua);
             this.guna2Panel4.Controls.Add(this.panel3);
             this.guna2Panel4.Controls.Add(this.txtNgayLapchi);
             this.guna2Panel4.Controls.Add(this.mahoadonchi);
@@ -998,7 +1002,7 @@ namespace PMQLTHU_CHI
             this.btnInChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnInChi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnInChi.ForeColor = System.Drawing.Color.White;
-            this.btnInChi.Location = new System.Drawing.Point(532, 36);
+            this.btnInChi.Location = new System.Drawing.Point(532, 229);
             this.btnInChi.Name = "btnInChi";
             this.btnInChi.Size = new System.Drawing.Size(135, 45);
             this.btnInChi.TabIndex = 0;
@@ -1018,7 +1022,7 @@ namespace PMQLTHU_CHI
             this.btnExportEx.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnExportEx.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnExportEx.ForeColor = System.Drawing.Color.White;
-            this.btnExportEx.Location = new System.Drawing.Point(532, 231);
+            this.btnExportEx.Location = new System.Drawing.Point(911, 229);
             this.btnExportEx.Name = "btnExportEx";
             this.btnExportEx.Size = new System.Drawing.Size(135, 45);
             this.btnExportEx.TabIndex = 3;
@@ -1038,7 +1042,7 @@ namespace PMQLTHU_CHI
             this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(532, 101);
+            this.btnXoa.Location = new System.Drawing.Point(532, 118);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(135, 45);
             this.btnXoa.TabIndex = 1;
@@ -1058,7 +1062,7 @@ namespace PMQLTHU_CHI
             this.btnImportEx.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnImportEx.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnImportEx.ForeColor = System.Drawing.Color.White;
-            this.btnImportEx.Location = new System.Drawing.Point(532, 166);
+            this.btnImportEx.Location = new System.Drawing.Point(759, 229);
             this.btnImportEx.Name = "btnImportEx";
             this.btnImportEx.Size = new System.Drawing.Size(135, 45);
             this.btnImportEx.TabIndex = 2;
@@ -1226,23 +1230,23 @@ namespace PMQLTHU_CHI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhieuChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhieuChi.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPhieuChi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhieuChi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPhieuChi.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPhieuChi.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPhieuChi.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPhieuChi.EnableHeadersVisualStyles = false;
             this.dgvPhieuChi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPhieuChi.Location = new System.Drawing.Point(3, 296);
@@ -1291,6 +1295,7 @@ namespace PMQLTHU_CHI
             this.btnStatistic.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.btnStatistic.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistic.Image")));
             this.btnStatistic.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistic.ImageSize = new System.Drawing.Size(30, 30);
             this.btnStatistic.Location = new System.Drawing.Point(3, 146);
             this.btnStatistic.Name = "btnStatistic";
             this.btnStatistic.Size = new System.Drawing.Size(178, 45);
@@ -1360,6 +1365,7 @@ namespace PMQLTHU_CHI
             this.btnAccount.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
             this.btnAccount.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAccount.ImageSize = new System.Drawing.Size(30, 30);
             this.btnAccount.Location = new System.Drawing.Point(3, 350);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(194, 45);
@@ -1470,6 +1476,45 @@ namespace PMQLTHU_CHI
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
+            // btnSua
+            // 
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSua.Animated = true;
+            this.btnSua.BorderRadius = 10;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSua.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(532, 10);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(135, 45);
+            this.btnSua.TabIndex = 40;
+            this.btnSua.Text = "Cập nhật";
+            // 
+            // btnsuathu
+            // 
+            this.btnsuathu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnsuathu.Animated = true;
+            this.btnsuathu.BorderRadius = 10;
+            this.btnsuathu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsuathu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnsuathu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnsuathu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnsuathu.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnsuathu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnsuathu.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnsuathu.ForeColor = System.Drawing.Color.White;
+            this.btnsuathu.Location = new System.Drawing.Point(528, 17);
+            this.btnsuathu.Name = "btnsuathu";
+            this.btnsuathu.Size = new System.Drawing.Size(135, 45);
+            this.btnsuathu.TabIndex = 41;
+            this.btnsuathu.Text = "Cập nhật";
+            this.btnsuathu.Click += new System.EventHandler(this.btnsuathu_Click);
+            // 
             // MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1569,5 +1614,7 @@ namespace PMQLTHU_CHI
         private Guna.UI2.WinForms.Guna2GradientButton btnCustomer;
         private Guna.UI2.WinForms.Guna2GradientButton btnProduct;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnsuathu;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSua;
     }
 }

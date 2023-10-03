@@ -80,3 +80,4 @@ D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.Register.resources
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.ForgotPassForm.resources
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.NoiDungChi.resources
 D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.ImportExcel.resources
+D:\PMQLTHU_CHI\PMQLTHU_CHI\obj\Release\PMQLTHU_CHI.TaiKhoanUser.resources

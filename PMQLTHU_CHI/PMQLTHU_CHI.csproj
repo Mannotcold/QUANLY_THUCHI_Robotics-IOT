@@ -144,6 +144,12 @@
       <DependentUpon>ReportChi.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TaiKhoanUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiKhoanUser.Designer.cs">
+      <DependentUpon>TaiKhoanUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="THU_CHI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportPhieuChi.rdlc" />
     <EmbeddedResource Include="ReportPhieuThuChi.rdlc" />
+    <EmbeddedResource Include="TaiKhoanUser.resx">
+      <DependentUpon>TaiKhoanUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="THU_CHI.resx">
       <DependentUpon>THU_CHI.cs</DependentUpon>
     </EmbeddedResource>

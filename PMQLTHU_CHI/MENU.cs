@@ -145,6 +145,53 @@ namespace PMQLTHU_CHI
             }
         }
 
+        private void btnsuathu_Click(object sender, EventArgs e)
+        {
+            
+
+
+            DialogResult rs = MessageBox.Show("Bạn có muốn cập nhật hay không", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                try
+                {
+
+                    connection = new SqlConnection(str);
+                    connection.Open();
+                    SqlCommand com = new SqlCommand();
+                    //Lấy dữ liệu về từ kết quả câu lệnh trên
+                    //ExecuteReader() dùng với select
+                    //ExecuteNonquery(); với inserrt update delete
+                    //com.ExecuteNonQuery();
+                    //MAPHIEUDP();
+                    com.CommandType = CommandType.Text; 
+                    com.CommandText = "Update PHIEU_THU set KhoaHoc = N'" + txtKhoaHocThu.Text.ToString() + "', " +
+                        "LopHoc = N'" + txtLopHocThu.Text.ToString() + "', thu = N'" + txtThu.Text + "', " +
+                        "Nguoi = N'" + txtKhachHang.Text.ToString() + "', Cash = N'" + txtPTTTThu.Text.ToString() + "', Discount = N'" + txtGhiChuThu.Text.ToString() + "' " +
+                        "where SoHoaDon = N'" + mahoadon.Text + "'";
+                    com.Connection = connection;
+                    //loaddata_PhieuThu();
+                    int kq = com.ExecuteNonQuery();
+                    if (kq > 0)
+                    {
+                        MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Cập nhật không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+                loaddata_PhieuThu();
+
+            }
+        }
+
         // Tra cuu thu
 
         private void btnTraCuu_Click(object sender, EventArgs e)
@@ -445,6 +492,7 @@ namespace PMQLTHU_CHI
             connection.Close();
         }
 
+        
 
         private void btnExportEx_Click(object sender, EventArgs e)
         {
